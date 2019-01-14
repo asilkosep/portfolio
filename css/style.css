@@ -7,18 +7,50 @@ html {
 }
 
 body {
+  background-image: url("../css/images/atmos_casestudy_hero.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  /* background-size: auto; */
+  /* background-attachment: fixed; */
   display: grid;
   grid-template-areas:
-  "navbar navbar"
+  "navbar"
   "hero"
   "overview"
+  "user-research"
+  "comp-analysis"
+  "opportunity"
+  "user-flows"
+  "wireframing"
+  "wireframing-imgs"
+  "branding"
+  "branding-images"
+  "style-guide"
+  "hifi-mockups"
   ;
   margin: auto;
 
 }
 
+.img-grid, .roles, .deliverables, .specs, .hero-intro, .navbar, .image, .overview-text, .drive, .dropbox, .evernote, .opportunity-intro, .user-personas, .user-persona-1, .user-persona-2, .user-persona-3, .user-stories, .key-features, .user-flows-1, .user-flows-2, .wireframing-intro, .wireframe-sketch-1, .wireframe-sketch-2, .wireframe-sketch-3 {
+  text-align: center;
+  background-color: white;
+  padding: 10rem 0;
+}
+
+.wireframe-title-2, .wireframe-title-1, .wireframe-img-1, .wireframe-img-2, .wireframe-img-3, .wireframe-img-4, .wireframe-img-5, .wireframe-img-6, .branding-intro, .mindmap-img, .logo-sketch-img, .moodboard-img-1, .moodboard-img-2 {
+  text-align: center;
+  background-color: white;
+  padding: 10rem 0;
+}
+
+.moodboard-img-2, .logo-img-1, .logo-img-2, .logo-img-3, .style-guide-img, .hifi-intro, .hifi-v1 {
+  text-align: center;
+  background-color: white;
+  padding: 10rem 0;
+}
+
 .navbar {
-  background-color: #00ffff;
   grid-area: navbar;
   padding: 3rem;
 }
@@ -46,26 +78,124 @@ body {
     "overview-text";
 }
 
-.img-grid {
-  background-color: green;
-  grid-area: img-grid;
-  padding: 10rem 0;
+.user-research {
+  background-color: red;
+  display: grid;
+  grid-area: user-research;
+  grid-template-areas:
+    "research-intro"
+    "survey-results";
 }
 
-.roles, .deliverables, .specs, .hero-intro {
-  text-align: center;
-  background-color: white;
+.comp-analysis {
+  background-color: green;
+  display: grid;
+  grid-area: comp-analysis;
+  grid-template-areas:
+    "drive"
+    "dropbox"
+    "evernote";
+}
+
+.opportunity {
+  display: grid;
+  grid-area: opportunity;
+  grid-template-areas:
+    "opportunity-intro"
+    "user-personas"
+    "user-persona-1"
+    "user-persona-2"
+    "user-persona-3"
+    "user-stories"
+    "key-features"
+    "user-flows-1"
+    "user-flows-2";
+}
+
+.user-flows {
+  display: grid;
+  grid-area: user-flows;
+  grid-template-areas:
+  "user-flows-1"
+  "user-flows-2";
+}
+
+.wireframing {
+  display: grid;
+  grid-area: wireframing;
+  grid-template-areas:
+  "divider"
+  "wireframing-intro"
+  ;
+}
+
+.wireframing-imgs {
+  display: grid;
+  grid-area: wireframing-imgs;
+  grid-template-areas:
+  "wireframe-title-1"
+  "wireframe-sketch-1"
+  "wireframe-sketch-2"
+  "wireframe-sketch-3"
+  "wireframe-title-2"
+  "wireframe-img-1"
+  "wireframe-img-2"
+  "wireframe-img-3"
+  "wireframe-img-4"
+  "wireframe-img-5"
+  "wireframe-img-6"
+}
+
+.branding {
+  display: grid;
+  grid-area: branding;
+  grid-template-areas:
+  "divider"
+  "branding-intro"
+  "mindmap-img"
+  "logo-sketch-img";
+}
+
+.branding-images {
+  display: grid;
+  grid-area: branding-images;
+  grid-template-areas:
+  "moodboard-img-1"
+  "moodboard-img-2"
+  "logo-img-1"
+  "logo-img-2"
+  "logo-img-3";
+}
+
+.style-guide {
+  display: grid;
+  grid-area: style-guide;
+  grid-template-areas:
+  "style-guide-img"
+  "divider";
+}
+
+.hifi-mockups {
+  display: grid;
+  grid-area: hifi-mockups;
+  grid-template-areas:
+  "hifi-intro"
+  "hifi-v1";
+}
+
+.img-grid {
+  grid-area: img-grid;
+  padding: 3rem 0;
 }
 
 .hero-intro {
   grid-area: intro;
-  padding: 10rem 0;
+  padding: 5rem 0;
 }
 
 .roles {
   grid-area: roles;
   padding: 10rem 0;
-
 }
 
 .deliverables {
@@ -85,31 +215,194 @@ body {
 }
 
 .overview-text {
-  background-color: #B1D4E7;
+  text-align: left;
   grid-area: overview-text;
-  padding: 10rem 0;
+  padding: 20rem 0;
 }
 
 .image {
-  background-color: orange;
   grid-area: image;
-  padding: 20rem 0;
+  /* padding: 20rem 0; */
 }
 
 .overview {
   background-color: #ffff00;
   grid-area: overview;
   /* padding: 40rem 2rem; */
-
 }
+
+.research-intro {
+  background-color: red;
+  grid-area: research-intro;
+  padding: 10rem 0;
+}
+
+.survey-results {
+  background-color: red;
+  grid-area: survey-results;
+  padding: 10rem 0;
+}
+
+.drive {
+  grid-area: drive;
+}
+
+.dropbox {
+  grid-area: dropbox;
+}
+
+.evernote {
+  grid-area: evernote;
+}
+
+.opportunity-intro {
+  grid-area: opportunity-intro;
+}
+
+.user-personas {
+  grid-area: user-personas;
+}
+
+.user-persona-1 {
+  grid-area: user-persona-1;
+}
+
+.user-persona-2 {
+  grid-area: user-persona-2;
+}
+
+.user-persona-3 {
+  grid-area: user-persona-3;
+}
+
+.user-stories {
+  grid-area: user-stories;
+}
+
+.key-features {
+  grid-area: key-features;
+}
+
+.user-flows-1 {
+  grid-area: user-flows-1;
+}
+
+.user-flows-2 {
+  grid-area: user-flows-2;
+}
+
+.wireframing-intro {
+  grid-area: wireframing-intro;
+}
+
+.wireframe-title-1 {
+  grid-area: wireframe-title-1;
+  padding: 10rem 0;
+}
+
+.wireframe-sketch-1 {
+  grid-area: wireframe-sketch-1;
+}
+
+.wireframe-sketch-2 {
+  grid-area: wireframe-sketch-2;
+}
+
+.wireframe-sketch-3 {
+  grid-area: wireframe-sketch-3;
+}
+
+.wireframe-title-2 {
+  grid-area: wireframe-title-2;
+}
+
+.wireframe-img-1 {
+  grid-area: wireframe-img-1;
+}
+
+.wireframe-img-2 {
+  grid-area: wireframe-img-2;
+}
+
+.wireframe-img-3 {
+  grid-area: wireframe-img-3;
+}
+
+.wireframe-img-4 {
+  grid-area: wireframe-img-4;
+}
+
+.wireframe-img-5 {
+  grid-area: wireframe-img-5;
+}
+
+.wireframe-img-6 {
+  grid-area: wireframe-img-6;
+}
+
+.branding-intro {
+  grid-area: branding-intro;
+}
+
+.mindmap-img {
+  grid-area: mindmap-img;
+}
+
+.logo-sketch-img {
+  grid-area: logo-sketch-img;
+}
+
+.moodboard-img-1 {
+  grid-area: moodboard-img-1;
+}
+
+.moodboard-img-2 {
+  grid-area: moodboard-img-2;
+}
+
+.logo-img-1 {
+  grid-area: logo-img-1;
+}
+
+.logo-img-2 {
+  grid-area: logo-img-2;
+}
+
+.logo-img-3 {
+  grid-area: logo-img-3;
+}
+
+.style-guide-img {
+  grid-area: style-guide-img;
+}
+
+.hifi-intro {
+  grid-area: hifi-intro;
+}
+
+.hifi-v1 {
+  grid-area: hifi-v1;
+}
+
 
 @media (min-width: 30rem) {
   body {
+    background-image: url("../css/images/atmos_casestudy_hero.png");
     grid-template-columns: 3fr 6fr 3fr;
     grid-template-areas:
     "navbar navbar navbar"
     ". hero ."
-    ". overview .";
+    ". overview ."
+    ". user-research ."
+    "comp-analysis comp-analysis comp-analysis"
+    ". opportunity ."
+    "user-flows user-flows user-flows"
+    ". wireframing ."
+    "wireframing-imgs wireframing-imgs wireframing-imgs"
+    ". branding ."
+    "branding-images branding-images branding-images"
+    ". style-guide ."
+    ". hifi-mockups .";
     margin: 1%;
   }
   .hero {
@@ -126,4 +419,85 @@ body {
     grid-template-areas:
     "overview-text overview-text overview-text"
     "divider divider divider";
+  }
+  .user-research {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "research-intro research-intro research-intro"
+    "survey-results survey-results survey-results" ;
+  }
+  .comp-analysis{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "drive dropbox evernote" ;
+  }
+  .opportunity {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "opportunity-intro opportunity-intro opportunity-intro"
+    "user-personas user-personas user-personas"
+    "user-persona-1 user-persona-1 user-persona-1"
+    "user-persona-2 user-persona-2 user-persona-2"
+    "user-persona-3 user-persona-3 user-persona-3"
+    "divider divider divider"
+    "user-stories user-stories user-stories"
+    "key-features key-features key-features";
+  }
+  .user-flows {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "user-flows-1 user-flows-1 user-flows-1"
+    "user-flows-2 user-flows-2 user-flows-2";
+  }
+  .wireframing {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "divider divider divider"
+    "wireframing-intro wireframing-intro wireframing-intro"
+    ;
+  }
+  .wireframing-imgs {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "wireframe-title-1 wireframe-title-1 wireframe-title-1"
+    "wireframe-sketch-1 wireframe-sketch-1 wireframe-sketch-1"
+    "wireframe-sketch-2 wireframe-sketch-2 wireframe-sketch-2"
+    "wireframe-sketch-3 wireframe-sketch-3 wireframe-sketch-3"
+    "wireframe-title-2 wireframe-title-2 wireframe-title-2"
+    "wireframe-img-1 wireframe-img-1 wireframe-img-1"
+    "wireframe-img-2 wireframe-img-2 wireframe-img-2"
+    "wireframe-img-3 wireframe-img-3 wireframe-img-3"
+    "wireframe-img-4 wireframe-img-4 wireframe-img-4"
+    "wireframe-img-5 wireframe-img-5 wireframe-img-5"
+    "wireframe-img-6 wireframe-img-6 wireframe-img-6"
+  }
+  .branding {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "divider divider divider"
+    "branding-intro branding-intro branding-intro"
+    "mindmap-img mindmap-img mindmap-img"
+    "logo-sketch-img logo-sketch-img logo-sketch-img";
+  }
+  .branding-images {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "moodboard-img-1 moodboard-img-1 moodboard-img-1"
+    "moodboard-img-2 moodboard-img-2 moodboard-img-2"
+    "logo-img-1 logo-img-1 logo-img-1"
+    "logo-img-2 logo-img-2 logo-img-2"
+    "logo-img-3 logo-img-3 logo-img-3";
+  }
+  .style-guide {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "style-guide-img style-guide-img style-guide-img"
+    "divider divider divider" ;
+  }
+  .hifi-mockups {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "hifi-intro hifi-intro hifi-intro"
+    "hifi-v1 hifi-v1 hifi-v1";
+  }
 }
