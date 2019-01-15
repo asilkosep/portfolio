@@ -151,7 +151,8 @@ body {
   "wireframe-img-3"
   "wireframe-img-4"
   "wireframe-img-5"
-  "wireframe-img-6"
+  "wireframe-img-6";
+  width: 100%;
 }
 
 .branding {
@@ -315,29 +316,17 @@ body {
 
 .wireframe-sketch-1 {
   grid-area: wireframe-sketch-1;
-  display: flex;
-  align-items: center;
-  object-fit: cover;
-  min-width: 50%;
-  min-height: 100%;
+  width: 100%;
 }
 
 .wireframe-sketch-2 {
   grid-area: wireframe-sketch-2;
-  display: flex;
-  align-items: center;
-  object-fit: cover;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
 }
 
 .wireframe-sketch-3 {
   grid-area: wireframe-sketch-3;
-  display: flex;
-  align-items: center;
-  object-fit: cover;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
 }
 
 .wireframe-title-2 {
