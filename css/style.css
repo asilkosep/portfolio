@@ -32,13 +32,13 @@ body {
 
 }
 
-.img-grid, .roles, .deliverables, .specs, .hero-intro, .navbar, .image, .overview-text, .drive, .dropbox, .evernote, .opportunity-intro, .user-personas, .user-persona-1, .user-persona-2, .user-persona-3, .user-stories, .key-features, .user-flows-1, .user-flows-2, .wireframing-intro, .wireframe-sketch-1, .wireframe-sketch-2, .wireframe-sketch-3 {
+.img-grid, .roles, .deliverables, .specs, .hero-intro, .navbar, .image, .overview-text, .drive, .dropbox, .evernote, .opportunity-intro, .user-personas, .user-persona-1, .user-persona-2, .user-persona-3, .user-stories, .key-features, .user-flows-1, .user-flows-2, .wireframing-intro, {
   text-align: center;
   background-color: white;
   padding: 10rem 0;
 }
 
-.wireframe-title-2, .wireframe-title-1, .wireframe-img-1, .wireframe-img-2, .wireframe-img-3, .wireframe-img-4, .wireframe-img-5, .wireframe-img-6, .branding-intro, .mindmap-img, .logo-sketch-img, .moodboard-img-1, .moodboard-img-2 {
+.wireframe-title-2, .wireframe-title-1, .wireframe-img-1, .wireframe-img-2, .wireframe-img-3, .wireframe-img-4, .wireframe-img-5, .wireframe-img-6, .branding-intro, .mindmap-img, .logo-sketch-title, .logo-sketch-img, .moodboard-img-1, .moodboard-img-2 {
   text-align: center;
   background-color: white;
   padding: 10rem 0;
@@ -48,6 +48,11 @@ body {
   text-align: center;
   background-color: white;
   padding: 10rem 0;
+}
+
+.wireframe-sketch-1, .wireframe-sketch-2, .wireframe-sketch-3 {
+  background-color: green;
+  padding: 5rem 0;
 }
 
 .navbar {
@@ -75,11 +80,11 @@ body {
   grid-area: hero;
   grid-template-areas:
     "divider"
-    "overview-text";
+    "overview-text"
+    "divider-btm";
 }
 
 .user-research {
-  background-color: red;
   display: grid;
   grid-area: user-research;
   grid-template-areas:
@@ -88,7 +93,6 @@ body {
 }
 
 .comp-analysis {
-  background-color: green;
   display: grid;
   grid-area: comp-analysis;
   grid-template-areas:
@@ -109,7 +113,9 @@ body {
     "user-stories"
     "key-features"
     "user-flows-1"
-    "user-flows-2";
+    "user-flows-2"
+    "divider"
+    "divider-btm";
 }
 
 .user-flows {
@@ -126,11 +132,13 @@ body {
   grid-template-areas:
   "divider"
   "wireframing-intro"
+  "divider-btm"
   ;
 }
 
 .wireframing-imgs {
   display: grid;
+  grid-gap: 1rem;
   grid-area: wireframing-imgs;
   grid-template-areas:
   "wireframe-title-1"
@@ -148,12 +156,15 @@ body {
 
 .branding {
   display: grid;
+  grid-gap: 1rem;
   grid-area: branding;
   grid-template-areas:
   "divider"
   "branding-intro"
   "mindmap-img"
-  "logo-sketch-img";
+  "logo-sketch-title"
+  "logo-sketch-img"
+  "divider-btm";
 }
 
 .branding-images {
@@ -172,7 +183,8 @@ body {
   grid-area: style-guide;
   grid-template-areas:
   "style-guide-img"
-  "divider";
+  "divider"
+  "divider-btm";
 }
 
 .hifi-mockups {
@@ -209,8 +221,12 @@ body {
 }
 
 .img-divider {
-  background-color: #B1D4E7;
   grid-area: divider;
+  padding: 10rem 0;
+}
+
+.img-divider-btm {
+  grid-area: divider-btm;
   padding: 10rem 0;
 }
 
@@ -226,19 +242,16 @@ body {
 }
 
 .overview {
-  background-color: #ffff00;
   grid-area: overview;
   /* padding: 40rem 2rem; */
 }
 
 .research-intro {
-  background-color: red;
   grid-area: research-intro;
   padding: 10rem 0;
 }
 
 .survey-results {
-  background-color: red;
   grid-area: survey-results;
   padding: 10rem 0;
 }
@@ -302,14 +315,29 @@ body {
 
 .wireframe-sketch-1 {
   grid-area: wireframe-sketch-1;
+  display: flex;
+  align-items: center;
+  object-fit: cover;
+  min-width: 50%;
+  min-height: 100%;
 }
 
 .wireframe-sketch-2 {
   grid-area: wireframe-sketch-2;
+  display: flex;
+  align-items: center;
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .wireframe-sketch-3 {
   grid-area: wireframe-sketch-3;
+  display: flex;
+  align-items: center;
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .wireframe-title-2 {
@@ -318,14 +346,23 @@ body {
 
 .wireframe-img-1 {
   grid-area: wireframe-img-1;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
 .wireframe-img-2 {
   grid-area: wireframe-img-2;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
 .wireframe-img-3 {
   grid-area: wireframe-img-3;
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
 }
 
 .wireframe-img-4 {
@@ -346,6 +383,10 @@ body {
 
 .mindmap-img {
   grid-area: mindmap-img;
+}
+
+.logo-sketch-title {
+  grid-area: logo-sketch-title;
 }
 
 .logo-sketch-img {
@@ -418,7 +459,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "overview-text overview-text overview-text"
-    "divider divider divider";
+    "divider-btm divider-btm divider-btm";
   }
   .user-research {
     grid-template-columns: 1fr 1fr 1fr;
@@ -435,11 +476,12 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "opportunity-intro opportunity-intro opportunity-intro"
+    "divider divider divider"
     "user-personas user-personas user-personas"
     "user-persona-1 user-persona-1 user-persona-1"
     "user-persona-2 user-persona-2 user-persona-2"
     "user-persona-3 user-persona-3 user-persona-3"
-    "divider divider divider"
+    "divider-btm divider-btm divider-btm"
     "user-stories user-stories user-stories"
     "key-features key-features key-features";
   }
@@ -460,33 +502,32 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "wireframe-title-1 wireframe-title-1 wireframe-title-1"
-    "wireframe-sketch-1 wireframe-sketch-1 wireframe-sketch-1"
-    "wireframe-sketch-2 wireframe-sketch-2 wireframe-sketch-2"
-    "wireframe-sketch-3 wireframe-sketch-3 wireframe-sketch-3"
+    "wireframe-sketch-1 wireframe-sketch-2 wireframe-sketch-3"
+    "wireframe-sketch-1 wireframe-sketch-2 wireframe-sketch-3"
+    "wireframe-sketch-1 wireframe-sketch-2 wireframe-sketch-3"
     "wireframe-title-2 wireframe-title-2 wireframe-title-2"
-    "wireframe-img-1 wireframe-img-1 wireframe-img-1"
-    "wireframe-img-2 wireframe-img-2 wireframe-img-2"
-    "wireframe-img-3 wireframe-img-3 wireframe-img-3"
-    "wireframe-img-4 wireframe-img-4 wireframe-img-4"
-    "wireframe-img-5 wireframe-img-5 wireframe-img-5"
-    "wireframe-img-6 wireframe-img-6 wireframe-img-6"
+    "wireframe-img-1 wireframe-img-2 wireframe-img-3"
+    "wireframe-img-1 wireframe-img-2 wireframe-img-3"
+    "wireframe-img-1 wireframe-img-2 wireframe-img-3"
+    "wireframe-img-4 wireframe-img-5 wireframe-img-6"
+    "wireframe-img-4 wireframe-img-5 wireframe-img-6"
+    "wireframe-img-4 wireframe-img-5 wireframe-img-6"
   }
   .branding {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    "divider divider divider"
+    "divider-btm divider-btm divider-btm"
     "branding-intro branding-intro branding-intro"
     "mindmap-img mindmap-img mindmap-img"
+    "logo-sketch-title logo-sketch-title logo-sketch-title"
     "logo-sketch-img logo-sketch-img logo-sketch-img";
   }
   .branding-images {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    "moodboard-img-1 moodboard-img-1 moodboard-img-1"
-    "moodboard-img-2 moodboard-img-2 moodboard-img-2"
-    "logo-img-1 logo-img-1 logo-img-1"
-    "logo-img-2 logo-img-2 logo-img-2"
-    "logo-img-3 logo-img-3 logo-img-3";
+    "moodboard-img-1 logo-img-1"
+    "moodboard-img-2 logo-img-2"
+    ". logo-img-3 ";
   }
   .style-guide {
     grid-template-columns: 1fr 1fr 1fr;
