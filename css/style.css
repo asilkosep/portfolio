@@ -676,23 +676,29 @@ ul{
 .persona-img1 {
   grid-area: persona-img1;
   width: 100%;
+  padding: 2rem;
 }
 .persona-img2 {
   grid-area: persona-img2;
   width: 100%;
+  padding: 2rem;
 }
 .persona-img3 {
   grid-area: persona-img3;
   width: 100%;
+  padding: 2rem;
 }
 .persona-title1 {
   grid-area: persona-title1;
+  padding: 2rem;
 }
 .persona-title2 {
   grid-area: persona-title2;
+  padding: 2rem;
 }
 .persona-title3 {
   grid-area: persona-title3;
+  padding: 2rem;
 }
 .persona-quote1 {
   grid-area: persona-quote1;
@@ -705,21 +711,27 @@ ul{
 }
 .frustrations1 {
   grid-area: frustrations1;
+  padding: 2rem;
 }
 .frustrations2 {
   grid-area: frustrations2;
+  padding: 2rem;
 }
 .frustrations3 {
   grid-area: frustrations3;
+  padding: 2rem;
 }
 .goals1 {
   grid-area: goals1;
+  padding: 2rem;
 }
 .goals2 {
   grid-area: goals2;
+  padding: 2rem;
 }
 .goals3 {
   grid-area: goals3;
+  padding: 2rem;
 }
 
 @media (min-width: 30rem) {
