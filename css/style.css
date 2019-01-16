@@ -4,6 +4,46 @@
 
 html {
   font-size: 10px;
+  font-family: futura-pt, sans-serif;
+}
+
+h1{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3rem;
+  padding: 5rem;
+  text-align: center;
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 4.8rem;
+  padding: 5rem;
+  text-align: center;
+}
+
+h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.2rem;
+  padding: 5rem;
+  text-align: center;
+}
+
+p{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 1.5rem;
+}
+
+ul{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 3rem;
+  text-align: center;
 }
 
 body {
@@ -27,31 +67,30 @@ body {
   "branding-images"
   "style-guide"
   "hifi-mockups"
+  "hifi-mockups-2"
+  "preference"
+  "final-mockups"
   ;
   margin: auto;
 
 }
 
 .img-grid, .roles, .deliverables, .specs, .hero-intro, .navbar, .image, .overview-text, .drive, .dropbox, .evernote, .opportunity-intro, .user-personas, .user-persona-1, .user-persona-2, .user-persona-3, .user-stories, .key-features, .user-flows-1, .user-flows-2, .wireframing-intro, {
-  text-align: center;
   background-color: white;
-  padding: 10rem 0;
+  padding: 5rem 0;
 }
 
-.wireframe-title-2, .wireframe-title-1, .wireframe-img-1, .wireframe-img-2, .wireframe-img-3, .wireframe-img-4, .wireframe-img-5, .wireframe-img-6, .branding-intro, .mindmap-img, .logo-sketch-title, .logo-sketch-img, .moodboard-img-1, .moodboard-img-2 {
-  text-align: center;
+.wireframe-title-2, .wireframe-title-1, .branding-intro, .mindmap-img, .logo-sketch-title, .logo-sketch-img, .moodboard-img-1, .moodboard-img-2 {
   background-color: white;
-  padding: 10rem 0;
+  padding: 2rem 0;
 }
 
 .moodboard-img-2, .logo-img-1, .logo-img-2, .logo-img-3, .style-guide-img, .hifi-intro, .hifi-v1 {
-  text-align: center;
   background-color: white;
-  padding: 10rem 0;
+  padding: 2rem 0;
 }
 
-.wireframe-sketch-1, .wireframe-sketch-2, .wireframe-sketch-3 {
-  background-color: green;
+.wireframe-sketch-1, .wireframe-sketch-2, .wireframe-sketch-3, .wireframe-img-1, .wireframe-img-2, .wireframe-img-3, .wireframe-img-4, .wireframe-img-5, .wireframe-img-6{
   padding: 5rem 0;
 }
 
@@ -152,7 +191,6 @@ body {
   "wireframe-img-4"
   "wireframe-img-5"
   "wireframe-img-6";
-  width: 100%;
 }
 
 .branding {
@@ -170,6 +208,7 @@ body {
 
 .branding-images {
   display: grid;
+  grid-gap: 1rem;
   grid-area: branding-images;
   grid-template-areas:
   "moodboard-img-1"
@@ -191,14 +230,47 @@ body {
 .hifi-mockups {
   display: grid;
   grid-area: hifi-mockups;
+  grid-gap: 1rem;
   grid-template-areas:
   "hifi-intro"
-  "hifi-v1";
+  "hifi-v1"
+  "hifi-v2"
+  "revisions"
+  "hifi-3-img1";
+}
+
+.hifi-mockups-2 {
+  display: grid;
+  grid-area: hifi-mockups-2;
+  grid-gap: 1rem;
+  grid-template-areas:
+  "hifi-3-img2"
+  "hifi-3-img3";
+}
+
+.preference {
+  display: grid;
+  grid-area: preference;
+  grid-gap: 1rem;
+}
+
+.final-mockups {
+  display: grid;
+  grid-area: final-mockups;
+  grid-gap: 1rem;
+  grid-template-areas:
+  "final-mockup-1"
+  "final-mockup-2"
+  "final-mockup-3"
+  "final-mockup-4"
+  "final-mockup-5"
+  "final-mockup-6";
 }
 
 .img-grid {
   grid-area: img-grid;
   padding: 3rem 0;
+  width: 100%;
 }
 
 .hero-intro {
@@ -208,38 +280,37 @@ body {
 
 .roles {
   grid-area: roles;
-  padding: 10rem 0;
 }
 
 .deliverables {
   grid-area: deliverables;
-  padding: 10rem 0;
 }
 
 .specs {
   grid-area: specs;
-  padding: 10rem 0;
 }
 
 .img-divider {
   grid-area: divider;
-  padding: 10rem 0;
+  padding: 5rem 0;
+  width: 100%;
 }
 
 .img-divider-btm {
   grid-area: divider-btm;
-  padding: 10rem 0;
+  padding: 5rem 0;
+  width: 100%;
 }
 
 .overview-text {
   text-align: left;
   grid-area: overview-text;
-  padding: 20rem 0;
+  padding: 5rem 0;
 }
 
 .image {
   grid-area: image;
-  /* padding: 20rem 0; */
+  width: 100%;
 }
 
 .overview {
@@ -259,14 +330,20 @@ body {
 
 .drive {
   grid-area: drive;
+  width: 100%;
+  padding: 5rem;
 }
 
 .dropbox {
   grid-area: dropbox;
+  width: 100%;
+  padding: 5rem;
 }
 
 .evernote {
   grid-area: evernote;
+  width: 100%;
+  padding: 5rem;
 }
 
 .opportunity-intro {
@@ -299,10 +376,14 @@ body {
 
 .user-flows-1 {
   grid-area: user-flows-1;
+  width: 100%;
+  padding: 5rem 0;
 }
 
 .user-flows-2 {
   grid-area: user-flows-2;
+  width: 100%;
+  padding: 5rem 0;
 }
 
 .wireframing-intro {
@@ -335,43 +416,42 @@ body {
 
 .wireframe-img-1 {
   grid-area: wireframe-img-1;
-  object-fit: cover;
   width: 100%;
-  max-height: 100%;
 }
 
 .wireframe-img-2 {
   grid-area: wireframe-img-2;
-  object-fit: cover;
   width: 100%;
-  max-height: 100%;
 }
 
 .wireframe-img-3 {
   grid-area: wireframe-img-3;
-  object-fit: cover;
   width: 100%;
-  max-height: 100%;
 }
 
 .wireframe-img-4 {
   grid-area: wireframe-img-4;
+  width: 100%;
 }
 
 .wireframe-img-5 {
   grid-area: wireframe-img-5;
+  width: 100%;
 }
 
 .wireframe-img-6 {
   grid-area: wireframe-img-6;
+  width: 100%;
 }
 
 .branding-intro {
   grid-area: branding-intro;
+  width: 100%;
 }
 
 .mindmap-img {
   grid-area: mindmap-img;
+  width: 100%;
 }
 
 .logo-sketch-title {
@@ -380,30 +460,37 @@ body {
 
 .logo-sketch-img {
   grid-area: logo-sketch-img;
+  width: 100%;
 }
 
 .moodboard-img-1 {
   grid-area: moodboard-img-1;
+  width: 100%;
 }
 
 .moodboard-img-2 {
   grid-area: moodboard-img-2;
+  width: 100%;
 }
 
 .logo-img-1 {
   grid-area: logo-img-1;
+  width: 100%;
 }
 
 .logo-img-2 {
   grid-area: logo-img-2;
+  width: 100%;
 }
 
 .logo-img-3 {
   grid-area: logo-img-3;
+  width: 100%;
 }
 
 .style-guide-img {
   grid-area: style-guide-img;
+  width: 100%;
 }
 
 .hifi-intro {
@@ -412,8 +499,66 @@ body {
 
 .hifi-v1 {
   grid-area: hifi-v1;
+  width: 100%;
 }
 
+.hifi-v2 {
+  grid-area: hifi-v2;
+  width: 100%;
+}
+
+.revisions {
+  grid-area: revisions;
+}
+
+.hifi-3-img1{
+  grid-area: hifi-3-img1;
+  width: 100%;
+}
+
+.hifi-3-img2{
+  grid-area: hifi-3-img2;
+  width: 100%;
+}
+
+.hifi-3-img3{
+  grid-area: hifi-3-img3;
+  width: 100%;
+}
+
+.preference {
+  grid-area: preference;
+}
+
+.final-mockup-1 {
+  grid-area: final-mockup-1;
+  width: 100%;
+}
+
+.final-mockup-2 {
+  grid-area: final-mockup-2;
+  width: 100%;
+}
+
+.final-mockup-3 {
+  grid-area: final-mockup-3;
+  width: 100%;
+}
+
+.final-mockup-4 {
+  grid-area: final-mockup-4;
+  width: 100%;
+}
+
+.final-mockup-5 {
+  grid-area: final-mockup-5;
+  width: 100%;
+}
+
+.final-mockup-6 {
+  grid-area: final-mockup-6;
+  width: 100%;
+}
 
 @media (min-width: 30rem) {
   body {
@@ -432,7 +577,10 @@ body {
     ". branding ."
     "branding-images branding-images branding-images"
     ". style-guide ."
-    ". hifi-mockups .";
+    ". hifi-mockups ."
+    "hifi-mockups-2 hifi-mockups-2 hifi-mockups-2"
+    ". preference ."
+    "final-mockups final-mockups final-mockups";
     margin: 1%;
   }
   .hero {
@@ -496,11 +644,7 @@ body {
     "wireframe-sketch-1 wireframe-sketch-2 wireframe-sketch-3"
     "wireframe-title-2 wireframe-title-2 wireframe-title-2"
     "wireframe-img-1 wireframe-img-2 wireframe-img-3"
-    "wireframe-img-1 wireframe-img-2 wireframe-img-3"
-    "wireframe-img-1 wireframe-img-2 wireframe-img-3"
-    "wireframe-img-4 wireframe-img-5 wireframe-img-6"
-    "wireframe-img-4 wireframe-img-5 wireframe-img-6"
-    "wireframe-img-4 wireframe-img-5 wireframe-img-6"
+    "wireframe-img-4 wireframe-img-5 wireframe-img-6";
   }
   .branding {
     grid-template-columns: 1fr 1fr 1fr;
@@ -528,6 +672,25 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "hifi-intro hifi-intro hifi-intro"
-    "hifi-v1 hifi-v1 hifi-v1";
+    "hifi-v1 hifi-v1 hifi-v1"
+    "hifi-v2 hifi-v2 hifi-v2"
+    "revisions revisions revisions"
+    "hifi-3-img1 hifi-3-img1 hifi-3-img1";
+  }
+  .hifi-mockups-2 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "hifi-3-img2 hifi-3-img3"
+    "hifi-3-img2 hifi-3-img3";
+  }
+  .preference {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .final-mockups {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "final-mockup-1 final-mockup-2"
+    "final-mockup-3 final-mockup-4"
+    "final-mockup-5 final-mockup-6";
   }
 }
