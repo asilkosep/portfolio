@@ -9,9 +9,9 @@ html {
 
 h1{
   font-style: normal;
-  font-weight: 600;
-  font-size: 3rem;
-  padding: 5rem;
+  font-weight: 400;
+  font-size: 8rem;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -19,7 +19,7 @@ h2 {
   font-style: normal;
   font-weight: 600;
   font-size: 4.8rem;
-  padding: 5rem;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -27,7 +27,7 @@ h3 {
   font-style: normal;
   font-weight: 600;
   font-size: 3.2rem;
-  padding: 5rem;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -35,14 +35,14 @@ p{
   font-style: normal;
   font-weight: 400;
   font-size: 2.2rem;
-  line-height: 1.5rem;
+  line-height: 1.8rem;
 }
 
 ul{
   font-style: normal;
   font-weight: 400;
   font-size: 2.2rem;
-  line-height: 3rem;
+  line-height: 1.8rem;
   text-align: center;
 }
 
@@ -50,6 +50,7 @@ body {
   background-image: url("../css/images/atmos_casestudy_hero.png");
   background-repeat: no-repeat;
   background-position: top;
+  width: 100%;
   /* background-size: auto; */
   /* background-attachment: fixed; */
   display: grid;
@@ -70,14 +71,14 @@ body {
   "hifi-mockups-2"
   "preference"
   "final-mockups"
+  "reflections"
   ;
-  margin: auto;
+  /* margin: auto; */
 
 }
 
-.img-grid, .roles, .deliverables, .specs, .hero-intro, .navbar, .image, .overview-text, .drive, .dropbox, .evernote, .opportunity-intro, .user-personas, .user-persona-1, .user-persona-2, .user-persona-3, .user-stories, .key-features, .user-flows-1, .user-flows-2, .wireframing-intro, {
-  background-color: white;
-  padding: 5rem 0;
+.roles, .deliverables, .specs, .navbar, .overview-text, .drive, .dropbox, .evernote, .opportunity-intro, .user-personas, .user-persona-1, .user-persona-2, .user-persona-3, .user-stories, .key-features, .user-flows-1, .user-flows-2, .wireframing-intro, .revisions {
+  padding: 2rem 0;
 }
 
 .wireframe-title-2, .wireframe-title-1, .branding-intro, .mindmap-img, .logo-sketch-title, .logo-sketch-img, .moodboard-img-1, .moodboard-img-2 {
@@ -91,30 +92,24 @@ body {
 }
 
 .wireframe-sketch-1, .wireframe-sketch-2, .wireframe-sketch-3, .wireframe-img-1, .wireframe-img-2, .wireframe-img-3, .wireframe-img-4, .wireframe-img-5, .wireframe-img-6{
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 
-.navbar {
-  grid-area: navbar;
-  padding: 3rem;
-}
 
 .hero {
-  background-color: #ffffff ;
   display: grid;
   grid-area: hero;
   grid-template-areas:
-    "img-grid "
+    "cloud-logo"
     "intro"
     "roles"
     "deliverables"
     "specs"
-    "image"
+    "main-mockup"
     "divider";
 }
 
 .overview {
-  background-color: #ffffff ;
   display: grid;
   grid-area: hero;
   grid-template-areas:
@@ -230,7 +225,7 @@ body {
 .hifi-mockups {
   display: grid;
   grid-area: hifi-mockups;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   grid-template-areas:
   "hifi-intro"
   "hifi-v1"
@@ -242,7 +237,7 @@ body {
 .hifi-mockups-2 {
   display: grid;
   grid-area: hifi-mockups-2;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   grid-template-areas:
   "hifi-3-img2"
   "hifi-3-img3";
@@ -251,35 +246,58 @@ body {
 .preference {
   display: grid;
   grid-area: preference;
-  grid-gap: 1rem;
+  grid-template-areas:
+  "preference-testing";
 }
 
 .final-mockups {
   display: grid;
   grid-area: final-mockups;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   grid-template-areas:
   "final-mockup-1"
   "final-mockup-2"
   "final-mockup-3"
   "final-mockup-4"
   "final-mockup-5"
-  "final-mockup-6";
+  "final-mockup-6"
+  "usability-testing"
+  "testing-img1"
+  "testing-img2"
+  "testing-img3"
+  "testing-text1"
+  "testing-text2"
+  "testing-text3"
+  ;
 }
 
-.img-grid {
-  grid-area: img-grid;
-  padding: 3rem 0;
+.reflections {
+  display: grid;
+  grid-area: reflections;
+  grid-template-areas:
+  "reflections-text";
+}
+
+.navbar {
+  grid-area: navbar;
+  padding: 3rem;
+  background-color: transparent;
+}
+
+.cloud-logo {
+  grid-area: cloud-logo;
   width: 100%;
+  background-color: transparent;
 }
 
 .hero-intro {
   grid-area: intro;
-  padding: 5rem 0;
+  background-color: transparent;
 }
 
 .roles {
   grid-area: roles;
+  background-color: transparent;
 }
 
 .deliverables {
@@ -308,8 +326,9 @@ body {
   padding: 5rem 0;
 }
 
-.image {
-  grid-area: image;
+.main-mockup {
+  grid-area: main-mockup;
+  padding: 10rem 0;
   width: 100%;
 }
 
@@ -377,13 +396,13 @@ body {
 .user-flows-1 {
   grid-area: user-flows-1;
   width: 100%;
-  padding: 5rem 0;
+  padding: 10rem;
 }
 
 .user-flows-2 {
   grid-area: user-flows-2;
   width: 100%;
-  padding: 5rem 0;
+  padding: 10rem;
 }
 
 .wireframing-intro {
@@ -530,6 +549,10 @@ body {
   grid-area: preference;
 }
 
+.preference-testing{
+  grid-area: preference-testing;
+}
+
 .final-mockup-1 {
   grid-area: final-mockup-1;
   width: 100%;
@@ -560,6 +583,46 @@ body {
   width: 100%;
 }
 
+.usability-testing {
+  grid-area: usability-testing;
+}
+
+.testing-img1 {
+  grid-area: testing-img1;
+  width: 100%;
+}
+
+.testing-img2 {
+  grid-area: testing-img2;
+  width: 100%;
+}
+
+.testing-img3 {
+  grid-area: testing-img3;
+  width: 100%;
+}
+
+.testing-text1 {
+  grid-area: testing-text1;
+}
+
+.testing-text2 {
+  grid-area: testing-text2;
+}
+
+.testing-text3 {
+  grid-area: testing-text3;
+}
+
+.reflections {
+  grid-area: reflections;
+}
+
+.reflections-text {
+  grid-area: reflections-text;
+}
+
+
 @media (min-width: 30rem) {
   body {
     background-image: url("../css/images/atmos_casestudy_hero.png");
@@ -580,16 +643,17 @@ body {
     ". hifi-mockups ."
     "hifi-mockups-2 hifi-mockups-2 hifi-mockups-2"
     ". preference ."
-    "final-mockups final-mockups final-mockups";
+    "final-mockups final-mockups final-mockups"
+    ". reflections .";
     margin: 1%;
   }
   .hero {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    ". img-grid ."
+    ". cloud-logo ."
     "intro intro intro"
     "roles deliverables specs"
-    "image image image"
+    "main-mockup main-mockup main-mockup"
     "divider divider divider";
   }
   .overview {
@@ -685,12 +749,25 @@ body {
   }
   .preference {
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "preference-testing preference-testing preference-testing";
   }
   .final-mockups {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "final-mockup-1 final-mockup-2"
     "final-mockup-3 final-mockup-4"
-    "final-mockup-5 final-mockup-6";
+    "final-mockup-5 final-mockup-6"
+    "usability-testing usability-testing"
+    "testing-img1 testing-text1"
+    "testing-img2 testing-text2"
+    "testing-img3 testing-text3"
+    ;
+  }
+  .reflections {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-area: reflections;
+    grid-template-areas:
+    "reflections-text reflections-text reflections-text";
   }
 }
