@@ -149,9 +149,10 @@ ul{
   grid-template-areas:
     "opportunity-intro"
     "user-personas"
-    "user-persona-1"
+    "user-persona-grid"
+    /* "user-persona-1"
     "user-persona-2"
-    "user-persona-3"
+    "user-persona-3" */
     "user-stories"
     "key-features"
     "user-flows-1"
@@ -284,6 +285,29 @@ ul{
   grid-area: reflections;
   grid-template-areas:
   "reflections-text";
+}
+
+.user-persona-grid {
+  display: grid;
+  grid-area: user-persona-grid;
+  grid-template-areas:
+  "persona-img1"
+  "persona-title1"
+  "persona-quote1"
+  "frustrations1"
+  "goals1"
+
+  "persona-img2"
+  "persona-title2"
+  "persona-quote2"
+  "frustrations2"
+  "goals2"
+
+  "persona-img3"
+  "persona-title3"
+  "persona-quote3"
+  "frustrations3"
+  "goals3";
 }
 
 .navbar {
@@ -649,6 +673,55 @@ ul{
   grid-area: home-bottom-text;
 }
 
+.persona-img1 {
+  grid-area: persona-img1;
+  width: 100%;
+}
+.persona-img2 {
+  grid-area: persona-img2;
+  width: 100%;
+}
+.persona-img3 {
+  grid-area: persona-img3;
+  width: 100%;
+}
+.persona-title1 {
+  grid-area: persona-title1;
+}
+.persona-title2 {
+  grid-area: persona-title2;
+}
+.persona-title3 {
+  grid-area: persona-title3;
+}
+.persona-quote1 {
+  grid-area: persona-quote1;
+}
+.persona-quote2 {
+  grid-area: persona-quote2;
+}
+.persona-quote3 {
+  grid-area: persona-quote3;
+}
+.frustrations1 {
+  grid-area: frustrations1;
+}
+.frustrations2 {
+  grid-area: frustrations2;
+}
+.frustrations3 {
+  grid-area: frustrations3;
+}
+.goals1 {
+  grid-area: goals1;
+}
+.goals2 {
+  grid-area: goals2;
+}
+.goals3 {
+  grid-area: goals3;
+}
+
 @media (min-width: 30rem) {
   .atmos-container {
     background-image: url("../css/images/atmos_casestudy_hero.png");
@@ -713,9 +786,10 @@ ul{
     "opportunity-intro opportunity-intro opportunity-intro"
     "divider divider divider"
     "user-personas user-personas user-personas"
-    "user-persona-1 user-persona-1 user-persona-1"
+    "user-persona-grid user-persona-grid user-persona-grid"
+    /* "user-persona-1 user-persona-1 user-persona-1"
     "user-persona-2 user-persona-2 user-persona-2"
-    "user-persona-3 user-persona-3 user-persona-3"
+    "user-persona-3 user-persona-3 user-persona-3" */
     "divider-btm divider-btm divider-btm"
     "user-stories user-stories user-stories"
     "key-features key-features key-features";
@@ -802,5 +876,20 @@ ul{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "reflections-text reflections-text reflections-text";
+  }
+  .user-persona-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "persona-img1 persona-title1"
+    "persona-quote1 persona-quote1"
+    "frustrations1 goals1"
+
+    "persona-img2 persona-title2"
+    "persona-quote2 persona-quote2"
+    "frustrations2 goals2"
+
+    "persona-img3 persona-title3"
+    "persona-quote3 persona-quote3"
+    "frustrations3 goals3"
   }
 }
