@@ -4,7 +4,7 @@
 
 html {
   font-size: 10px;
-  font-family: futura-pt, sans-serif;
+  font-family: 'Gothic A1', sans-serif;
 }
 
 h1{
@@ -35,7 +35,7 @@ p{
   font-style: normal;
   font-weight: 400;
   font-size: 2.2rem;
-  line-height: 1.8rem;
+  line-height: 2.5rem;
 }
 
 ul{
@@ -333,7 +333,7 @@ ul{
   display: grid;
   grid-area: bio-hero;
   grid-template-areas:
-  "hero-intro";
+  "bio-hero-intro";
 }
 
 .navbar {
@@ -760,8 +760,8 @@ ul{
   padding: 2rem;
 }
 
-.hero-intro {
-  grid-area: hero-intro;
+.bio-hero-intro {
+  grid-area: bio-hero-intro;
 }
 .bio-img {
   grid-area: bio-img;
@@ -975,6 +975,6 @@ ul{
   .bio-hero {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    "hero-intro hero-intro hero-intro";
+    "bio-hero-intro bio-hero-intro bio-hero-intro";
   }
 }
