@@ -10,15 +10,15 @@ html {
 h1{
   font-style: normal;
   font-weight: 400;
-  font-size: 8rem;
+  font-size: 6rem;
   padding: 2rem;
   text-align: center;
 }
 
 h2 {
   font-style: normal;
-  font-weight: 600;
-  font-size: 4.8rem;
+  font-weight: 300;
+  font-size: 3rem;
   padding: 2rem;
   text-align: center;
 }
@@ -46,7 +46,7 @@ ul{
   text-align: center;
 }
 
-body {
+.atmos-container {
   background-image: url("../css/images/atmos_casestudy_hero.png");
   background-repeat: no-repeat;
   background-position: top;
@@ -74,7 +74,15 @@ body {
   "reflections"
   ;
   /* margin: auto; */
+}
 
+.home-container {
+  display: grid;
+  grid-template-areas:
+  "home-navbar"
+  "title-section"
+  "home-hero"
+  "home-bottom-text";
 }
 
 .roles, .deliverables, .specs, .navbar, .overview-text, .drive, .dropbox, .evernote, .opportunity-intro, .user-personas, .user-persona-1, .user-persona-2, .user-persona-3, .user-stories, .key-features, .user-flows-1, .user-flows-2, .wireframing-intro, .revisions {
@@ -622,9 +630,27 @@ body {
   grid-area: reflections-text;
 }
 
+.home-navbar {
+  grid-area: home-navbar;
+  padding: 2rem;
+}
+
+.home-hero {
+  grid-area: home-hero;
+  width: 100%;
+}
+
+.title-section {
+  grid-area: title-section;
+  padding-top: 10rem;
+}
+
+.home-bottom-text {
+  grid-area: home-bottom-text;
+}
 
 @media (min-width: 30rem) {
-  body {
+  .atmos-container {
     background-image: url("../css/images/atmos_casestudy_hero.png");
     grid-template-columns: 3fr 6fr 3fr;
     grid-template-areas:
@@ -645,7 +671,15 @@ body {
     ". preference ."
     "final-mockups final-mockups final-mockups"
     ". reflections .";
-    margin: 1%;
+    /* margin: 1%; */
+  }
+  .home-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "home-navbar home-navbar"
+    "title-section ."
+    "home-hero home-hero"
+    ". home-bottom-text";
   }
   .hero {
     grid-template-columns: 1fr 1fr 1fr;
@@ -766,7 +800,6 @@ body {
   }
   .reflections {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-area: reflections;
     grid-template-areas:
     "reflections-text reflections-text reflections-text";
   }
