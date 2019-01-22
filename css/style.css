@@ -17,7 +17,7 @@ h1{
   font-family: 'Open Sans', sans-serif;
 }
 
-/* titles */
+/* section titles */
 h2 {
   font-style: normal;
   font-weight: 300;
@@ -27,11 +27,12 @@ h2 {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* subtitles */
+/* sub section titles */
 h3 {
+  color: #008FC4;
   font-style: normal;
   font-weight: 300;
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   padding: 2rem 0;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
@@ -40,10 +41,10 @@ h3 {
 /* bolded subtitles */
 h4 {
   font-style: normal;
-  font-weight: 700;
-  font-size: 2.2rem;
+  font-weight: 900;
+  font-size: 1.8rem;
   padding: 2rem 0;
-  text-align: center;
+  /* text-align: center; */
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -71,8 +72,26 @@ ul{
   font-weight: 300;
   font-size: 1.6rem;
   line-height: 2.5rem;
-  text-align: center;
-  padding: 2rem;
+  /* text-align: center; */
+  padding: 2rem 0;
+}
+
+.home-navbar{
+    /* border:1px solid #ccc; */
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    /* text-align:center; */
+}
+.home-navbar li{
+    display:inline;
+}
+.home-navbar a{
+    display:inline-block;
+    padding:10px;
+    color: black;
+    text-decoration: none;
 }
 
 .atmos-container {
@@ -84,7 +103,7 @@ ul{
   /* background-attachment: fixed; */
   display: grid;
   grid-template-areas:
-  "navbar"
+  "home-navbar"
   "hero"
   "details"
   "overview"
@@ -99,7 +118,7 @@ ul{
   "style-guide"
   "hifi-mockups"
   "hifi-mockups-2"
-  "preference"
+  s"preference"
   "final-mockups"
   "reflections"
   ;
@@ -112,43 +131,28 @@ ul{
   "home-navbar"
   "title-section"
   "home-hero"
-  "home-bottom-text";
+  "home-bottom-text"
+  "btm-nav";
 }
 
 .bio-container {
   display: grid;
   grid-template-areas:
+  "home-navbar"
   "bio-hero"
   "bio-hero-img"
   "bio-body"
+  "btm-nav"
   ;
 }
-/*
-.roles, .deliverables, .specs, .navbar, .overview-text, .drive, .dropbox, .evernote, .opportunity-intro, .user-personas, .user-persona-1, .user-persona-2, .user-persona-3, .user-stories, .key-features, .user-flows-1, .user-flows-2, .wireframing-intro, .revisions {
-  padding: 2rem 0;
-} */
-
-.wireframe-title-2, .wireframe-title-1, .branding-intro, .mindmap-img, .logo-sketch-title, .logo-sketch-img {
-  background-color: white;
-  padding: 2rem 0;
-}
-
-.style-guide-img, .hifi-intro, .hifi-v1 {
-  background-color: white;
-  padding: 2rem 0;
-}
-
-.wireframe-sketch-1, .wireframe-sketch-2, .wireframe-sketch-3, .wireframe-img-1, .wireframe-img-2, .wireframe-img-3, .wireframe-img-4, .wireframe-img-5, .wireframe-img-6{
-  padding: 2rem 0;
-}
-
 
 .hero {
   display: grid;
   grid-area: hero;
   grid-template-areas:
     "cloud-logo"
-    "intro";
+    "intro"
+    "btn-prototype";
 }
 .details {
   display: grid;
@@ -195,9 +199,6 @@ ul{
     "opportunity-intro"
     "user-personas"
     "user-persona-grid"
-    /* "user-persona-1"
-    "user-persona-2"
-    "user-persona-3" */
     "user-stories"
     "key-features"
     "user-flows-1"
@@ -332,10 +333,12 @@ ul{
 }
 
 .user-persona-grid {
+  border:1px solid #ccc;
+  border-width: 1px 0;
   display: grid;
   grid-area: user-persona-grid;
   grid-template-areas:
-  "persona-img1"
+  /* "persona-img1"
   "persona-title1"
   "persona-quote1"
   "frustrations1"
@@ -345,7 +348,7 @@ ul{
   "persona-title2"
   "persona-quote2"
   "frustrations2"
-  "goals2"
+  "goals2" */
 
   "persona-img3"
   "persona-title3"
@@ -405,14 +408,20 @@ ul{
 
 .cloud-logo {
   grid-area: cloud-logo;
-  width: 100%;
+  width: 150px;
   background-color: transparent;
-  padding: 0 10rem 3rem 0 ;
+  padding: 5rem 0 2rem ;
 }
 
 .hero-intro {
   grid-area: intro;
   background-color: transparent;
+}
+
+.btn-prototype {
+  grid-area: btn-prototype;
+  width: 250px;
+  padding: 1rem 10rem 3rem 0 ;
 }
 
 .description {
@@ -424,14 +433,17 @@ ul{
 .roles {
   grid-area: roles;
   background-color: transparent;
+  padding: 1rem;
 }
 
 .deliverables {
   grid-area: deliverables;
+  padding: 1rem;
 }
 
 .specs {
   grid-area: specs;
+  padding: 1rem;
 }
 
 .img-divider {
@@ -454,7 +466,7 @@ ul{
 
 .main-mockup {
   grid-area: main-mockup;
-  padding: 10rem 0;
+  padding: 1rem 0;
   width: 100%;
 }
 
@@ -465,7 +477,6 @@ ul{
 
 .research-intro {
   grid-area: research-intro;
-  padding: 10rem 0;
 }
 
 .survey-results {
@@ -820,7 +831,7 @@ ul{
 
 .home-navbar {
   grid-area: home-navbar;
-  padding: 2rem;
+  /* padding: 0 2rem 0 0 ; */
 }
 
 .home-hero {
@@ -903,35 +914,40 @@ ul{
 }
 
 .btm-nav-icons {
-  /* align-self: center;
-  justify-self: center; */
+  align-self: center;
+  justify-self: center;
   grid-area: btm-nav-icons;
   padding: 1rem 0;
 }
 
 .btmnav-gmail{
   grid-area: btmnav-gmail;
-  width: 15%;
+  /* width: 15%; */
+  width: 7rem;
   padding: 2rem;
 }
 .btmnav-behance{
   grid-area: btmnav-behance;
-  width: 15%;
+  /* width: 15%; */
+  width: 7rem;
   padding: 2rem;
 }
 .btmnav-linkedin{
   grid-area: btmnav-linkedin;
-  width: 15%;
+  /* width: 15%; */
+  width: 7rem;
   padding: 2rem;
 }
 .btmnav-instagram{
   grid-area: btmnav-instagram;
-  width: 15%;
+  /* width: 15%; */
+  width: 7rem;
   padding: 2rem;
 }
 .btmnav-pinterest{
   grid-area: btmnav-pinterest;
-  width: 15%;
+  /* width: 15%; */
+  width: 7rem;
   padding: 2rem;
 }
 
@@ -941,7 +957,7 @@ ul{
     background-image: url("../css/images/atmos_herocloud.png");
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
-    ". navbar navbar . ."
+    ". home-navbar home-navbar . ."
     ". hero hero . ."
     ". . details . ."
     ". . overview . ."
@@ -963,17 +979,18 @@ ul{
     /* margin: 1%; */
   }
   .home-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 5fr 5fr 1fr;
     grid-template-areas:
-    ". title-section"
-    ". home-navbar"
-    "home-hero home-hero"
-    ". home-bottom-text"
-    "btm-nav btm-nav";
+    ". home-navbar . ."
+    ". title-section . ."
+    "home-hero home-hero home-hero home-hero"
+    ". . home-bottom-text ."
+    "btm-nav btm-nav btm-nav btm-nav";
   }
   .bio-container {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
+    ". home-navbar home-navbar . ."
     ". bio-hero bio-hero . ."
     "bio-hero-img bio-hero-img bio-hero-img bio-hero-img bio-hero-img"
     ". . bio-body . ."
@@ -983,15 +1000,16 @@ ul{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "cloud-logo . ."
-    "intro intro intro";
+    "intro intro intro"
+    "btn-prototype . .";
   }
 
   .details {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "description description description"
-    "roles deliverables specs"
     "main-mockup main-mockup main-mockup"
+    "roles deliverables specs"
     "divider divider divider";
 
   }
@@ -1019,9 +1037,6 @@ ul{
     "divider divider divider"
     "user-personas user-personas user-personas"
     "user-persona-grid user-persona-grid user-persona-grid"
-    /* "user-persona-1 user-persona-1 user-persona-1"
-    "user-persona-2 user-persona-2 user-persona-2"
-    "user-persona-3 user-persona-3 user-persona-3" */
     "divider-btm divider-btm divider-btm"
     "user-stories user-stories user-stories"
     "key-features key-features key-features";
@@ -1112,13 +1127,13 @@ ul{
   .user-persona-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    "persona-img1 persona-title1"
+    /* "persona-img1 persona-title1"
     "persona-quote1 persona-quote1"
     "frustrations1 goals1"
 
     "persona-img2 persona-title2"
     "persona-quote2 persona-quote2"
-    "frustrations2 goals2"
+    "frustrations2 goals2" */
 
     "persona-img3 persona-title3"
     "persona-quote3 persona-quote3"
@@ -1150,6 +1165,6 @@ ul{
   .btm-nav {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    ". btm-nav-icons .";
+    "btm-nav-icons btm-nav-icons btm-nav-icons";
   }
 }
