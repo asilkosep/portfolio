@@ -106,8 +106,10 @@ ul{
   "home-navbar"
   "hero"
   "details"
+  "specifications"
   "overview"
   "user-research"
+  "survey-results"
   "comp-analysis"
   "opportunity"
   "user-flows"
@@ -115,7 +117,6 @@ ul{
   "wireframing-imgs"
   "branding"
   "branding-images"
-  "style-guide"
   "hifi-mockups"
   "hifi-mockups-2"
   s"preference"
@@ -159,11 +160,29 @@ ul{
   grid-area: details;
   grid-template-areas:
     "description"
-    "roles"
-    "deliverables"
-    "specs"
-    "main-mockup"
-    "divider";
+    "main-mockup";
+}
+
+.specifications {
+  background-image: url("../css/images/roles_bgshape.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* background-size: auto; */
+  /* background-attachment: fixed; */
+  display: grid;
+  grid-area: specifications;
+  grid-template-areas:
+    "lists"
+}
+
+.lists{
+  display: grid;
+  grid-area: lists;
+  padding: 30rem 0 30rem;
+  grid-template-areas:
+  "roles"
+  "deliverables"
+  "specs";
 }
 
 .overview {
@@ -179,8 +198,18 @@ ul{
   display: grid;
   grid-area: user-research;
   grid-template-areas:
-    "research-intro"
-    "survey-results";
+    "research-intro";
+}
+
+.survey-results {
+  display: grid;
+  grid-area: survey-results;
+  grid-template-areas:
+    "survey-1"
+    "survey-2"
+    "survey-3"
+    "survey-4"
+    "comp-anal-title";
 }
 
 .comp-analysis {
@@ -249,11 +278,7 @@ ul{
   grid-area: branding;
   grid-template-areas:
   "divider"
-  "branding-intro"
-  "mindmap-img"
-  "logo-sketch-title"
-  "logo-sketch-img"
-  "divider-btm";
+  "branding-intro";
 }
 
 .branding-images {
@@ -261,11 +286,10 @@ ul{
   grid-gap: 1rem;
   grid-area: branding-images;
   grid-template-areas:
+  "mindmap-img"
   "moodboard-img-1"
-  "moodboard-img-2"
-  "logo-img-1"
-  "logo-img-2"
-  "logo-img-3";
+  "logo-sketch-img"
+  "logo-img-1";
 }
 
 .style-guide {
@@ -479,9 +503,32 @@ ul{
   grid-area: research-intro;
 }
 
-.survey-results {
-  grid-area: survey-results;
-  padding: 10rem 0;
+.survey-1{
+  grid-area: survey-1;
+  width: 100%;
+  padding: 2rem;
+}
+
+.survey-2{
+  grid-area: survey-2;
+  width: 100%;
+  padding: 2rem;
+}
+
+.survey-3{
+  grid-area: survey-3;
+  width: 100%;
+  padding: 2rem;
+}
+
+.survey-4{
+  grid-area: survey-4;
+  width: 100%;
+  padding: 2rem;
+}
+
+.comp-anal-title {
+  grid-area: comp-anal-title;
 }
 
 .drive {
@@ -825,6 +872,10 @@ ul{
   grid-area: goals3;
   padding: 2rem;
 }
+.roles_bgshape {
+  grid-area: roles_bgshape;
+  width: 100%;
+}
 
 
 /* home page */
@@ -960,8 +1011,10 @@ ul{
     ". home-navbar home-navbar . ."
     ". hero hero . ."
     ". . details . ."
+    "specifications specifications specifications specifications specifications"
     ". . overview . ."
     ". . user-research . ."
+    ". survey-results survey-results survey-results ."
     ". comp-analysis comp-analysis comp-analysis ."
     ". . opportunity . ."
     ". user-flows user-flows user-flows ."
@@ -1009,9 +1062,17 @@ ul{
     grid-template-areas:
     "description description description"
     "main-mockup main-mockup main-mockup"
-    "roles deliverables specs"
-    "divider divider divider";
-
+  }
+  .specifications {
+    background-image: url("../css/images/roles_bgshape.png");
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+      ". . lists . .";
+  }
+  .lists{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "roles deliverables specs";
   }
   .overview {
     grid-template-columns: 1fr 1fr 1fr;
@@ -1025,10 +1086,16 @@ ul{
     "research-intro research-intro research-intro"
     "survey-results survey-results survey-results" ;
   }
+  .survey-results {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "survey-1 survey-2 survey-3 survey-4"
+    "comp-anal-title comp-anal-title comp-anal-title comp-anal-title ";
+  }
   .comp-analysis{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    "drive dropbox evernote" ;
+    "drive dropbox evernote";
   }
   .opportunity {
     grid-template-columns: 1fr 1fr 1fr;
@@ -1068,18 +1135,13 @@ ul{
   .branding {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    "divider-btm divider-btm divider-btm"
-    "branding-intro branding-intro branding-intro"
-    "mindmap-img mindmap-img mindmap-img"
-    "logo-sketch-title logo-sketch-title logo-sketch-title"
-    "logo-sketch-img logo-sketch-img logo-sketch-img";
+    "branding-intro branding-intro branding-intro";
   }
   .branding-images {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    "moodboard-img-1 logo-img-1"
-    "moodboard-img-2 logo-img-2"
-    ". logo-img-3 ";
+    "mindmap-img logo-sketch-img"
+    "moodboard-img-1 logo-img-1";
   }
   .style-guide {
     grid-template-columns: 1fr 1fr 1fr;
