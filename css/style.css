@@ -116,13 +116,17 @@ ul{
   "wireframing"
   "wireframing-imgs"
   "branding"
+  "branding-sketch-title"
   "branding-images"
+  "branding-moodboard-title"
+  "branding-moodboard"
   "hifi-mockups"
+  "hifi-images"
+  "revisions-text"
   "hifi-mockups-2"
-  s"preference"
+  "preference"
   "final-mockups"
-  "reflections"
-  ;
+  "reflections" ;
   /* margin: auto; */
 }
 
@@ -230,11 +234,25 @@ ul{
     "user-persona-grid"
     "user-stories"
     "key-features"
-    "user-flows-1"
-    "user-flows-2"
-    "divider"
-    "divider-btm";
+    "features-icon1"
+    "features-text1"
+    "features-icon2"
+    "features-text2"
+    "features-icon3"
+    "features-text3"
+    "features-icon4"
+    "features-text4"
+    "features-icon5"
+    "features-text5";
 }
+
+/* .feature1 {
+  display: grid;
+  grid-area: key-features;
+  grid-template-areas:
+    "features-icon1"
+    "features-text1";
+} */
 
 .user-flows {
   display: grid;
@@ -277,8 +295,12 @@ ul{
   grid-gap: 1rem;
   grid-area: branding;
   grid-template-areas:
-  "divider"
   "branding-intro";
+}
+
+.branding-sketch-title {
+  display: grid;
+  grid-area: branding-sketch-title;
 }
 
 .branding-images {
@@ -287,8 +309,18 @@ ul{
   grid-area: branding-images;
   grid-template-areas:
   "mindmap-img"
+  "logo-sketch-img";
+}
+.branding-moodboard-title{
+  display: grid;
+  grid-area: branding-moodboard-title;
+}
+
+.branding-moodboard {
+  display: grid;
+  grid-area: branding-moodboard;
+  grid-template-areas:
   "moodboard-img-1"
-  "logo-sketch-img"
   "logo-img-1";
 }
 
@@ -306,9 +338,21 @@ ul{
   grid-area: hifi-mockups;
   grid-gap: 2rem;
   grid-template-areas:
-  "hifi-intro"
+  "hifi-intro";
+}
+
+.hifi-images {
+  display: grid;
+  grid-area: hifi-images;
+  grid-template-areas:
   "hifi-v1"
-  "hifi-v2"
+  "hifi-v2";
+}
+
+.revisions-text {
+  display: grid;
+  grid-area: revisions-text;
+  grid-template-areas:
   "revisions"
   "hifi-3-img1";
 }
@@ -575,6 +619,71 @@ ul{
 
 .key-features {
   grid-area: key-features;
+}
+
+.features-icon1{
+  grid-area: features-icon1;
+  padding: 5rem;
+  width:100%;
+}
+
+.features-text1{
+  grid-area: features-text1;
+  align-self: left;
+  justify-self: left;
+  padding: 5rem;
+}
+
+.features-icon2{
+  grid-area: features-icon2;
+  padding: 5rem;
+  width:100%;
+}
+
+.features-text2{
+  grid-area: features-text2;
+  align-self: left;
+  justify-self: left;
+  padding: 5rem;
+}
+
+.features-icon3{
+  grid-area: features-icon3;
+  padding: 5rem;
+  width:100%;
+}
+
+.features-text3{
+  grid-area: features-text3;
+  align-self: left;
+  justify-self: left;
+  padding: 5rem;
+}
+
+.features-icon4{
+  grid-area: features-icon4;
+  padding: 5rem;
+  width:100%;
+}
+
+.features-text4{
+  grid-area: features-text4;
+  align-self: left;
+  justify-self: left;
+  padding: 5rem;
+}
+
+.features-icon5{
+  grid-area: features-icon5;
+  padding: 5rem;
+  width:100%;
+}
+
+.features-text5{
+  grid-area: features-text5;
+  align-self: left;
+  justify-self: left;
+  padding: 5rem;
 }
 
 .user-flows-1 {
@@ -1021,9 +1130,14 @@ ul{
     ". . wireframing . ."
     ". wireframing-imgs wireframing-imgs wireframing-imgs . "
     ". . branding . ."
+    " . branding-sketch-title branding-sketch-title branding-sketch-title ."
     ". branding-images branding-images branding-images ."
+    " . branding-moodboard-title branding-moodboard-title branding-moodboard-title ."
+    " . branding-moodboard branding-moodboard branding-moodboard ."
     ". . style-guide . ."
     ". . hifi-mockups . ."
+    " . hifi-images hifi-images hifi-images ."
+    " . . revisions-text . ."
     ". hifi-mockups-2 hifi-mockups-2 hifi-mockups-2 ."
     ". . preference . ."
     ". final-mockups final-mockups final-mockups ."
@@ -1097,16 +1211,19 @@ ul{
     grid-template-areas:
     "drive dropbox evernote";
   }
-  .opportunity {
+  .opportunity{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "opportunity-intro opportunity-intro opportunity-intro"
-    "divider divider divider"
     "user-personas user-personas user-personas"
     "user-persona-grid user-persona-grid user-persona-grid"
-    "divider-btm divider-btm divider-btm"
     "user-stories user-stories user-stories"
-    "key-features key-features key-features";
+    "key-features key-features key-features"
+    "features-icon1 features-text1 features-text1"
+    "features-icon2 features-text2 features-text2"
+    "features-icon3 features-text3 features-text3"
+    "features-icon4 features-text4 features-text4"
+    "features-icon5 features-text5 features-text5";
   }
   .user-flows {
     grid-template-columns: 1fr 1fr 1fr;
@@ -1126,8 +1243,6 @@ ul{
     grid-template-areas:
     "wireframe-title-1 wireframe-title-1 wireframe-title-1"
     "wireframe-sketch-1 wireframe-sketch-2 wireframe-sketch-3"
-    "wireframe-sketch-1 wireframe-sketch-2 wireframe-sketch-3"
-    "wireframe-sketch-1 wireframe-sketch-2 wireframe-sketch-3"
     "wireframe-title-2 wireframe-title-2 wireframe-title-2"
     "wireframe-img-1 wireframe-img-2 wireframe-img-3"
     "wireframe-img-4 wireframe-img-5 wireframe-img-6";
@@ -1137,6 +1252,20 @@ ul{
     grid-template-areas:
     "branding-intro branding-intro branding-intro";
   }
+
+  .branding-images {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "mindmap-img logo-sketch-img";
+  }
+
+  .branding-moodboard {
+    display: grid;
+    grid-area: branding-moodboard;
+    grid-template-areas:
+    "moodboard-img-1 logo-img-1";
+  }
+
   .branding-images {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -1152,9 +1281,16 @@ ul{
   .hifi-mockups {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    "hifi-intro hifi-intro hifi-intro"
-    "hifi-v1 hifi-v1 hifi-v1"
-    "hifi-v2 hifi-v2 hifi-v2"
+    "hifi-intro hifi-intro hifi-intro";
+  }
+  .hifi-images {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "hifi-v1 hifi-v2";
+  }
+  .revisions-text {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
     "revisions revisions revisions"
     "hifi-3-img1 hifi-3-img1 hifi-3-img1";
   }
@@ -1178,8 +1314,7 @@ ul{
     "usability-testing usability-testing"
     "testing-img1 testing-text1"
     "testing-img2 testing-text2"
-    "testing-img3 testing-text3"
-    ;
+    "testing-img3 testing-text3";
   }
   .reflections {
     grid-template-columns: 1fr 1fr 1fr;
