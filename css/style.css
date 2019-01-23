@@ -112,7 +112,9 @@ ul{
   "survey-results"
   "comp-analysis"
   "opportunity"
+  "features-list"
   "user-flows"
+  "user-flows-title"
   "wireframing"
   "wireframing-imgs"
   "branding"
@@ -224,7 +226,6 @@ ul{
     "dropbox"
     "evernote";
 }
-
 .opportunity {
   display: grid;
   grid-area: opportunity;
@@ -233,7 +234,12 @@ ul{
     "user-personas"
     "user-persona-grid"
     "user-stories"
-    "key-features"
+    "key-features";
+}
+.features-list{
+  display: grid;
+  grid-area: features-list;
+  grid-template-areas:
     "features-icon1"
     "features-text1"
     "features-icon2"
@@ -246,13 +252,10 @@ ul{
     "features-text5";
 }
 
-/* .feature1 {
+.user-flows-title {
   display: grid;
-  grid-area: key-features;
-  grid-template-areas:
-    "features-icon1"
-    "features-text1";
-} */
+  grid-area: user-flows-title;
+}
 
 .user-flows {
   display: grid;
@@ -621,10 +624,13 @@ ul{
   grid-area: key-features;
 }
 
+.features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
+  padding: 4rem;
+  width:100%;
+}
+
 .features-icon1{
   grid-area: features-icon1;
-  padding: 5rem;
-  width:100%;
 }
 
 .features-text1{
@@ -636,8 +642,6 @@ ul{
 
 .features-icon2{
   grid-area: features-icon2;
-  padding: 5rem;
-  width:100%;
 }
 
 .features-text2{
@@ -649,8 +653,6 @@ ul{
 
 .features-icon3{
   grid-area: features-icon3;
-  padding: 5rem;
-  width:100%;
 }
 
 .features-text3{
@@ -662,8 +664,6 @@ ul{
 
 .features-icon4{
   grid-area: features-icon4;
-  padding: 5rem;
-  width:100%;
 }
 
 .features-text4{
@@ -675,8 +675,6 @@ ul{
 
 .features-icon5{
   grid-area: features-icon5;
-  padding: 5rem;
-  width:100%;
 }
 
 .features-text5{
@@ -1126,6 +1124,8 @@ ul{
     ". survey-results survey-results survey-results ."
     ". comp-analysis comp-analysis comp-analysis ."
     ". . opportunity . ."
+    ". features-list features-list features-list ."
+    ". user-flows-title user-flows-title user-flows-title ."
     ". user-flows user-flows user-flows ."
     ". . wireframing . ."
     ". wireframing-imgs wireframing-imgs wireframing-imgs . "
@@ -1218,12 +1218,13 @@ ul{
     "user-personas user-personas user-personas"
     "user-persona-grid user-persona-grid user-persona-grid"
     "user-stories user-stories user-stories"
-    "key-features key-features key-features"
-    "features-icon1 features-text1 features-text1"
-    "features-icon2 features-text2 features-text2"
-    "features-icon3 features-text3 features-text3"
-    "features-icon4 features-text4 features-text4"
-    "features-icon5 features-text5 features-text5";
+    "key-features key-features key-features";
+  }
+  .features-list {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "features-icon1 features-icon2 features-icon3 features-icon4 features-icon5"
+    "features-text1 features-text2 features-text3 features-text4 features-text5 ";
   }
   .user-flows {
     grid-template-columns: 1fr 1fr 1fr;
@@ -1236,7 +1237,6 @@ ul{
     grid-template-areas:
     "divider divider divider"
     "wireframing-intro wireframing-intro wireframing-intro"
-    ;
   }
   .wireframing-imgs {
     grid-template-columns: 1fr 1fr 1fr;
