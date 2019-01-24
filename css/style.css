@@ -4,7 +4,7 @@
 
 html {
   font-size: 10px;
-  font-family: 'Esteban', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   /* font-family: 'Open Sans', sans-serif; */
 }
 
@@ -14,7 +14,6 @@ h1{
   font-size: 7.2rem;
   /* padding: 2rem; */
   /* text-align: center; */
-  font-family: 'Open Sans', sans-serif;
 }
 
 /* section titles */
@@ -24,7 +23,6 @@ h2 {
   font-size: 4.8rem;
   padding: 2rem 0;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
 }
 
 /* sub section titles */
@@ -35,7 +33,6 @@ h3 {
   font-size: 2.4rem;
   padding: 2rem 0;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
 }
 
 /* bolded subtitles */
@@ -45,7 +42,6 @@ h4 {
   font-size: 1.8rem;
   padding: 2rem 0;
   /* text-align: center; */
-  font-family: 'Open Sans', sans-serif;
 }
 
 /* quotes */
@@ -55,7 +51,6 @@ h5 {
   font-size: 3.2rem;
   padding: 2rem 0;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -76,6 +71,7 @@ ul{
   padding: 2rem 0;
 }
 
+
 .home-navbar{
     /* border:1px solid #ccc; */
     border-width:1px 0;
@@ -84,6 +80,7 @@ ul{
     padding:0;
     /* text-align:center; */
 }
+
 .home-navbar li{
     display:inline;
 }
@@ -95,7 +92,7 @@ ul{
 }
 
 .atmos-container {
-  background-image: url("../css/images/atmos_herocloud.png");
+  background-image: url("../images/atmos_herocloud.png");
   background-repeat: no-repeat;
   background-position: 0px 200px;
   background-size: contain;
@@ -161,6 +158,7 @@ ul{
     "intro"
     "btn-prototype";
 }
+
 .details {
   display: grid;
   grid-area: details;
@@ -170,21 +168,16 @@ ul{
 }
 
 .specifications {
-  background-image: url("../css/images/roles_bgshape.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  /* background-size: auto; */
-  /* background-attachment: fixed; */
   display: grid;
   grid-area: specifications;
   grid-template-areas:
-    "lists"
+    "specifications-bg"
+    "lists";
 }
 
 .lists{
   display: grid;
   grid-area: lists;
-  padding: 30rem 0 30rem;
   grid-template-areas:
   "roles"
   "deliverables"
@@ -204,7 +197,8 @@ ul{
   display: grid;
   grid-area: user-research;
   grid-template-areas:
-    "research-intro";
+    "research-intro"
+    "usersurvey";
 }
 
 .survey-results {
@@ -222,6 +216,7 @@ ul{
   display: grid;
   grid-area: comp-analysis;
   grid-template-areas:
+    "companalysis"
     "drive"
     "dropbox"
     "evernote";
@@ -232,8 +227,10 @@ ul{
   grid-template-areas:
     "opportunity-intro"
     "user-personas"
+    "userpersonas"
     "user-persona-grid"
     "user-stories"
+    "userstories"
     "key-features";
 }
 .features-list{
@@ -261,6 +258,7 @@ ul{
   display: grid;
   grid-area: user-flows;
   grid-template-areas:
+  "userflows"
   "user-flows-1"
   "user-flows-2";
 }
@@ -298,7 +296,8 @@ ul{
   grid-gap: 1rem;
   grid-area: branding;
   grid-template-areas:
-  "branding-intro";
+  "branding-intro"
+  "styleguide";
 }
 
 .branding-sketch-title {
@@ -341,7 +340,8 @@ ul{
   grid-area: hifi-mockups;
   grid-gap: 2rem;
   grid-template-areas:
-  "hifi-intro";
+  "hifi-intro"
+  "prototype2";
 }
 
 .hifi-images {
@@ -472,6 +472,55 @@ ul{
   "btm-nav-icons";
 }
 
+/* buttons start */
+
+.btn {
+ border: 2px solid black;
+ background-color: white;
+ color: black;
+ padding: 1.2rem 2rem;
+ font-size: 1.6rem;
+ cursor: pointer;
+ border-radius: 4rem;;
+}
+
+.prototype, .usersurvey, .companalysis, .userpersonas, .userstories, .userflows, .styleguide, .prototype2 {
+ border-color: #008FC4;
+ color: black;
+}
+
+.prototype:hover, .usersurvey:hover, .companalysis:hover, .userpersonas:hover, .userstories:hover, .userflows:hover, .styleguide:hover, .prototype2:hover {
+ background-color: #008FC4;
+ color: white;
+}
+
+.prototype {
+  grid-area: prototype;
+}
+.usersurvey {
+  grid-area: usersurvey;
+}
+.companalysis {
+  grid-area: companalysis;
+}
+.userpersonas {
+  grid-area: userpersonas;
+}
+.userstories {
+  grid-area: userstories;
+}
+.userflows {
+  grid-area: userflows;
+}
+.styleguide {
+  grid-area: styleguide;
+}
+.prototype2 {
+  grid-area: prototype2;
+}
+
+
+
 .navbar {
   grid-area: navbar;
   background-color: transparent;
@@ -500,6 +549,14 @@ ul{
   background-color: transparent;
   padding: 10rem 0;
 }
+
+.specifications-bg {
+  display: inline-block;
+  margin-bottom: 50px;
+  grid-area: specifications-bg;
+  width: 100%
+}
+.specifications-bg { -webkit-transform: skewY(-9deg); }
 
 .roles {
   grid-area: roles;
@@ -979,10 +1036,6 @@ ul{
   grid-area: goals3;
   padding: 2rem;
 }
-.roles_bgshape {
-  grid-area: roles_bgshape;
-  width: 100%;
-}
 
 
 /* home page */
@@ -1112,7 +1165,7 @@ ul{
 
 @media (min-width: 30rem) {
   .atmos-container {
-    background-image: url("../css/images/atmos_herocloud.png");
+    background-image: url("../images/atmos_herocloud.png");
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". home-navbar home-navbar . ."
@@ -1178,9 +1231,9 @@ ul{
     "main-mockup main-mockup main-mockup"
   }
   .specifications {
-    background-image: url("../css/images/roles_bgshape.png");
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
+      "specifications-bg specifications-bg specifications-bg specifications-bg specifications-bg"
       ". . lists . .";
   }
   .lists{
@@ -1198,7 +1251,7 @@ ul{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "research-intro research-intro research-intro"
-    "survey-results survey-results survey-results" ;
+    ". usersurvey ." ;
   }
   .survey-results {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1209,6 +1262,7 @@ ul{
   .comp-analysis{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
+    ". companalysis ."
     "drive dropbox evernote";
   }
   .opportunity{
@@ -1216,8 +1270,10 @@ ul{
     grid-template-areas:
     "opportunity-intro opportunity-intro opportunity-intro"
     "user-personas user-personas user-personas"
+    ". userpersonas ."
     "user-persona-grid user-persona-grid user-persona-grid"
     "user-stories user-stories user-stories"
+    ". userstories ."
     "key-features key-features key-features";
   }
   .features-list {
@@ -1229,6 +1285,7 @@ ul{
   .user-flows {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
+    ". userflows ."
     "user-flows-1 user-flows-1 user-flows-1"
     "user-flows-2 user-flows-2 user-flows-2";
   }
@@ -1250,7 +1307,8 @@ ul{
   .branding {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    "branding-intro branding-intro branding-intro";
+    "branding-intro branding-intro branding-intro"
+    ". styleguide .";
   }
 
   .branding-images {
@@ -1281,7 +1339,8 @@ ul{
   .hifi-mockups {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    "hifi-intro hifi-intro hifi-intro";
+    "hifi-intro hifi-intro hifi-intro"
+    "prototype2 prototype2 prototype2";
   }
   .hifi-images {
     grid-template-columns: 1fr 1fr;
