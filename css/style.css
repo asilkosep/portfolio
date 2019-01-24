@@ -103,12 +103,16 @@ ul{
   "home-navbar"
   "hero"
   "details"
+  "main-mockup"
   "specifications"
   "overview"
   "user-research"
   "survey-results"
   "comp-analysis"
   "opportunity"
+  "user-personas"
+  "user-persona-grid"
+  "user-stories"
   "features-list"
   "user-flows"
   "user-flows-title"
@@ -125,6 +129,7 @@ ul{
   "hifi-mockups-2"
   "preference"
   "final-mockups"
+  "reflections-intro"
   "reflections" ;
   /* margin: auto; */
 }
@@ -164,20 +169,20 @@ ul{
   grid-area: details;
   grid-template-areas:
     "description"
-    "main-mockup";
 }
 
 .specifications {
   display: grid;
   grid-area: specifications;
   grid-template-areas:
-    "specifications-bg"
+    "blue-bg"
     "lists";
 }
 
 .lists{
   display: grid;
   grid-area: lists;
+  padding: 10rem;
   grid-template-areas:
   "roles"
   "deliverables"
@@ -188,15 +193,14 @@ ul{
   display: grid;
   grid-area: hero;
   grid-template-areas:
-    "divider"
-    "overview-text"
-    "divider-btm";
+    "overview-text";
 }
 
 .user-research {
   display: grid;
   grid-area: user-research;
   grid-template-areas:
+    "blue-bg"
     "research-intro"
     "usersurvey";
 }
@@ -221,22 +225,26 @@ ul{
     "dropbox"
     "evernote";
 }
+
 .opportunity {
   display: grid;
   grid-area: opportunity;
-  grid-template-areas:
-    "opportunity-intro"
-    "user-personas"
-    "userpersonas"
-    "user-persona-grid"
-    "user-stories"
-    "userstories"
-    "key-features";
 }
+
+.user-personas{
+  display: grid;
+  grid-area: user-personas;
+  grid-template-areas:
+  "blue-bg"
+  "user-personas-intro"
+  "userpersonas"
+}
+
 .features-list{
   display: grid;
   grid-area: features-list;
   grid-template-areas:
+    "key-features"
     "features-icon1"
     "features-text1"
     "features-icon2"
@@ -267,7 +275,7 @@ ul{
   display: grid;
   grid-area: wireframing;
   grid-template-areas:
-  "divider"
+  "blue-bg"
   "wireframing-intro"
   "divider-btm"
   ;
@@ -296,6 +304,7 @@ ul{
   grid-gap: 1rem;
   grid-area: branding;
   grid-template-areas:
+  "blue-bg"
   "branding-intro"
   "styleguide";
 }
@@ -340,6 +349,7 @@ ul{
   grid-area: hifi-mockups;
   grid-gap: 2rem;
   grid-template-areas:
+  "blue-bg"
   "hifi-intro"
   "prototype2";
 }
@@ -396,6 +406,14 @@ ul{
   "testing-text3" ;
 }
 
+.reflections-intro{
+  display: grid;
+  grid-area: reflections-intro;
+  grid-template-areas:
+  "blue-bg"
+  "reflections-title"
+}
+
 .reflections {
   display: grid;
   grid-area: reflections;
@@ -409,6 +427,11 @@ ul{
   display: grid;
   grid-area: user-persona-grid;
   grid-template-areas:
+  "persona-img3"
+  "persona-title3"
+  "persona-quote3"
+  "frustrations3"
+  "goals3";
   /* "persona-img1"
   "persona-title1"
   "persona-quote1"
@@ -420,12 +443,15 @@ ul{
   "persona-quote2"
   "frustrations2"
   "goals2" */
+}
 
-  "persona-img3"
-  "persona-title3"
-  "persona-quote3"
-  "frustrations3"
-  "goals3";
+.user-stories {
+  display: grid;
+  grid-area: user-stories;
+  grid-template-areas:
+  "blue-bg"
+  "user-stories-text"
+  "userstories";
 }
 
 
@@ -518,7 +544,7 @@ ul{
 .prototype2 {
   grid-area: prototype2;
 }
-
+/* buttons end */
 
 
 .navbar {
@@ -550,13 +576,14 @@ ul{
   padding: 10rem 0;
 }
 
-.specifications-bg {
+.blue-bg {
   display: inline-block;
   margin-bottom: 50px;
-  grid-area: specifications-bg;
+  grid-area: blue-bg;
+  position: absolute;
   width: 100%
 }
-.specifications-bg { -webkit-transform: skewY(-9deg); }
+.blue-bg { -webkit-transform: skewY(-9deg); }
 
 .roles {
   grid-area: roles;
@@ -605,6 +632,7 @@ ul{
 
 .research-intro {
   grid-area: research-intro;
+  padding: 10rem;
 }
 
 .survey-1{
@@ -638,27 +666,23 @@ ul{
 .drive {
   grid-area: drive;
   width: 100%;
-  padding: 5rem;
+  padding: 2rem;
 }
 
 .dropbox {
   grid-area: dropbox;
   width: 100%;
-  padding: 5rem;
+  padding: 2rem;
 }
 
 .evernote {
   grid-area: evernote;
   width: 100%;
-  padding: 5rem;
+  padding: 2rem;
 }
 
-.opportunity-intro {
-  grid-area: opportunity-intro;
-}
-
-.user-personas {
-  grid-area: user-personas;
+.user-personas-intro {
+  grid-area: user-personas-intro;
 }
 
 .user-persona-1 {
@@ -673,8 +697,8 @@ ul{
   grid-area: user-persona-3;
 }
 
-.user-stories {
-  grid-area: user-stories;
+.user-stories-text {
+  grid-area: user-stories-text;
 }
 
 .key-features {
@@ -968,6 +992,10 @@ ul{
   justify-self: center;
 }
 
+.reflections-title {
+  grid-area: reflections-title;
+}
+
 .reflections {
   grid-area: reflections;
 }
@@ -1162,38 +1190,43 @@ ul{
   padding: 2rem;
 }
 
-
+/* desktop */
 @media (min-width: 30rem) {
   .atmos-container {
-    background-image: url("../images/atmos_herocloud.png");
+    /* background-image: url("../images/atmos_herocloud.png"); */
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". home-navbar home-navbar . ."
     ". hero hero . ."
     ". . details . ."
+    ". . main-mockup . ."
     "specifications specifications specifications specifications specifications"
     ". . overview . ."
-    ". . user-research . ."
+    "user-research user-research user-research user-research user-research"
     ". survey-results survey-results survey-results ."
     ". comp-analysis comp-analysis comp-analysis ."
     ". . opportunity . ."
+    "user-personas user-personas user-personas user-personas user-personas"
+    ". . user-persona-grid . . "
+    " user-stories user-stories user-stories user-stories user-stories"
     ". features-list features-list features-list ."
     ". user-flows-title user-flows-title user-flows-title ."
     ". user-flows user-flows user-flows ."
-    ". . wireframing . ."
+    "wireframing wireframing wireframing wireframing wireframing"
     ". wireframing-imgs wireframing-imgs wireframing-imgs . "
-    ". . branding . ."
+    "branding  branding  branding branding  branding "
     " . branding-sketch-title branding-sketch-title branding-sketch-title ."
     ". branding-images branding-images branding-images ."
     " . branding-moodboard-title branding-moodboard-title branding-moodboard-title ."
     " . branding-moodboard branding-moodboard branding-moodboard ."
     ". . style-guide . ."
-    ". . hifi-mockups . ."
+    "hifi-mockups  hifi-mockups  hifi-mockups hifi-mockups hifi-mockups "
     " . hifi-images hifi-images hifi-images ."
     " . . revisions-text . ."
     ". hifi-mockups-2 hifi-mockups-2 hifi-mockups-2 ."
     ". . preference . ."
     ". final-mockups final-mockups final-mockups ."
+    "reflections-intro reflections-intro reflections-intro reflections-intro reflections-intro"
     ". . reflections . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav";
     /* margin: 1%; */
@@ -1228,12 +1261,12 @@ ul{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "description description description"
-    "main-mockup main-mockup main-mockup"
   }
+
   .specifications {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
-      "specifications-bg specifications-bg specifications-bg specifications-bg specifications-bg"
+      "blue-bg blue-bg blue-bg blue-bg blue-bg"
       ". . lists . .";
   }
   .lists{
@@ -1248,10 +1281,11 @@ ul{
     "divider-btm divider-btm divider-btm";
   }
   .user-research {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
-    "research-intro research-intro research-intro"
-    ". usersurvey ." ;
+    "blue-bg blue-bg blue-bg blue-bg blue-bg"
+    ". . research-intro . ."
+    ". . usersurvey . ." ;
   }
   .survey-results {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1265,23 +1299,43 @@ ul{
     ". companalysis ."
     "drive dropbox evernote";
   }
-  .opportunity{
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "opportunity-intro opportunity-intro opportunity-intro"
-    "user-personas user-personas user-personas"
-    ". userpersonas ."
-    "user-persona-grid user-persona-grid user-persona-grid"
-    "user-stories user-stories user-stories"
-    ". userstories ."
-    "key-features key-features key-features";
-  }
   .features-list {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
+    "key-features key-features key-features key-features key-features"
     "features-icon1 features-icon2 features-icon3 features-icon4 features-icon5"
     "features-text1 features-text2 features-text3 features-text4 features-text5 ";
   }
+  .user-personas{
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    "blue-bg blue-bg blue-bg blue-bg blue-bg"
+    ". . user-personas-intro . ."
+    ". . userpersonas . ."
+  }
+  .user-persona-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "persona-img3 persona-title3"
+    "persona-quote3 persona-quote3"
+    "frustrations3 goals3";
+    /* "persona-img1 persona-title1"
+    "persona-quote1 persona-quote1"
+    "frustrations1 goals1"
+
+    "persona-img2 persona-title2"
+    "persona-quote2 persona-quote2"
+    "frustrations2 goals2" */
+  }
+
+  .user-stories {
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    "blue-bg blue-bg blue-bg blue-bg blue-bg"
+    ". . user-stories-text . ."
+    ". . userstories . .";
+  }
+
   .user-flows {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -1290,10 +1344,10 @@ ul{
     "user-flows-2 user-flows-2 user-flows-2";
   }
   .wireframing {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
-    "divider divider divider"
-    "wireframing-intro wireframing-intro wireframing-intro"
+    "blue-bg blue-bg blue-bg blue-bg blue-bg"
+    ". . wireframing-intro . ."
   }
   .wireframing-imgs {
     grid-template-columns: 1fr 1fr 1fr;
@@ -1305,10 +1359,11 @@ ul{
     "wireframe-img-4 wireframe-img-5 wireframe-img-6";
   }
   .branding {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
-    "branding-intro branding-intro branding-intro"
-    ". styleguide .";
+    "blue-bg blue-bg blue-bg blue-bg blue-bg"
+    ". . branding-intro . ."
+    ". . styleguide . .";
   }
 
   .branding-images {
@@ -1330,17 +1385,13 @@ ul{
     "mindmap-img logo-sketch-img"
     "moodboard-img-1 logo-img-1";
   }
-  .style-guide {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "style-guide-img style-guide-img style-guide-img"
-    "divider divider divider" ;
-  }
+
   .hifi-mockups {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
-    "hifi-intro hifi-intro hifi-intro"
-    "prototype2 prototype2 prototype2";
+    "blue-bg blue-bg blue-bg blue-bg blue-bg"
+    ". . hifi-intro . ."
+    ". . prototype2 . .";
   }
   .hifi-images {
     grid-template-columns: 1fr 1fr;
@@ -1375,26 +1426,18 @@ ul{
     "testing-img2 testing-text2"
     "testing-img3 testing-text3";
   }
+  .reflections-intro{
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    "blue-bg blue-bg blue-bg blue-bg blue-bg"
+    ". . reflections-title . ."
+  }
   .reflections {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "reflections-text reflections-text reflections-text";
   }
-  .user-persona-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    /* "persona-img1 persona-title1"
-    "persona-quote1 persona-quote1"
-    "frustrations1 goals1"
 
-    "persona-img2 persona-title2"
-    "persona-quote2 persona-quote2"
-    "frustrations2 goals2" */
-
-    "persona-img3 persona-title3"
-    "persona-quote3 persona-quote3"
-    "frustrations3 goals3"
-  }
   .bio-hero-img {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -1424,3 +1467,12 @@ ul{
     "btm-nav-icons btm-nav-icons btm-nav-icons";
   }
 }
+
+
+/* tablet */
+@media (min-width: 76.8rem) {
+
+
+
+/* phone */
+@media (min-width: 32rem) {
