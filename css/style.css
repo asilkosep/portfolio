@@ -9,6 +9,7 @@ html {
 }
 
 h1{
+  /* font-family: 'Abel', sans-serif; */
   font-style: normal;
   font-weight: 400;
   font-size: 9rem;
@@ -55,7 +56,7 @@ h5 {
 p{
   font-style: normal;
   font-weight: 300;
-  font-size: 2rem;
+  font-size: 1.6rem;
   /* font-size: 1.6rem; */
   line-height: 2.5rem;
   padding: 1rem 0;
@@ -70,19 +71,37 @@ ul{
   padding: 2rem 0;
 }
 
-.home-navbar{
+.btm-nav p{
+  font-weight: 200;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+.email h3{
+  text-align: left;
+}
+
+.navbar{
     list-style:none;
 }
 
-.home-navbar li{
+.navbar li{
     display:inline;
 }
-.home-navbar a{
+.navbar a{
     display:inline-block;
     padding:3rem 5rem 0 0;
     color: black;
     font-size: 2rem;
     text-decoration: none;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky {
+  padding-top: 60px;
 }
 
 .persona-title3 h3{
@@ -92,7 +111,7 @@ ul{
 .atmos-container {
   display: grid;
   grid-template-areas:
-  "home-navbar"
+  "navbar"
   "hero"
   "details"
   "main-mockup"
@@ -129,7 +148,7 @@ ul{
 .home-container {
   display: grid;
   grid-template-areas:
-  "home-navbar"
+  "navbar"
   "title-section"
   "home-hero"
   "home-body"
@@ -140,10 +159,22 @@ ul{
 .bio-container {
   display: grid;
   grid-template-areas:
-  "home-navbar"
+  "navbar"
   "bio-hero"
   "bio-hero-img"
   "bio-body"
+  "btm-nav"
+  ;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-areas:
+  "navbar"
+  "title-section"
+  "email"
+  "bio-hero-img"
+  "home-bottom-text"
   "btm-nav"
   ;
 }
@@ -554,12 +585,14 @@ ul{
   grid-area: btm-nav;
   margin-top: 10rem;
   grid-template-areas:
+  "btm-nav-text"
   "btm-nav-icons";
 }
 
-/* buttons start */
+/* button sepcs start */
 
 .btn {
+ font-family: 'Abel', sans-serif;
  border: 2px solid black;
  background-color: transparent;
  color: black;
@@ -607,6 +640,9 @@ ul{
 }
 /* buttons end */
 
+.btm-nav-text{
+  grid-area: btm-nav-text;
+}
 
 .navbar {
   grid-area: navbar;
@@ -761,11 +797,6 @@ ul{
 
 .key-features {
   grid-area: key-features;
-}
-
-.features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
-  padding: 2rem;
-  width:100%;
 }
 
 .features-text1, .features-text2, .features-text3, .features-text4, .features-text5 {
@@ -1105,8 +1136,8 @@ ul{
 
 /* home page */
 
-.home-navbar {
-  grid-area: home-navbar;
+.navbar {
+  grid-area: navbar;
   /* padding: 0 2rem 0 0 ; */
 }
 
@@ -1237,7 +1268,7 @@ ul{
 
 .title-section {
   grid-area: title-section;
-  padding: 10rem 0 5rem 0;
+  padding: 10rem 0 0 0;
 }
 
 .poplock-section {
@@ -1348,6 +1379,12 @@ ul{
   grid-area: btmnav-pinterest;
 }
 
+/* contact page */
+.email{
+  grid-area: email;
+}
+
+
 /* smaller phones */
 @media only screen and (min-width: 360px) {
   h1{
@@ -1374,7 +1411,7 @@ ul{
     /* background-image: url("../images/atmos_herocloud.png"); */
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
-    ". home-navbar home-navbar home-navbar ."
+    ". navbar navbar navbar ."
     ". hero hero . ."
     "details details details details details"
     ". main-mockup main-mockup main-mockup ."
@@ -1412,7 +1449,7 @@ ul{
   .home-container {
     grid-template-columns: 1fr 5fr 5fr 1fr;
     grid-template-areas:
-    ". home-navbar home-navbar ."
+    ". navbar navbar ."
     ". title-section title-section ."
     "home-hero home-hero home-hero home-hero"
     "home-body home-body home-body home-body"
@@ -1422,11 +1459,21 @@ ul{
   .bio-container {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
-    ". home-navbar home-navbar home-navbar ."
+    ". navbar navbar navbar ."
     ". bio-hero bio-hero bio-hero ."
     "bio-hero-img bio-hero-img bio-hero-img bio-hero-img bio-hero-img"
     ". bio-body bio-body bio-body ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav";
+  }
+  .contact-container {
+    grid-template-columns: 1fr 5fr 5fr 1fr;
+    grid-template-areas:
+    ". navbar navbar ."
+    ". title-section title-section ."
+    ". email email ."
+    "bio-hero-img bio-hero-img bio-hero-img bio-hero-img "
+    ". . home-bottom-text ."
+    "btm-nav btm-nav btm-nav btm-nav";
   }
   .btmnav-gmail, .btmnav-behance, .btmnav-linkedin, .btmnav-instagram, .btmnav-pinterest{
     width: 6rem;
@@ -1459,10 +1506,6 @@ ul{
   }
 
   .specifications {
-    /* background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    /* background-size: cover; */
-    /* padding-top:10rem; */
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
       ". lists lists lists .";
@@ -1585,6 +1628,10 @@ ul{
     grid-template-areas:
     "key-features key-features key-features"
     "features-set features-set features-set";
+  }
+  .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
+    padding: 3rem;
+    width:100%;
   }
   .features-set{
     align-items: center;
@@ -1770,6 +1817,7 @@ ul{
   .btm-nav {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
+    "btm-nav-text btm-nav-text btm-nav-text"
     "btm-nav-icons btm-nav-icons btm-nav-icons";
   }
   .home-body {
@@ -1788,7 +1836,7 @@ ul{
     /* background-image: url("../images/atmos_herocloud.png"); */
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
-    ". home-navbar home-navbar . ."
+    ". navbar navbar . ."
     ". hero hero . ."
     "details details details details details"
     ". main-mockup main-mockup main-mockup ."
@@ -1826,7 +1874,7 @@ ul{
   .home-container {
     grid-template-columns: 1fr 5fr 5fr 1fr;
     grid-template-areas:
-    ". home-navbar home-navbar ."
+    ". navbar navbar ."
     ". title-section title-section ."
     "home-hero home-hero home-hero home-hero"
     "home-body home-body home-body home-body"
@@ -1836,7 +1884,7 @@ ul{
   .bio-container {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
-    ". home-navbar home-navbar . ."
+    ". navbar navbar . ."
     ". bio-hero bio-hero bio-hero ."
     "bio-hero-img bio-hero-img bio-hero-img bio-hero-img bio-hero-img"
     ". bio-body bio-body bio-body ."
@@ -1951,13 +1999,6 @@ ul{
     "persona-img3 persona-title3"
     "persona-quote3 persona-quote3"
     "frustrations3 goals3";
-    /* "persona-img1 persona-title1"
-    "persona-quote1 persona-quote1"
-    "frustrations1 goals1"
-
-    "persona-img2 persona-title2"
-    "persona-quote2 persona-quote2"
-    "frustrations2 goals2" */
   }
 
   .user-stories {
@@ -1984,6 +2025,9 @@ ul{
     grid-template-areas:
     "key-features key-features key-features"
     "features-set features-set features-set";
+  }
+  .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
+    width:75%;
   }
   .features-set{
     align-items: center;
@@ -2161,6 +2205,7 @@ ul{
   .btm-nav {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
+    "btm-nav-text btm-nav-text btm-nav-text"
     "btm-nav-icons btm-nav-icons btm-nav-icons";
   }
   .home-body {
@@ -2178,7 +2223,7 @@ ul{
     /* background-image: url("../images/atmos_herocloud.png"); */
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
-    ". home-navbar home-navbar . ."
+    ". navbar navbar . ."
     ". hero hero . ."
     "details details details details details"
     ". . main-mockup . ."
@@ -2216,7 +2261,7 @@ ul{
   .home-container {
     grid-template-columns: 1fr 5fr 5fr 1fr;
     grid-template-areas:
-    ". home-navbar home-navbar ."
+    ". navbar navbar ."
     ". title-section title-section ."
     "home-hero home-hero home-hero home-hero"
     "home-body home-body home-body home-body"
@@ -2226,7 +2271,7 @@ ul{
   .bio-container {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
-    ". home-navbar home-navbar . ."
+    ". navbar navbar . ."
     ". bio-hero bio-hero . ."
     "bio-hero-img bio-hero-img bio-hero-img bio-hero-img bio-hero-img"
     ". . bio-body . ."
@@ -2356,13 +2401,6 @@ ul{
     "persona-img3 persona-title3"
     "persona-quote3 persona-quote3"
     "frustrations3 goals3";
-    /* "persona-img1 persona-title1"
-    "persona-quote1 persona-quote1"
-    "frustrations1 goals1"
-
-    "persona-img2 persona-title2"
-    "persona-quote2 persona-quote2"
-    "frustrations2 goals2" */
   }
 
   .user-stories {
@@ -2542,6 +2580,7 @@ ul{
   .btm-nav {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
+    "btm-nav-text btm-nav-text btm-nav-text"
     "btm-nav-icons btm-nav-icons btm-nav-icons";
   }
   .btm-nav-icons {
@@ -2563,7 +2602,7 @@ ul{
     /* background-image: url("../images/atmos_herocloud.png"); */
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
-    ". home-navbar home-navbar . ."
+    ". navbar navbar . ."
     ". hero hero . ."
     "details details details details details"
     ". . main-mockup . ."
@@ -2601,7 +2640,7 @@ ul{
   .home-container {
     grid-template-columns: 1fr 5fr 5fr 1fr;
     grid-template-areas:
-    ". home-navbar home-navbar ."
+    ". navbar navbar ."
     ". title-section title-section ."
     "home-hero home-hero home-hero home-hero"
     "home-body home-body home-body home-body"
@@ -2611,7 +2650,7 @@ ul{
   .bio-container {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
-    ". home-navbar home-navbar . ."
+    ". navbar navbar . ."
     ". bio-hero bio-hero . ."
     "bio-hero-img bio-hero-img bio-hero-img bio-hero-img bio-hero-img"
     ". . bio-body . ."
@@ -2698,6 +2737,9 @@ ul{
     grid-template-areas:
     "key-features key-features key-features"
     "features-set features-set features-set";
+  }
+  .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
+    width:90%;
   }
   .features-set{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -2914,6 +2956,7 @@ ul{
   .btm-nav {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
+    "btm-nav-text btm-nav-text btm-nav-text"
     "btm-nav-icons btm-nav-icons btm-nav-icons";
   }
   .btm-nav-icons {
@@ -2925,5 +2968,196 @@ ul{
     "poplock-section poplock-section poplock-section "
     "atmosphere-section atmosphere-section atmosphere-section "
     "racsha-section racsha-section racsha-section";
+  }
+}
+
+/* @media only screen and (min-width: 1200px) {
+
+  .details {
+    padding: 15rem 0;
+  }
+} */
+
+/* desktop */
+@media only screen and (min-width: 1336px) {
+
+  .details {
+    padding: 15rem 0;
+  }
+  .user-research {
+    padding: 10rem 0;
+  }
+  .research-intro {
+    padding: 10rem 0 10rem 0;
+  }
+  .user-personas{
+    padding: 10rem 0;
+  }
+  .user-personas-intro {
+    padding: 10rem 0 15rem 0;
+  }
+  .user-stories {
+    padding: 10rem 0;
+  }
+  .user-stories-intro{
+    padding: 10rem 0 10rem 0;
+  }
+  .wireframing {
+    padding: 10rem 0;
+  }
+  .wireframing-intro {
+    padding: 15rem 0 15rem 0;
+  }
+  .branding {
+    padding: 10rem 0;
+  }
+  .branding-intro{
+    padding: 15rem 0 5rem 0;
+  }
+  .hifi-mockups {
+    padding: 10rem 0;
+  }
+  .hifi-intro{
+    padding: 15rem 0 10rem 0;
+  }
+  .reflections-intro{
+    padding: 10rem 0;
+  }
+  .reflections-title{
+    padding: 15rem 0 20rem 0;
+  }
+  .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
+    width:85%;
+  }
+}
+
+@media only screen and (min-width: 1680px) {
+  .details {
+    background-image: url("../images/atmos_herocloud.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10rem 0;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-areas:
+    ". . description . .";
+  }
+  .details {
+    padding: 25rem 0;
+  }
+  .specifications {
+    padding: 10rem 0;
+  }
+  .lists{
+    padding: 15rem 0 10rem 0;
+  }
+  .user-research {
+    padding: 15rem 0;
+  }
+  .research-intro {
+    padding: 10rem 0 10rem 0;
+  }
+  .user-personas{
+    padding: 15rem 0;
+  }
+  .user-personas-intro {
+    padding: 15rem 0 10rem 0;
+  }
+  .user-stories {
+    padding: 15rem 0;
+  }
+  .user-stories-intro{
+    padding: 15rem 0 10rem 0;
+  }
+  .wireframing {
+    padding: 15rem 0;
+  }
+  .wireframing-intro {
+    padding: 20rem 0 15rem 0;
+  }
+  .branding {
+    padding: 15rem 0;
+  }
+  .branding-intro{
+    padding: 15rem 0 10rem 0;
+  }
+  .hifi-mockups {
+    padding: 15rem 0;
+  }
+  .hifi-intro{
+    padding: 15rem 0 10rem 0;
+  }
+  .reflections-intro{
+    padding: 15rem 0;
+  }
+  .reflections-title{
+    padding: 20rem 0 15rem 0;
+  }
+  .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
+    width:75%;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+
+  .details {
+    background-image: url("../images/atmos_herocloud.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10rem 0;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-areas:
+    ". . description . .";
+  }
+
+  .details {
+    padding: 30rem 0;
+  }
+  .specifications {
+    padding: 15rem 0;
+  }
+  .lists{
+    padding: 15rem 0 15rem 0;
+  }
+  .user-research {
+    padding: 25rem 0;
+  }
+  .research-intro {
+    padding: 10rem 0 10rem 0;
+  }
+  .user-personas{
+    padding: 25rem 0;
+  }
+  .user-personas-intro {
+    padding: 15rem 0 10rem 0;
+  }
+  .user-stories {
+    padding: 25rem 0;
+  }
+  .user-stories-intro{
+    padding: 15rem 0 10rem 0;
+  }
+  .wireframing {
+    padding: 25rem 0;
+  }
+  .wireframing-intro {
+    padding: 20rem 0 15rem 0;
+  }
+  .branding {
+    padding: 25rem 0;
+  }
+  .branding-intro{
+    padding: 15rem 0 10rem 0;
+  }
+  .hifi-mockups {
+    padding: 15rem 0;
+  }
+  .hifi-intro{
+    padding: 15rem 0 10rem 0;
+  }
+  .reflections-intro{
+    padding: 20rem 0;
+  }
+  .reflections-title{
+    padding: 20rem 0 15rem 0;
   }
 }

@@ -17,10 +17,11 @@
 
   <div class="home-container">
 
-    <ul class="home-navbar">
+    <ul class="navbar">
       <li><a href="index.html">Home</a></li>
       <li><a href="bio.html">About</a></li>
       <li><a href="https://nonphiction.com/">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
 
     <section class="title-section">
@@ -65,8 +66,11 @@
     </section>
 
     <section class="btm-nav">
+      <!-- <div class="btm-nav-text">
+        <p> UI/UX designer looking for a challenging postion in NYC </p>
+      </div> -->
       <div class="btm-nav-icons">
-        <a href="atmosphere.html">
+        <a href="contact.html">
           <img class="btmnav-gmail" src="images/btmnav-gmail-white.png" alt="btm-nav gmail">
         </a>
         <a href="https://www.behance.net/lisapesokfcaf">
@@ -85,6 +89,26 @@
     </section>
 
   </div>
+
+  <script>
+      // When the user scrolls the page, execute myFunction
+      window.onscroll = function() {myFunction()};
+
+      // Get the navbar
+      var navbar = document.getElementById("navbar");
+
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+  </script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133427342-1"></script>
