@@ -5,15 +5,12 @@
 html {
   font-size: 10px;
   font-family: 'Abel', sans-serif;
-  /* font-family: 'Open Sans', sans-serif; */
 }
 
 h1{
-  /* font-family: 'Abel', sans-serif; */
   font-style: normal;
   font-weight: 400;
-  font-size: 9rem;
-  /* font-size: 7.2rem; */
+  font-size: 15rem;
 }
 
 /* section titles */
@@ -35,7 +32,7 @@ h3 {
   text-align: center;
 }
 
-/* bolded subtitles */
+/*captions */
 h4 {
   font-style: normal;
   font-weight: 900;
@@ -54,6 +51,7 @@ h5 {
 }
 
 p{
+  font-family: 'Lato', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 1.6rem;
@@ -70,7 +68,18 @@ ul{
   /* text-align: center; */
   padding: 2rem 0;
 }
-
+.title-section p{
+  font-family: 'Abel', sans-serif;
+}
+.hero-intro p{
+  font-family: 'Abel', sans-serif;
+}
+.home-bottom-text p{
+  font-family: 'Abel', sans-serif;
+}
+.bio-hero p{
+  font-family: 'Abel', sans-serif;
+}
 .btm-nav p{
   font-weight: 200;
   color: white;
@@ -80,11 +89,9 @@ ul{
 .email h3{
   text-align: left;
 }
-
 .navbar{
     list-style:none;
 }
-
 .navbar li{
     display:inline;
 }
@@ -206,7 +213,6 @@ ul{
   display: grid;
   grid-area: specifications;
   grid-template-areas:
-    /* "blue-bg" */
     "lists";
 }
 
@@ -360,16 +366,17 @@ ul{
 }
 
 .branding {
+  display: grid;
   background-image: url("../images/atmos_specifications_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
-  grid-gap: 1rem;
   grid-area: branding;
   grid-template-areas:
   "branding-intro";
 }
 .branding-intro{
+  display: grid;
   grid-area: branding-intro;
   grid-template-areas:
   "branding-introtext"
@@ -401,15 +408,6 @@ ul{
   grid-template-areas:
   "moodboard-img-1"
   "logo-img-1";
-}
-
-.style-guide {
-  display: grid;
-  grid-area: style-guide;
-  grid-template-areas:
-  "style-guide-img"
-  "divider"
-  "divider-btm";
 }
 
 .hifi-mockups {
@@ -599,7 +597,9 @@ ul{
  padding: 1.2rem 2rem;
  font-size: 1.6rem;
  cursor: pointer;
- border-radius: 4rem;;
+ border-radius: 4rem;
+ text-decoration:none;
+ text-align: center;
 }
 
 .prototype, .usersurvey, .companalysis, .userpersonas, .userstories, .userflows, .styleguide, .prototype2 {
@@ -664,7 +664,7 @@ ul{
 .btn-prototype {
   grid-area: btn-prototype;
   width: 250px;
-  padding: 1rem 10rem 3rem 0 ;
+  padding: 2rem 10rem 3rem 0 ;
 }
 
 .description {
@@ -1832,6 +1832,9 @@ ul{
 
 /* phone */
 @media only screen and (min-width: 600px) {
+  h1{
+    font-size: 7rem;
+  }
   .atmos-container {
     /* background-image: url("../images/atmos_herocloud.png"); */
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
@@ -2971,18 +2974,17 @@ ul{
   }
 }
 
-/* @media only screen and (min-width: 1200px) {
-
+@media only screen and (min-width: 1200px) {
   .details {
-    padding: 15rem 0;
+    padding: 20rem 0;
   }
-} */
+}
 
 /* desktop */
 @media only screen and (min-width: 1336px) {
 
   .details {
-    padding: 15rem 0;
+    padding: 20rem 0;
   }
   .user-research {
     padding: 10rem 0;
@@ -3027,7 +3029,8 @@ ul{
     padding: 15rem 0 20rem 0;
   }
   .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
-    width:85%;
+    width:70%;
+    justify-items: center;
   }
 }
 
