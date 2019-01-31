@@ -28,16 +28,17 @@ h3 {
   font-style: normal;
   font-weight: 300;
   font-size: 2.4rem;
-  padding: 2rem 0;
+  padding: 3rem 0 1rem 0;
   text-align: center;
 }
 
 /*captions */
 h4 {
+  font-family: 'Lato', sans-serif;
   font-style: normal;
-  font-weight: 900;
-  font-size: 1.8rem;
-  padding: 2rem 0;
+  font-weight: 300;
+  font-size: 1.2rem;
+  padding: .25rem 0 1rem 0;
   /* text-align: center; */
 }
 
@@ -57,7 +58,7 @@ p{
   font-size: 1.6rem;
   /* font-size: 1.6rem; */
   line-height: 2.5rem;
-  padding: 1rem 0;
+  padding: 1rem 0 0 0;
 }
 
 ul{
@@ -67,8 +68,12 @@ ul{
   font-size: 1.6rem;
   line-height: 2.5rem;
   /* text-align: center; */
-  padding: 2rem 0;
 }
+
+b{
+  font-weight: 600;
+}
+
 .title-section p{
   font-family: 'Abel', sans-serif;
 }
@@ -90,30 +95,35 @@ ul{
 .email h3{
   text-align: left;
 }
+.home-bottom-text h3 {
+  text-align: left;
+}
 .navbar{
+    overflow: hidden;
     list-style:none;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: white;
+
 }
 .navbar li{
     display:inline;
 }
 .navbar a{
+    font-family: 'Abel', sans-serif;
     display:inline-block;
     padding:3rem 5rem 0 0;
     color: black;
     font-size: 2rem;
     text-decoration: none;
 }
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-.sticky {
-  padding-top: 60px;
-}
-
 .persona-title3 h3{
   text-align: left;
+}
+.home-bottom-text a {
+  text-decoration: none;
+  color: #008FC4;
 }
 
 .atmos-container {
@@ -171,6 +181,7 @@ ul{
   "bio-hero"
   "bio-hero-img"
   "bio-body"
+  "home-bottom-text"
   "btm-nav"
   ;
 }
@@ -181,6 +192,7 @@ ul{
   "navbar"
   "title-section"
   "email"
+  "resume"
   "bio-hero-img"
   "home-bottom-text"
   "btm-nav"
@@ -434,7 +446,10 @@ ul{
   grid-area: hifi-images;
   grid-template-areas:
   "hifi-v1"
-  "hifi-v2";
+  "hifi-v2"
+  "hifi-v1-caption"
+  "hifi-v2-caption"
+  ;
 }
 
 .revisions {
@@ -478,7 +493,11 @@ ul{
   "testing-img3"
   "testing-text1"
   "testing-text2"
-  "testing-text3" ;
+  "testing-text3"
+  "caption1"
+  "caption2"
+  "caption3"
+  "caption4";
 }
 
 .reflections-intro{
@@ -603,18 +622,22 @@ ul{
  text-align: center;
 }
 
-.prototype, .usersurvey, .companalysis, .userpersonas, .userstories, .userflows, .styleguide, .prototype2 {
+.prototype, .usersurvey, .companalysis, .userpersonas, .userstories, .userflows, .styleguide, .prototype2, .resume {
  border-color: #008FC4;
  color: black;
  margin: 3rem 0;
 
 }
 
-.prototype:hover, .usersurvey:hover, .companalysis:hover, .userpersonas:hover, .userstories:hover, .userflows:hover, .styleguide:hover, .prototype2:hover {
+.prototype:hover, .usersurvey:hover, .companalysis:hover, .userpersonas:hover, .userstories:hover, .userflows:hover, .styleguide:hover, .prototype2:hover, .resume:hover {
  background-color: #008FC4;
  color: white;
 }
 
+.resume{
+  grid-area: resume;
+  margin-right: 25rem;
+}
 .prototype {
   grid-area: prototype;
 }
@@ -665,7 +688,7 @@ ul{
 .btn-prototype {
   grid-area: btn-prototype;
   width: 250px;
-  padding: 2rem 10rem 3rem 0 ;
+  padding-top: 3rem ;
 }
 
 .description {
@@ -963,6 +986,14 @@ ul{
   width: 100%;
 }
 
+.hifi-v1-caption{
+  grid-area: hifi-v1-caption;
+}
+
+.hifi-v2-caption{
+  grid-area: hifi-v2-caption;
+}
+
 .revisions-text {
   grid-area: revisions-text;
   padding: 10rem 0 5rem 0;
@@ -1061,6 +1092,18 @@ ul{
   justify-self: center;
 }
 
+.caption1 {
+  grid-area: caption1;
+}
+.caption2 {
+  grid-area: caption2;
+}
+.caption3 {
+  grid-area: caption3;
+}
+.caption4 {
+  grid-area: caption4;
+}
 .reflections-title {
   grid-area: reflections-title;
 }
@@ -1407,6 +1450,11 @@ ul{
     font-size: 2rem;
     padding: 2rem 0;
     text-align: center;
+    padding: 3rem 0 1rem 0;
+  }
+  .navbar a{
+      font-size: 1.6rem;
+      padding: 3rem 2rem 0 0;
   }
   .atmos-container {
     /* background-image: url("../images/atmos_herocloud.png"); */
@@ -1464,6 +1512,7 @@ ul{
     ". bio-hero bio-hero bio-hero ."
     "bio-hero-img bio-hero-img bio-hero-img bio-hero-img bio-hero-img"
     ". bio-body bio-body bio-body ."
+    ". . home-bottom-text . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav";
   }
   .contact-container {
@@ -1472,6 +1521,7 @@ ul{
     ". navbar navbar ."
     ". title-section title-section ."
     ". email email ."
+    ". resume . . "
     "bio-hero-img bio-hero-img bio-hero-img bio-hero-img "
     ". . home-bottom-text ."
     "btm-nav btm-nav btm-nav btm-nav";
@@ -1529,7 +1579,6 @@ ul{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "overview-text overview-text overview-text"
-    "divider-btm divider-btm divider-btm";
   }
   .user-research {
     background-image: url("../images/atmos_specifications_bg2.png");
@@ -1741,7 +1790,9 @@ ul{
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "hifi-v1 hifi-v1"
-    "hifi-v2 hifi-v2";
+    "hifi-v1-caption hifi-v1-caption"
+    "hifi-v2 hifi-v2"
+    "hifi-v2-caption hifi-v2-caption";
   }
   .revisions {
     grid-template-columns: 1fr 1fr 1fr;
@@ -1764,9 +1815,13 @@ ul{
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "final-mockup-1 final-mockup-1"
+    "caption1 caption1"
     "final-mockup-2 final-mockup-2"
+    "caption2 caption2"
     "final-mockup-3 final-mockup-3"
+    "caption3 caption3"
     "final-mockup-4 final-mockup-4"
+    "caption4 caption4"
     "usability-testing usability-testing"
     "testing-img1 testing-img1"
     "testing-text1 testing-text1"
@@ -1888,10 +1943,11 @@ ul{
   .bio-container {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
-    ". navbar navbar . ."
+    ". navbar navbar navbar ."
     ". bio-hero bio-hero bio-hero ."
     "bio-hero-img bio-hero-img bio-hero-img bio-hero-img bio-hero-img"
     ". bio-body bio-body bio-body ."
+    ". . home-bottom-text  . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav";
   }
   .hero {
@@ -2136,7 +2192,9 @@ ul{
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "hifi-v1 hifi-v1"
-    "hifi-v2 hifi-v2";
+    "hifi-v1-caption hifi-v1-caption"
+    "hifi-v2 hifi-v2"
+    "hifi-v2-caption hifi-v2-caption";
   }
   .revisions {
     grid-template-columns: 1fr 1fr 1fr;
@@ -2159,7 +2217,9 @@ ul{
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "final-mockup-1 final-mockup-2"
+    "caption1 caption2"
     "final-mockup-3 final-mockup-4"
+    "caption3 caption4"
     "final-mockup-5 final-mockup-6"
     "usability-testing usability-testing"
     "testing-img1 testing-text1"
@@ -2277,8 +2337,10 @@ ul{
     grid-template-areas:
     ". navbar navbar . ."
     ". bio-hero bio-hero . ."
+    ". resume resume . ."
     "bio-hero-img bio-hero-img bio-hero-img bio-hero-img bio-hero-img"
     ". . bio-body . ."
+    ". . home-bottom-text . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav";
   }
   .hero {
@@ -2511,7 +2573,8 @@ ul{
   .hifi-images {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    "hifi-v1 hifi-v2";
+    "hifi-v1 hifi-v2"
+    "hifi-v1-caption hifi-v2-caption";
   }
   .revisions {
     grid-template-columns: 1fr 1fr 1fr;
@@ -2534,7 +2597,9 @@ ul{
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "final-mockup-1 final-mockup-2"
+    "caption1 caption2"
     "final-mockup-3 final-mockup-4"
+    "caption3 caption4"
     "final-mockup-5 final-mockup-6"
     "usability-testing usability-testing"
     "testing-img1 testing-text1"
@@ -2656,8 +2721,10 @@ ul{
     grid-template-areas:
     ". navbar navbar . ."
     ". bio-hero bio-hero . ."
+    ". resume resume . ."
     "bio-hero-img bio-hero-img bio-hero-img bio-hero-img bio-hero-img"
     ". . bio-body . ."
+    ". . home-bottom-text . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav";
   }
   .hero {
@@ -2818,7 +2885,7 @@ ul{
     ". . wireframing-intro . ."
   }
   .wireframing-intro {
-    padding: 15rem 0 5rem 0;
+    padding: 15rem 0 10rem 0;
   }
   .wireframing-imgs {
     grid-template-columns: 1fr 1fr 1fr;
@@ -2887,7 +2954,8 @@ ul{
   .hifi-images {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    "hifi-v1 hifi-v2";
+    "hifi-v1 hifi-v2"
+    "hifi-v1-caption hifi-v2-caption";
   }
   .revisions {
     grid-template-columns: 1fr 1fr 1fr;
@@ -2910,7 +2978,9 @@ ul{
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "final-mockup-1 final-mockup-2"
+    "caption1 caption2"
     "final-mockup-3 final-mockup-4"
+    "caption3 caption4"
     "final-mockup-5 final-mockup-6"
     "usability-testing usability-testing"
     "testing-img1 testing-text1"
@@ -2921,13 +2991,13 @@ ul{
     background-image: url("../images/atmos_specifications_bg2.png");
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 10rem 0;
+    padding: 15rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . reflections-title . ."
   }
   .reflections-title{
-    padding: 15rem 0 5rem 0;
+    padding: 15rem 0 10rem 0;
   }
   .reflections {
     grid-template-columns: 1fr 1fr 1fr;
@@ -2985,37 +3055,40 @@ ul{
 @media only screen and (min-width: 1336px) {
 
   .details {
+    padding: 15rem 0;
+  }
+  .specifications {
     padding: 20rem 0;
   }
   .user-research {
-    padding: 10rem 0;
+    padding: 15rem 0;
   }
   .research-intro {
-    padding: 10rem 0 10rem 0;
+    padding: 15rem 0 10rem 0;
   }
   .user-personas{
-    padding: 10rem 0;
+    padding: 15rem 0;
   }
   .user-personas-intro {
-    padding: 10rem 0 15rem 0;
+    padding: 15rem 0 15rem 0;
   }
   .user-stories {
-    padding: 10rem 0;
+    padding: 15rem 0;
   }
   .user-stories-intro{
-    padding: 10rem 0 10rem 0;
+    padding: 15rem 0 10rem 0;
   }
   .wireframing {
-    padding: 10rem 0;
+    padding: 15rem 0;
   }
   .wireframing-intro {
-    padding: 15rem 0 15rem 0;
+    padding: 20rem 0 20rem 0;
   }
   .branding {
     padding: 10rem 0;
   }
   .branding-intro{
-    padding: 15rem 0 10rem 0;
+    padding: 20rem 0 10rem 0;
   }
   .hifi-mockups {
     padding: 10rem 0;
@@ -3024,10 +3097,10 @@ ul{
     padding: 15rem 0 10rem 0;
   }
   .reflections-intro{
-    padding: 10rem 0;
+    padding: 15rem 0;
   }
   .reflections-title{
-    padding: 15rem 0 20rem 0;
+    padding: 20rem 0 20rem 0;
   }
   .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
     width:70%;
@@ -3049,7 +3122,7 @@ ul{
     padding: 25rem 0;
   }
   .specifications {
-    padding: 10rem 0;
+    padding: 15rem 0;
   }
   .lists{
     padding: 15rem 0 10rem 0;
@@ -3058,22 +3131,22 @@ ul{
     padding: 15rem 0;
   }
   .research-intro {
-    padding: 10rem 0 10rem 0;
+    padding: 20rem 0 20rem 0;
   }
   .user-personas{
-    padding: 15rem 0;
+    padding: 20rem 0;
   }
   .user-personas-intro {
     padding: 15rem 0 10rem 0;
   }
   .user-stories {
-    padding: 15rem 0;
+    padding: 20rem 0;
   }
   .user-stories-intro{
     padding: 15rem 0 10rem 0;
   }
   .wireframing {
-    padding: 15rem 0;
+    padding: 20rem 0;
   }
   .wireframing-intro {
     padding: 20rem 0 15rem 0;
@@ -3091,7 +3164,7 @@ ul{
     padding: 15rem 0 10rem 0;
   }
   .reflections-intro{
-    padding: 15rem 0;
+    padding: 20rem 0;
   }
   .reflections-title{
     padding: 20rem 0 15rem 0;
@@ -3153,13 +3226,13 @@ ul{
     padding: 15rem 0 10rem 0;
   }
   .hifi-mockups {
-    padding: 15rem 0;
+    padding: 20rem 0;
   }
   .hifi-intro{
     padding: 15rem 0 10rem 0;
   }
   .reflections-intro{
-    padding: 20rem 0;
+    padding: 25rem 0;
   }
   .reflections-title{
     padding: 20rem 0 15rem 0;
