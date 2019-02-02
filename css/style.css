@@ -203,7 +203,6 @@ a.active{
   grid-template-areas:
   "navbar"
   "title-section"
-  "email"
   "resume"
   "bio-hero-img"
   "home-bottom-text"
@@ -649,7 +648,7 @@ a.active{
 
 .resume{
   grid-area: resume;
-  margin-right: 25rem;
+  max-width: 40rem;
 }
 .prototype {
   grid-area: prototype;
@@ -1430,16 +1429,10 @@ a.active{
   grid-area: btmnav-pinterest;
 }
 
-/* contact page */
-.email{
-  grid-area: email;
-}
-
-
 /* smaller phones */
 @media only screen and (min-width: 360px) {
   /* .drive, .dropbox, .evernote {
-    width: 75%;
+    padding: 6rem;;
   } */
   h1{
     font-style: normal;
@@ -1530,12 +1523,12 @@ a.active{
     grid-template-areas:
     ". navbar navbar ."
     ". title-section title-section ."
-    ". email email ."
     ". resume . . "
     "bio-hero-img bio-hero-img bio-hero-img bio-hero-img "
     ". . home-bottom-text ."
     "btm-nav btm-nav btm-nav btm-nav";
   }
+
   .btmnav-gmail, .btmnav-behance, .btmnav-linkedin, .btmnav-instagram, .btmnav-pinterest{
     width: 6rem;
     padding: 2rem;
@@ -1553,15 +1546,15 @@ a.active{
     background-image: url("../images/atmos_herocloud.png");
     background-repeat: no-repeat;
     background-size: cover;
-    /* padding: 10rem 0; */
+    padding: 10rem 0 0 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". description description description  .";
   }
 
   .description {
-    /* padding: 0 0 10rem 0; */
-    padding: 20rem 0;
+    padding: 10rem 0 10rem 0;
+    /* padding: 20rem 0; */
   }
   .main-mockup {
     padding-top: 10rem;
@@ -1957,6 +1950,16 @@ a.active{
     ". bio-body bio-body bio-body ."
     ". . home-bottom-text  . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav";
+  }
+  .contact-container {
+    grid-template-columns: 1fr 5fr 5fr 1fr;
+    grid-template-areas:
+    ". navbar navbar ."
+    ". title-section title-section ."
+    ". resume . . "
+    "bio-hero-img bio-hero-img bio-hero-img bio-hero-img "
+    ". . home-bottom-text ."
+    "btm-nav btm-nav btm-nav btm-nav";
   }
   .hero {
     grid-template-columns: 1fr 1fr 1fr;
@@ -3065,7 +3068,7 @@ a.active{
 @media only screen and (min-width: 1336px) {
 
   .details {
-    padding: 15rem 0;
+    padding: 20rem 0;
   }
   .specifications {
     padding: 20rem 0;
