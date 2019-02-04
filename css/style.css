@@ -194,8 +194,7 @@ a.active{
   "bio-hero-img"
   "bio-body"
   "home-bottom-text"
-  "btm-nav"
-  ;
+  "btm-nav";
 }
 
 .contact-container {
@@ -206,7 +205,16 @@ a.active{
   "resume"
   "bio-hero-img"
   "home-bottom-text"
-  "btm-nav"
+  "btm-nav";
+}
+.poplock-container{
+  display: grid;
+  grid-template-areas:
+  "navbar"
+  "hero"
+  "details-poplock"
+  "main-mockup"
+  "specifications"
   ;
 }
 
@@ -215,7 +223,7 @@ a.active{
   grid-area: hero;
   padding: 5rem 0 0 0;
   grid-template-areas:
-    "cloud-logo"
+    "main-logo"
     "intro"
     "btn-prototype";
 }
@@ -234,6 +242,15 @@ a.active{
 
 .specifications {
   background-image: url("../images/atmos_specifications_bg2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-area: specifications;
+  grid-template-areas:
+    "lists";
+}
+#poplock.specifications {
+  background-image: url("../images/poplock_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
@@ -685,8 +702,8 @@ a.active{
   background-color: transparent;
 }
 
-.cloud-logo {
-  grid-area: cloud-logo;
+.main-logo {
+  grid-area: main-logo;
   width: 150px;
   background-color: transparent;
   padding: 5rem 0 2rem ;
@@ -1183,6 +1200,17 @@ a.active{
   padding: 2rem;
 }
 
+/* poplock page */
+.details-poplock {
+  background-image: url("../images/poplock_heroimg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-area: details-poplock;
+  grid-template-areas:
+    "description";
+}
+
 
 /* home page */
 
@@ -1315,6 +1343,7 @@ a.active{
   text-align: center;
 }
 /* hover stuff end */
+
 
 .title-section {
   grid-area: title-section;
@@ -1528,6 +1557,25 @@ a.active{
     ". . home-bottom-text ."
     "btm-nav btm-nav btm-nav btm-nav";
   }
+  .poplock-container{
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". navbar navbar navbar ."
+    ". hero hero . ."
+    "details-poplock details-poplock details-poplock details-poplock details-poplock"
+    ". main-mockup main-mockup main-mockup ."
+    "specifications specifications specifications specifications specifications"
+    ;
+  }
+  .details-poplock {
+    /* background-image: url("../images/atmos_herocloud.png");
+    background-repeat: no-repeat;
+    background-size: cover; */
+    padding: 10rem 0 0 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". description description description  .";
+  }
 
   .btmnav-gmail, .btmnav-behance, .btmnav-linkedin, .btmnav-instagram, .btmnav-pinterest{
     width: 6rem;
@@ -1537,7 +1585,7 @@ a.active{
   .hero {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    "cloud-logo . ."
+    "main-logo . ."
     "intro intro intro"
     "btn-prototype . .";
   }
@@ -1561,6 +1609,12 @@ a.active{
   }
 
   .specifications {
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+      ". lists lists lists .";
+  }
+
+  #poplock.specifications {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
       ". lists lists lists .";
@@ -1724,10 +1778,10 @@ a.active{
     "wireframe-title-2 wireframe-title-2 "
     "wireframe-img-1 wireframe-img-1 "
     "wireframe-img-2 wireframe-img-2 "
-    "wireframe-img-3 wireframe-img-3 "
-    "wireframe-img-4 wireframe-img-4 "
-    "wireframe-img-5 wireframe-img-5 "
-    "wireframe-img-6 wireframe-img-6 ";
+    "wireframe-img-3 wireframe-img-3"
+    "wireframe-img-4 wireframe-img-4"
+    "wireframe-img-5 wireframe-img-5"
+    "wireframe-img-6 wireframe-img-6";
   }
   .branding {
     background-image: url("../images/atmos_specifications_bg2.png");
@@ -1891,91 +1945,8 @@ a.active{
   h1{
     font-size: 7rem;
   }
-
-  .atmos-container {
-    /* background-image: url("../images/atmos_herocloud.png"); */
-    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
-    grid-template-areas:
-    ". navbar navbar . ."
-    ". hero hero . ."
-    "details details details details details"
-    ". main-mockup main-mockup main-mockup ."
-    "specifications specifications specifications specifications specifications"
-    ". overview overview overview ."
-    "user-research user-research user-research user-research user-research"
-    ". survey-results survey-results survey-results ."
-    ". comp-analysis comp-analysis comp-analysis ."
-    ". opportunity opportunity opportunity ."
-    "user-personas user-personas user-personas user-personas user-personas"
-    ". user-persona-grid user-persona-grid user-persona-grid . "
-    " user-stories user-stories user-stories user-stories user-stories"
-    ". features-list features-list features-list ."
-    ". user-flows-title user-flows-title user-flows-title ."
-    ". user-flows user-flows user-flows ."
-    "wireframing wireframing wireframing wireframing wireframing"
-    ". wireframing-imgs wireframing-imgs wireframing-imgs . "
-    "branding  branding  branding branding  branding "
-    " . branding-sketch-title branding-sketch-title branding-sketch-title ."
-    ". branding-images branding-images branding-images ."
-    " . branding-moodboard-title branding-moodboard-title branding-moodboard-title ."
-    " . branding-moodboard branding-moodboard branding-moodboard ."
-    ". . style-guide . ."
-    "hifi-mockups  hifi-mockups  hifi-mockups hifi-mockups hifi-mockups "
-    " . hifi-images hifi-images hifi-images ."
-    " . revisions revisions revisions ."
-    ". hifi-mockups-2 hifi-mockups-2 hifi-mockups-2 ."
-    ". preference preference preference ."
-    ". final-mockups final-mockups final-mockups ."
-    "reflections-intro reflections-intro reflections-intro reflections-intro reflections-intro"
-    ". reflections reflections reflections ."
-    "btm-nav btm-nav btm-nav btm-nav btm-nav";
-    /* margin: 1%; */
-  }
-  .home-container {
-    grid-template-columns: 1fr 5fr 5fr 1fr;
-    grid-template-areas:
-    ". navbar navbar ."
-    ". title-section title-section ."
-    "home-hero home-hero home-hero home-hero"
-    "home-body home-body home-body home-body"
-    ". . home-bottom-text ."
-    "btm-nav btm-nav btm-nav btm-nav";
-  }
-  .bio-container {
-    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
-    grid-template-areas:
-    ". navbar navbar navbar ."
-    ". bio-hero bio-hero bio-hero ."
-    "bio-hero-img bio-hero-img bio-hero-img bio-hero-img bio-hero-img"
-    ". bio-body bio-body bio-body ."
-    ". . home-bottom-text  . ."
-    "btm-nav btm-nav btm-nav btm-nav btm-nav";
-  }
-  .contact-container {
-    grid-template-columns: 1fr 5fr 5fr 1fr;
-    grid-template-areas:
-    ". navbar navbar ."
-    ". title-section title-section ."
-    ". resume . . "
-    "bio-hero-img bio-hero-img bio-hero-img bio-hero-img "
-    ". . home-bottom-text ."
-    "btm-nav btm-nav btm-nav btm-nav";
-  }
-  .hero {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "cloud-logo . ."
-    "intro intro intro"
-    "btn-prototype . .";
-  }
   .details {
-    background-image: url("../images/atmos_herocloud.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 3rem 0;
-    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
-    grid-template-areas:
-    ". description description description  .";
+    padding: 3rem 0
   }
   .description {
     padding: 10rem 0 5rem 0;
@@ -1993,11 +1964,6 @@ a.active{
     grid-template-areas:
       ". lists lists lists .";
   }
-
-  .roles, .deliverables, .specs {
-    text-align: center;
-  }
-
   .lists{
     padding: 10rem 0 0 0;
     grid-template-columns: 1fr 1fr 1fr;
@@ -2006,35 +1972,15 @@ a.active{
   }
   .overview {
     padding-top: 10rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "overview-text overview-text overview-text"
-    "divider-btm divider-btm divider-btm";
   }
   .user-research {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 10rem 0;
-    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
-    grid-template-areas:
-    ". research-intro research-intro research-intro .";
   }
-
   .research-intro {
     padding: 20rem 0 5rem 0;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    "research-intro-text research-intro-text"
-    "usersurvey usersurvey";
   }
   .survey-results {
     padding: 10rem 0;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    "key-usersurvey key-usersurvey"
-    "survey-1 survey-2"
-    "survey-3 survey-4";
   }
   .comp-analysis{
     grid-template-columns: 1fr 1fr 1fr;
@@ -2043,88 +1989,30 @@ a.active{
     "companalysis companalysis companalysis"
     "drive dropbox evernote";
   }
-
   .user-personas{
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 10rem 0;
-    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
-    grid-template-areas:
-    ". user-personas-intro user-personas-intro user-personas-intro .";
   }
   .user-personas-intro {
     padding: 20em 0 5rem 0;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "user-personas-introtext user-personas-introtext user-personas-introtext"
-    "userpersonas userpersonas userpersonas";
   }
   .user-persona-grid {
     margin-top: 10rem;
     padding-top: 2rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    "persona-img3 persona-title3"
-    "persona-quote3 persona-quote3"
-    "frustrations3 goals3";
   }
-
   .user-stories {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 5rem 0;
-    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
-    grid-template-areas:
-    ". user-stories-intro user-stories-intro user-stories-intro .";
   }
-
   .user-stories-intro{
     padding: 20rem 0 5rem 0;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "user-stories-introtext"
-    "userstories";
   }
   .features-list {
     padding-top: 10rem;
-    align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "key-features key-features key-features"
-    "features-set features-set features-set";
   }
   .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
     width:75%;
   }
-  .features-set{
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "features-icon1 features-text1 features-text1"
-    "features-icon2 features-text2 features-text2"
-    "features-icon3 features-text3 features-text3"
-    "features-icon4 features-text4 features-text4"
-    "features-icon5 features-text5 features-text5";
-  }
-
-  .user-flows {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "userflows userflows userflows"
-    "user-flows-1 user-flows-1 user-flows-1"
-    "user-flows-2 user-flows-2 user-flows-2";
-  }
   .wireframing {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 10rem 0;
-    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
-    grid-template-areas:
-    ". wireframing-intro wireframing-intro wireframing-intro ."
   }
   .wireframing-intro {
     padding: 15rem 0 5rem 0;
@@ -2142,85 +2030,19 @@ a.active{
     "wireframe-img-5 wireframe-img-6 ";
   }
   .branding {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 10rem 0;
-    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
-    grid-template-areas:
-    ". branding-intro branding-intro branding-intro .";
   }
   .branding-intro{
-    grid-template-columns: 1fr;
     padding: 15rem 0 5rem 0;
-    grid-template-areas:
-    "branding-introtext"
-    "styleguide";
   }
-
-  .branding-images {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    "mindmap-img logo-sketch-img";
-  }
-
-  .branding-moodboard {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    "moodboard-img-1 moodboard-img-1 "
-    "logo-img-1 logo-img-1" ;
-  }
-
-  .branding-images {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    "mindmap-img logo-sketch-img"
-    "moodboard-img-1 logo-img-1";
-  }
-
   .hifi-mockups {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 5rem 0;
-    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
-    grid-template-areas:
-    ". hifi-intro hifi-intro hifi-intro .";
   }
-
   .hifi-intro{
     padding: 20rem 0 5rem 0;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-    "hifi-introtext"
-    "prototype2";
   }
-
   .hifi-images {
     padding-top: 5rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    "hifi-v1 hifi-v1"
-    "hifi-v1-caption hifi-v1-caption"
-    "hifi-v2 hifi-v2"
-    "hifi-v2-caption hifi-v2-caption";
-  }
-  .revisions {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "revisions-text revisions-text revisions-text"
-    "hifi-3-img1 hifi-3-img1 hifi-3-img1";
-  }
-  .hifi-mockups-2 {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    "hifi-3-img2 hifi-3-img3"
-    "hifi-3-img2 hifi-3-img3";
-  }
-  .preference {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "preference-testing preference-testing preference-testing";
   }
   .final-mockups {
     grid-template-columns: 1fr 1fr;
@@ -2236,56 +2058,10 @@ a.active{
     "testing-img3 testing-text3";
   }
   .reflections-intro{
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 10rem 0;
-    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
-    grid-template-areas:
-    ". reflections-title reflections-title reflections-title ."
   }
   .reflections-title{
     padding: 15rem 0 5rem 0;
-  }
-  .reflections {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "reflections-text reflections-text reflections-text";
-  }
-  .bio-hero-img {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "bio-img bio-img bio-img";
-  }
-  .bio-body {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    ". boxes-img ."
-    "boxes boxes boxes"
-    "boxes-text boxes-text boxes-text"
-    ". dance-img ."
-    "dance dance dance"
-    "dance-text dance-text dance-text"
-    ". idea-img ."
-    "ideo ideo ideo"
-    "idea-text idea-text idea-text"
-    "bio-quote bio-quote bio-quote"
-    ". coffee-img ."
-    "conclusion conclusion conclusion"
-    "coffee-text coffee-text coffee-text";
-  }
-  .btm-nav {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "btm-nav-text btm-nav-text btm-nav-text"
-    "btm-nav-icons btm-nav-icons btm-nav-icons";
-  }
-  .home-body {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "poplock-section poplock-section poplock-section "
-    "atmosphere-section atmosphere-section atmosphere-section "
-    "racsha-section racsha-section racsha-section";
   }
 }
 
@@ -2354,7 +2130,7 @@ a.active{
   .hero {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    "cloud-logo . ."
+    "main-logo . ."
     "intro intro intro"
     "btn-prototype . .";
   }
@@ -2741,7 +2517,7 @@ a.active{
   .hero {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    "cloud-logo . ."
+    "main-logo . ."
     "intro intro intro"
     "btn-prototype . .";
   }
