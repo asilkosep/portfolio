@@ -215,6 +215,9 @@ a.active{
   "details-poplock"
   "main-mockup"
   "specifications"
+  "overview"
+  "user-research"
+  "survey-results"
   ;
 }
 
@@ -278,6 +281,15 @@ a.active{
 
 .user-research {
   background-image: url("../images/atmos_specifications_bg2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-area: user-research;
+  grid-template-areas:
+    "research-intro";
+}
+#poplock.user-research{
+  background-image: url("../images/poplock_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
@@ -1565,6 +1577,9 @@ a.active{
     "details-poplock details-poplock details-poplock details-poplock details-poplock"
     ". main-mockup main-mockup main-mockup ."
     "specifications specifications specifications specifications specifications"
+    ". overview overview overview ."
+    "user-research user-research user-research user-research user-research"
+    ". survey-results survey-results survey-results ."
     ;
   }
   .details-poplock {
@@ -1640,6 +1655,15 @@ a.active{
   }
   .user-research {
     background-image: url("../images/atmos_specifications_bg2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10rem;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". research-intro research-intro research-intro .";
+  }
+  #poplock.user-research{
+    background-image: url("../images/poplock_bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 10rem;
