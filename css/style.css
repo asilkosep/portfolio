@@ -213,7 +213,7 @@ a.active{
   grid-template-areas:
   "navbar"
   "hero"
-  "details-poplock"
+  "details"
   "main-mockup"
   "specifications"
   "overview"
@@ -260,6 +260,16 @@ a.active{
   background-size: cover;
   /* width: 100vw; */
   /* height: 100vh; */
+  display: grid;
+  grid-area: details;
+  grid-template-areas:
+    "description";
+}
+#poplock.details {
+  background-image: url("../images/poplock_heroimg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   display: grid;
   grid-area: details;
   grid-template-areas:
@@ -774,11 +784,16 @@ a.active{
  border-color: #008FC4;
  color: black;
  margin: 3rem 0;
-
 }
-
+#poplock.prototype, #poplock.usersurvey, #poplock.companalysis, #poplock.userpersonas, #poplock.userstories, #poplock.userflows, #poplock.styleguide, #poplock.prototype2, #poplock.resume {
+  border-color: #E93886;
+}
 .prototype:hover, .usersurvey:hover, .companalysis:hover, .userpersonas:hover, .userstories:hover, .userflows:hover, .styleguide:hover, .prototype2:hover, .resume:hover {
  background-color: #008FC4;
+ color: white;
+}
+#poplock.prototype:hover, #poplock.usersurvey:hover, #poplock.companalysis:hover, #poplock.userpersonas:hover, #poplock.userstories:hover, #poplock.userflows:hover, #poplock.styleguide:hover, #poplock.prototype2:hover, #poplock.resume:hover {
+ background-color: #E93886;
  color: white;
 }
 
@@ -1245,19 +1260,20 @@ a.active{
   padding: 10rem 0 3rem 0;
 }
 
+.testing-img1, .testing-img2, .testing-img3 {
+  width: 100%
+}
+#poplock.testing-img1, #poplock.testing-img2, #poplock.testing-img3 {
+  width: 100%;
+}
 .testing-img1 {
   grid-area: testing-img1;
-  width: 100%;
 }
-
 .testing-img2 {
   grid-area: testing-img2;
-  width: 100%;
 }
-
 .testing-img3 {
   grid-area: testing-img3;
-  width: 100%;
 }
 
 .testing-text1 {
@@ -1357,18 +1373,6 @@ a.active{
   grid-area: goals3;
   padding: 2rem;
 }
-
-/* poplock page */
-.details-poplock {
-  background-image: url("../images/poplock_heroimg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: grid;
-  grid-area: details-poplock;
-  grid-template-areas:
-    "description";
-}
-
 
 /* home page */
 
@@ -1642,6 +1646,9 @@ a.active{
     text-align: center;
     padding: 3rem 0 1rem 0;
   }
+  .poplock-container h3 {
+    color: #678602;
+  }
   .navbar a{
       font-size: 1.6rem;
       padding: 3rem 2rem 0 0;
@@ -1719,7 +1726,7 @@ a.active{
     grid-template-areas:
     ". navbar navbar navbar ."
     ". hero hero . ."
-    "details-poplock details-poplock details-poplock details-poplock details-poplock"
+    "details details details details details"
     ". main-mockup main-mockup main-mockup ."
     "specifications specifications specifications specifications specifications"
     ". overview overview overview ."
@@ -1750,13 +1757,6 @@ a.active{
     "btm-nav btm-nav btm-nav btm-nav btm-nav"
     ;
   }
-  .details-poplock {
-    padding: 10rem 0 0 0;
-    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
-    grid-template-areas:
-    ". description description description  .";
-  }
-
   .btmnav-gmail, .btmnav-behance, .btmnav-linkedin, .btmnav-instagram, .btmnav-pinterest{
     width: 6rem;
     padding: 2rem;
@@ -1776,21 +1776,27 @@ a.active{
     grid-template-areas:
     ". description description description  .";
   }
-
+  #poplock.details {
+    /* padding: 5rem 0 0 0; */
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". description description description  .";
+  }
   .description {
     padding: 10rem 0 10rem 0;
     /* padding: 20rem 0; */
   }
+  #poplock.description{
+    padding:0 0 10rem 0;
+  }
   .main-mockup {
     padding-top: 10rem;
   }
-
   .specifications {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
       ". lists lists lists .";
   }
-
   #poplock.specifications {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
@@ -1928,6 +1934,15 @@ a.active{
     "features-icon4 features-text4 features-text4"
     "features-icon5 features-text5 features-text5";
   }
+  #poplock.features-set{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "features-icon1 features-text1 features-text1"
+    "features-icon2 features-text2 features-text2"
+    "features-icon3 features-text3 features-text3"
+    "features-icon4 features-text4 features-text4"
+  }
+
 
   .user-flows {
     grid-template-columns: 1fr 1fr 1fr;
@@ -2105,13 +2120,13 @@ a.active{
     ". reflections-title reflections-title reflections-title ."
   }
   #poplock.reflections-intro{
-    padding-top: 5rem;
+    padding: 5rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". reflections-title reflections-title reflections-title ."
   }
   .reflections-title{
-    padding: 15rem 0 5rem 0;
+    padding: 10rem 0 5rem 0;
   }
   .reflections {
     grid-template-columns: 1fr 1fr 1fr;
@@ -2165,7 +2180,13 @@ a.active{
   .details {
     padding: 3rem 0
   }
+  #poplock.details {
+    padding: 3rem 0
+  }
   .description {
+    padding: 10rem 0 5rem 0;
+  }
+  #poplock.description {
     padding: 10rem 0 5rem 0;
   }
   .main-mockup {
@@ -2361,10 +2382,16 @@ a.active{
     grid-template-areas:
     ". . description . .";
   }
-
+  #poplock.details {
+    padding: 5rem 0;
+  }
   .description {
     padding: 10rem 0 5rem 0;
   }
+  #poplock.description {
+    padding: 10rem 0 5rem 0;
+  }
+
 
   .specifications {
     background-image: url("../images/atmos_specifications_bg2.png");
@@ -2441,8 +2468,7 @@ a.active{
     "features-icon1 features-text1 features-text1"
     "features-icon2 features-text2 features-text2"
     "features-icon3 features-text3 features-text3"
-    "features-icon4 features-text4 features-text4"
-    "features-icon5 features-text5 features-text5";
+    "features-icon4 features-text4 features-text4";
   }
   .user-personas{
     background-image: url("../images/atmos_specifications_bg2.png");
@@ -2515,6 +2541,16 @@ a.active{
     "wireframe-title-2 wireframe-title-2 wireframe-title-2"
     "wireframe-img-1 wireframe-img-2 wireframe-img-3"
     "wireframe-img-4 wireframe-img-5 wireframe-img-6";
+  }
+  #poplock.wireframing-imgs{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "wireframe-title-1 wireframe-title-1 wireframe-title-1"
+    "wireframe-sketch-1 wireframe-sketch-1 wireframe-sketch-1"
+    "wireframe-sketch-2 wireframe-sketch-2 wireframe-sketch-2 "
+    "wireframe-title-2 wireframe-title-2 wireframe-title-2 "
+    "wireframe-img-1 wireframe-img-2  wireframe-img-3"
+    "wireframe-img-4 wireframe-img-5  wireframe-img-6";
   }
   .branding {
     background-image: url("../images/atmos_specifications_bg2.png");
@@ -2672,7 +2708,6 @@ a.active{
     padding: 4rem;
   } */
   .atmos-container {
-    /* background-image: url("../images/atmos_herocloud.png"); */
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". navbar navbar . ."
@@ -2731,6 +2766,42 @@ a.active{
     ". . home-bottom-text . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav";
   }
+  .poplock-container{
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". navbar navbar navbar ."
+    ". hero hero . ."
+    "details details details details details"
+    ". . main-mockup . ."
+    "specifications specifications specifications specifications specifications"
+    ". . overview . ."
+    "user-research user-research user-research user-research user-research"
+    ". survey-results survey-results survey-results ."
+    ". comp-analysis comp-analysis comp-analysis ."
+    ". . opportunity . ."
+    "user-personas user-personas user-personas user-personas user-personas"
+    ". . user-persona-grid . . "
+    " user-stories user-stories user-stories user-stories user-stories"
+    ". features-list features-list features-list ."
+    ". user-flows-title user-flows-title user-flows-title ."
+    ". user-flows user-flows user-flows ."
+    "wireframing wireframing wireframing wireframing wireframing"
+    ". wireframing-imgs wireframing-imgs wireframing-imgs . "
+    "branding  branding  branding branding  branding "
+    " . branding-sketch-title branding-sketch-title branding-sketch-title ."
+    ". branding-images branding-images branding-images ."
+    " . branding-moodboard-title branding-moodboard-title branding-moodboard-title ."
+    " . branding-moodboard branding-moodboard branding-moodboard ."
+    "hifi-mockups  hifi-mockups  hifi-mockups hifi-mockups hifi-mockups "
+    " . hifi-images hifi-images hifi-images ."
+    " . . revisions . ."
+    ". hifi-mockups-2 hifi-mockups-2 hifi-mockups-2 ."
+    ". final-mockups final-mockups final-mockups ."
+    "reflections-intro reflections-intro reflections-intro reflections-intro reflections-intro"
+    ". . reflections . ."
+    "btm-nav btm-nav btm-nav btm-nav btm-nav"
+    ;
+  }
   .hero {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -2740,19 +2811,26 @@ a.active{
   }
 
   .details {
-    background-image: url("../images/atmos_herocloud.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . description . .";
   }
-
+  #poplock.details {
+    padding: 10rem 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . description . .";
+  }
   .description {
     padding: 10rem 0 5rem 0;
   }
-
+  #poplock.description {
+    padding: 10rem 0 5rem 0;
+  }
+  #poplock.main-mockup {
+    padding:5rem 0 0 0;
+  }
   .specifications {
     background-image: url("../images/atmos_specifications_bg2.png");
     background-repeat: no-repeat;
@@ -2776,9 +2854,12 @@ a.active{
     "divider-btm divider-btm divider-btm";
   }
   .user-research {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 10rem 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . research-intro . .";
+  }
+  #poplock.user-research {
     padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
@@ -2813,6 +2894,12 @@ a.active{
     "key-features key-features key-features"
     "features-set features-set features-set";
   }
+  #poplock.features-list{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "key-features"
+    "features-set";
+  }
   .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
     width:90%;
   }
@@ -2822,10 +2909,19 @@ a.active{
     "features-icon1 features-icon2 features-icon3 features-icon4 features-icon5"
     "features-text1 features-text2 features-text3 features-text4 features-text5";
   }
+  #poplock.features-set{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "features-icon1 features-icon2 features-icon3 features-icon4"
+    "features-text1 features-text2 features-text3 features-text4";
+  }
   .user-personas{
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 10rem 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . user-personas-intro . .";
+  }
+  #poplock.user-personas {
     padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
@@ -2855,9 +2951,12 @@ a.active{
   }
 
   .user-stories {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 10rem 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . user-stories-intro . .";
+  }
+  #poplock.user-stories{
     padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
@@ -2880,14 +2979,18 @@ a.active{
     "user-flows-2 user-flows-2 user-flows-2";
   }
   .wireframing {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . wireframing-intro . ."
   }
+  #poplock.wireframing {
+    padding: 10rem 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . wireframing-intro . ."
+  }
+
   .wireframing-intro {
     padding: 15rem 0 10rem 0;
   }
@@ -2901,9 +3004,12 @@ a.active{
     "wireframe-img-4 wireframe-img-5 wireframe-img-6";
   }
   .branding {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 10rem 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . branding-intro . .";
+  }
+  #poplock.branding {
     padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
@@ -2936,17 +3042,18 @@ a.active{
     "mindmap-img logo-sketch-img"
     "moodboard-img-1 logo-img-1";
   }
-
   .hifi-mockups {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . hifi-intro . .";
   }
-
+  #poplock.hifi-mockups{
+    padding: 10rem 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . hifi-intro . .";
+  }
   .hifi-intro{
     padding: 15rem 0 5rem 0;
     grid-template-columns: 1fr;
@@ -2954,12 +3061,17 @@ a.active{
     "hifi-introtext"
     "prototype2";
   }
-
   .hifi-images {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "hifi-v1 hifi-v2"
     "hifi-v1-caption hifi-v2-caption";
+  }
+  #poplock.hifi-images{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "hifi-v1 hifi-v2 hifi-v3"
+    "hifi-v4 hifi-v5 hifi-v6";
   }
   .revisions {
     grid-template-columns: 1fr 1fr 1fr;
@@ -2991,10 +3103,16 @@ a.active{
     "testing-img2 testing-text2"
     "testing-img3 testing-text3";
   }
+  #poplock.testing-img1, #poplock.testing-img2, #poplock.testing-img3 {
+    padding: 5rem;
+  }
   .reflections-intro{
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 15rem 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . reflections-title . ."
+  }
+   #poplock.reflections-intro{
     padding: 15rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
@@ -3052,8 +3170,14 @@ a.active{
   .details {
     padding: 20rem 0;
   }
+  #poplock.details {
+    padding: 20rem 0;
+  }
   .drive, .dropbox, .evernote {
     padding: 5rem;
+  }
+  .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
+    width:70%;
   }
 }
 
@@ -3061,6 +3185,9 @@ a.active{
 @media only screen and (min-width: 1336px) {
 
   .details {
+    padding: 20rem 0;
+  }
+  #poplock.details {
     padding: 20rem 0;
   }
   .specifications {
@@ -3115,7 +3242,7 @@ a.active{
 }
 
 @media only screen and (min-width: 1680px) {
-  .details {
+  /* .details {
     background-image: url("../images/atmos_herocloud.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -3123,11 +3250,15 @@ a.active{
     grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
     grid-template-areas:
     ". . description . .";
-  }
+  } */
+
   /* .drive, .dropbox, .evernote {
     padding: 6rem;
   } */
   .details {
+    padding: 25rem 0;
+  }
+  #poplock.details {
     padding: 25rem 0;
   }
   .specifications {
@@ -3181,11 +3312,14 @@ a.active{
   .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
     width:75%;
   }
+  #poplock.testing-img1, #poplock.testing-img2, #poplock.testing-img3 {
+    padding: 10rem;
+  }
 }
 
 @media only screen and (min-width: 1920px) {
 
-  .details {
+  /* .details {
     background-image: url("../images/atmos_herocloud.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -3193,11 +3327,15 @@ a.active{
     grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
     grid-template-areas:
     ". . description . .";
-  }
+  } */
+
   /* .drive, .dropbox, .evernote {
     padding: 8rem;
   } */
   .details {
+    padding: 30rem 0;
+  }
+  #poplock.details {
     padding: 30rem 0;
   }
   .specifications {
