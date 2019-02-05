@@ -3270,35 +3270,68 @@ a.active{
   .user-research {
     padding: 15rem 0;
   }
+  #poplock.user-research {
+    padding: 15rem 0;
+  }
   .research-intro {
+    padding: 20rem 0 20rem 0;
+  }
+  #poplock.research-intro {
     padding: 20rem 0 20rem 0;
   }
   .user-personas{
     padding: 20rem 0;
   }
+  #poplock.user-personas{
+    padding: 20rem 0;
+  }
   .user-personas-intro {
+    padding: 15rem 0 10rem 0;
+  }
+  #poplock.user-personas-intro {
     padding: 15rem 0 10rem 0;
   }
   .user-stories {
     padding: 20rem 0;
   }
+  #poplock.user-stories {
+    padding: 20rem 0;
+  }
   .user-stories-intro{
+    padding: 15rem 0 10rem 0;
+  }
+  #poplock.user-stories-intro{
     padding: 15rem 0 10rem 0;
   }
   .wireframing {
     padding: 20rem 0;
   }
+  #poplock.wireframing {
+    padding: 20rem 0;
+  }
   .wireframing-intro {
+    padding: 20rem 0 15rem 0;
+  }
+  #poplock.wireframing-intro {
     padding: 20rem 0 15rem 0;
   }
   .branding {
     padding: 15rem 0;
   }
+  #poplock.branding {
+    padding: 20rem 0;
+  }
   .branding-intro{
+    padding: 15rem 0 10rem 0;
+  }
+  #poplock.branding-intro{
     padding: 15rem 0 10rem 0;
   }
   .hifi-mockups {
     padding: 15rem 0;
+  }
+  #poplock.hifi-mockups {
+    padding: 20rem 0;
   }
   .hifi-intro{
     padding: 15rem 0 10rem 0;
@@ -3306,7 +3339,13 @@ a.active{
   .reflections-intro{
     padding: 20rem 0;
   }
+  #poplock.reflections-intro{
+    padding: 20rem 0;
+  }
   .reflections-title{
+    padding: 20rem 0 15rem 0;
+  }
+  #poplock.reflections-title{
     padding: 20rem 0 15rem 0;
   }
   .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
@@ -3338,52 +3377,106 @@ a.active{
   #poplock.details {
     padding: 30rem 0;
   }
+  #poplock.description{
+    padding: 15rem 0 15rem 0;
+  }
   .specifications {
     padding: 15rem 0;
   }
+  #poplock.specifications {
+    padding: 25rem 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+      ". . lists . .";
+  }
   .lists{
+    padding: 15rem 0 15rem 0;
+  }
+  #poplock.lists{
     padding: 15rem 0 15rem 0;
   }
   .user-research {
     padding: 25rem 0;
   }
+  #poplock.user-research {
+    padding: 30rem 0;
+  }
   .research-intro {
+    padding: 10rem 0 10rem 0;
+  }
+  #poplock.research-intro {
     padding: 10rem 0 10rem 0;
   }
   .user-personas{
     padding: 25rem 0;
   }
+  #poplock.user-personas{
+    padding: 30rem 0;
+  }
   .user-personas-intro {
+    padding: 15rem 0 10rem 0;
+  }
+  #poplock.user-personas-intro {
     padding: 15rem 0 10rem 0;
   }
   .user-stories {
     padding: 25rem 0;
   }
+  #poplock.user-stories {
+    padding: 30rem 0;
+  }
   .user-stories-intro{
+    padding: 15rem 0 10rem 0;
+  }
+  #poplock.user-stories-intro{
     padding: 15rem 0 10rem 0;
   }
   .wireframing {
     padding: 25rem 0;
   }
+  #poplock.wireframing {
+    padding: 30rem 0;
+  }
   .wireframing-intro {
+    padding: 20rem 0 15rem 0;
+  }
+  #poplock.wireframing-intro {
     padding: 20rem 0 15rem 0;
   }
   .branding {
     padding: 25rem 0;
   }
+  #poplock.branding {
+    padding: 30rem 0;
+  }
   .branding-intro{
+    padding: 15rem 0 10rem 0;
+  }
+  #poplock.branding-intro{
     padding: 15rem 0 10rem 0;
   }
   .hifi-mockups {
     padding: 20rem 0;
   }
+  #poplock.hifi-mockups {
+    padding: 30rem 0;
+  }
   .hifi-intro{
+    padding: 15rem 0 10rem 0;
+  }
+  #poplock.hifi-intro{
     padding: 15rem 0 10rem 0;
   }
   .reflections-intro{
     padding: 25rem 0;
   }
+  #poplock.reflections-intro{
+    padding: 30rem 0;
+  }
   .reflections-title{
+    padding: 20rem 0 15rem 0;
+  }
+  #poplock.reflections-title{
     padding: 20rem 0 15rem 0;
   }
 }
