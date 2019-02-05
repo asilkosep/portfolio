@@ -218,7 +218,24 @@ a.active{
   "overview"
   "user-research"
   "survey-results"
-  ;
+  "comp-analysis"
+  "opportunity"
+  "user-personas"
+  "user-persona-grid"
+  "user-stories"
+  "features-list"
+  "user-flows"
+  "user-flows-title"
+  "wireframing"
+  "wireframing-imgs"
+  "branding"
+  "branding-sketch-title"
+  "branding-images"
+  "branding-moodboard-title"
+  "branding-moodboard"
+  "hifi-mockups"
+  "hifi-images"
+  "revisions";
 }
 
 .hero {
@@ -253,7 +270,7 @@ a.active{
     "lists";
 }
 #poplock.specifications {
-  background-image: url("../images/poplock_bg.png");
+  background-image: url("../images/poplock_bg2.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
@@ -289,7 +306,7 @@ a.active{
     "research-intro";
 }
 #poplock.user-research{
-  background-image: url("../images/poplock_bg.png");
+  background-image: url("../images/poplock_bg2.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
@@ -336,6 +353,16 @@ a.active{
 
 .user-personas{
   background-image: url("../images/atmos_specifications_bg2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-area: user-personas;
+  grid-template-areas:
+  "user-personas-intro";
+}
+
+#poplock.user-personas{
+  background-image: url("../images/poplock_bg2.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
@@ -401,7 +428,15 @@ a.active{
   grid-template-areas:
   "wireframing-intro";
 }
-
+#poplock.wireframing {
+  background-image: url("../images/poplock_bg2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-area: wireframing;
+  grid-template-areas:
+  "wireframing-intro";
+}
 .wireframing-imgs {
   display: grid;
   grid-gap: 1rem;
@@ -419,10 +454,36 @@ a.active{
   "wireframe-img-5"
   "wireframe-img-6";
 }
+#poplock.wireframing-imgs{
+  display: grid;
+  grid-gap: 1rem;
+  grid-area: wireframing-imgs;
+  grid-template-areas:
+  "wireframe-title-1"
+  "wireframe-sketch-1"
+  "wireframe-sketch-2"
+  "wireframe-title-2"
+  "wireframe-img-1"
+  "wireframe-img-2"
+  "wireframe-img-3"
+  "wireframe-img-4"
+  "wireframe-img-5"
+  "wireframe-img-6";
+}
 
 .branding {
   display: grid;
   background-image: url("../images/atmos_specifications_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-area: branding;
+  grid-template-areas:
+  "branding-intro";
+}
+#poplock.branding{
+  display: grid;
+  background-image: url("../images/poplock_bg2.png");
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
@@ -475,6 +536,16 @@ a.active{
   grid-template-areas:
   "hifi-intro";
 }
+#poplock.hifi-mockups{
+  background-image: url("../images/poplock_bg2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-area: hifi-mockups;
+  grid-gap: 2rem;
+  grid-template-areas:
+  "hifi-intro";
+}
 .hifi-intro{
   display: grid;
   grid-area: hifi-intro;
@@ -489,8 +560,10 @@ a.active{
   grid-template-areas:
   "hifi-v1"
   "hifi-v2"
-  "hifi-v1-caption"
-  "hifi-v2-caption"
+  "hifi-v3"
+  "hifi-v4"
+  "hifi-v5"
+  "hifi-v6"
   ;
 }
 
@@ -593,7 +666,15 @@ a.active{
   grid-template-areas:
   "user-stories-intro";
 }
-
+#poplock.user-stories {
+  background-image: url("../images/poplock_bg2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-area: user-stories;
+  grid-template-areas:
+  "user-stories-intro";
+}
 .user-stories-intro{
   display: grid;
   grid-area: user-stories-intro;
@@ -1020,9 +1101,24 @@ a.active{
   grid-area: hifi-v1;
   width: 100%;
 }
-
 .hifi-v2 {
   grid-area: hifi-v2;
+  width: 100%;
+}
+.hifi-v3 {
+  grid-area: hifi-v3;
+  width: 100%;
+}
+.hifi-v4 {
+  grid-area: hifi-v4;
+  width: 100%;
+}
+.hifi-v5 {
+  grid-area: hifi-v5;
+  width: 100%;
+}
+.hifi-v6{
+  grid-area: hifi-v6;
   width: 100%;
 }
 
@@ -1527,7 +1623,6 @@ a.active{
     ". branding-images branding-images branding-images ."
     " . branding-moodboard-title branding-moodboard-title branding-moodboard-title ."
     " . branding-moodboard branding-moodboard branding-moodboard ."
-    ". . style-guide . ."
     "hifi-mockups  hifi-mockups  hifi-mockups hifi-mockups hifi-mockups "
     " . hifi-images hifi-images hifi-images ."
     " . revisions revisions revisions ."
@@ -1580,12 +1675,28 @@ a.active{
     ". overview overview overview ."
     "user-research user-research user-research user-research user-research"
     ". survey-results survey-results survey-results ."
+    ". comp-analysis comp-analysis comp-analysis ."
+    ". opportunity opportunity opportunity ."
+    "user-personas user-personas user-personas user-personas user-personas"
+    ". user-persona-grid user-persona-grid user-persona-grid . "
+    " user-stories user-stories user-stories user-stories user-stories"
+    ". features-list features-list features-list ."
+    ". user-flows-title user-flows-title user-flows-title ."
+    ". user-flows user-flows user-flows ."
+    "wireframing wireframing wireframing wireframing wireframing"
+    ". wireframing-imgs wireframing-imgs wireframing-imgs . "
+    "branding  branding  branding branding  branding "
+    " . branding-sketch-title branding-sketch-title branding-sketch-title ."
+    ". branding-images branding-images branding-images ."
+    " . branding-moodboard-title branding-moodboard-title branding-moodboard-title ."
+    " . branding-moodboard branding-moodboard branding-moodboard ."
+    "hifi-mockups  hifi-mockups  hifi-mockups hifi-mockups hifi-mockups "
+    " . hifi-images hifi-images hifi-images ."
+    " . revisions revisions revisions ."
+    ". hifi-mockups-2 hifi-mockups-2 hifi-mockups-2 ."
     ;
   }
   .details-poplock {
-    /* background-image: url("../images/atmos_herocloud.png");
-    background-repeat: no-repeat;
-    background-size: cover; */
     padding: 10rem 0 0 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
@@ -1606,9 +1717,6 @@ a.active{
   }
 
   .details {
-    background-image: url("../images/atmos_herocloud.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 10rem 0 0 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
@@ -1654,24 +1762,17 @@ a.active{
     "overview-text overview-text overview-text"
   }
   .user-research {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding-top: 10rem;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". research-intro research-intro research-intro .";
   }
   #poplock.user-research{
-    background-image: url("../images/poplock_bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding-top: 10rem;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". research-intro research-intro research-intro .";
   }
-
   .research-intro {
     padding: 15rem 0 5rem 0;
     grid-template-columns: 1fr 1fr;
@@ -1696,13 +1797,12 @@ a.active{
     "dropbox"
     "evernote";
   }
-
   .user-personas{
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* padding: 10rem 0; */
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". user-personas-intro user-personas-intro user-personas-intro .";
+  }
+  #poplock.user-personas{
     grid-template-areas:
     ". user-personas-intro user-personas-intro user-personas-intro .";
   }
@@ -1731,7 +1831,6 @@ a.active{
     "persona-quote2 persona-quote2"
     "frustrations2 goals2" */
   }
-
   .user-stories {
     background-image: url("../images/atmos_specifications_bg2.png");
     background-repeat: no-repeat;
@@ -1741,7 +1840,10 @@ a.active{
     grid-template-areas:
     ". user-stories-intro user-stories-intro user-stories-intro .";
   }
-
+  #poplock.user-stories {
+    grid-template-areas:
+    ". user-stories-intro user-stories-intro user-stories-intro .";
+  }
   .user-stories-intro{
     padding: 15rem 0 5rem 0;
     grid-template-columns: 1fr;
@@ -1781,13 +1883,14 @@ a.active{
     "user-flows-2 user-flows-2 user-flows-2";
   }
   .wireframing {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding-top: 5rem;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
-    ". wireframing-intro wireframing-intro wireframing-intro ."
+    ". wireframing-intro wireframing-intro wireframing-intro .";
+  }
+  #poplock.wireframing {
+    grid-template-areas:
+    ". wireframing-intro wireframing-intro wireframing-intro .";
   }
   .wireframing-intro {
     padding: 15rem 0 5rem 0;
@@ -1807,10 +1910,24 @@ a.active{
     "wireframe-img-5 wireframe-img-5"
     "wireframe-img-6 wireframe-img-6";
   }
+  #poplock.wireframing-imgs{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "wireframe-title-1 wireframe-title-1 "
+    "wireframe-sketch-1 wireframe-sketch-1"
+    "wireframe-sketch-2 wireframe-sketch-2 "
+    "wireframe-title-2 wireframe-title-2 "
+    "wireframe-img-1 wireframe-img-2 "
+    "wireframe-img-3 wireframe-img-4 "
+    "wireframe-img-5 wireframe-img-6";
+  }
   .branding {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding-top: 10rem;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". branding-intro branding-intro branding-intro .";
+  }
+  #poplock.branding{
     padding-top: 10rem;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
@@ -1846,15 +1963,17 @@ a.active{
   }
 
   .hifi-mockups {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding-top: 10rem;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". hifi-intro hifi-intro hifi-intro .";
   }
-
+  #poplock.hifi-mockups{
+    padding-top: 10rem;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". hifi-intro hifi-intro hifi-intro .";
+  }
   .hifi-intro{
     padding: 15rem 0 5rem 0;
     grid-template-columns: 1fr;
@@ -1862,7 +1981,6 @@ a.active{
     "hifi-introtext"
     "prototype2";
   }
-
   .hifi-images {
     padding-top: 5rem;
     grid-template-columns: 1fr 1fr;
@@ -1871,6 +1989,14 @@ a.active{
     "hifi-v1-caption hifi-v1-caption"
     "hifi-v2 hifi-v2"
     "hifi-v2-caption hifi-v2-caption";
+  }
+  #poplock.hifi-images{
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      "hifi-v1 hifi-v2"
+      "hifi-v3 hifi-v4"
+      "hifi-v5 hifi-v6"
+      ;
   }
   .revisions {
     grid-template-columns: 1fr 1fr 1fr;
@@ -1883,6 +2009,11 @@ a.active{
     grid-template-areas:
     "hifi-3-img2 hifi-3-img3"
     "hifi-3-img2 hifi-3-img3";
+  }
+  #poplock.hifi-mockups-2{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "" ;
   }
   .preference {
     grid-template-columns: 1fr 1fr 1fr;
