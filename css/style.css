@@ -228,6 +228,7 @@ a.active{
   "user-flows"
   "user-flows-title"
   "wireframing"
+  "wireframing-sketches"
   "wireframing-imgs"
   "branding"
   "branding-sketch-title"
@@ -259,7 +260,6 @@ a.active{
   background-repeat: no-repeat;
   background-size: cover;
   /* width: 100vw; */
-  /* height: 100vh; */
   display: grid;
   grid-area: details;
   grid-template-areas:
@@ -351,22 +351,35 @@ a.active{
 }
 
 .comp-analysis {
+  align-items: top;
   display: grid;
   grid-area: comp-analysis;
   grid-template-areas:
     "comp-anal-title"
     "companalysis"
-    "drive"
-    "dropbox"
-    "evernote";
+    "logo1"
+    "logo2"
+    "logo3";
 }
-
+#poplock.comp-analysis{
+  align-items: top;
+  display: grid;
+  grid-area: comp-analysis;
+  grid-template-areas:
+    "comp-anal-title"
+    "companalysis"
+    "logo1"
+    "logo1-text"
+    "logo2"
+    "logo2-text"
+    "logo3"
+    "logo3-text";
+}
 .opportunity {
   display: grid;
   grid-area: opportunity;
   padding-top: 10rem;
 }
-
 .user-personas{
   background-image: url("../images/atmos_specifications_bg2.png");
   background-repeat: no-repeat;
@@ -376,7 +389,6 @@ a.active{
   grid-template-areas:
   "user-personas-intro";
 }
-
 #poplock.user-personas{
   background-image: url("../images/poplock_bg2.png");
   background-repeat: no-repeat;
@@ -386,7 +398,6 @@ a.active{
   grid-template-areas:
   "user-personas-intro";
 }
-
 .user-personas-intro {
   display: grid;
   grid-area: user-personas-intro;
@@ -403,7 +414,6 @@ a.active{
     "key-features"
     "features-set";
 }
-
 .features-set{
   display: grid;
   grid-area: features-set;
@@ -419,13 +429,11 @@ a.active{
   "features-icon5"
   "features-text5";
 }
-
 .user-flows-title {
   display: grid;
   grid-area: user-flows-title;
   padding-top: 10rem;
 }
-
 .user-flows {
   display: grid;
   grid-area: user-flows;
@@ -434,7 +442,6 @@ a.active{
   "user-flows-1"
   "user-flows-2";
 }
-
 .wireframing {
   background-image: url("../images/atmos_specifications_bg.png");
   background-repeat: no-repeat;
@@ -452,6 +459,14 @@ a.active{
   grid-area: wireframing;
   grid-template-areas:
   "wireframing-intro";
+}
+.wireframing-sketches{
+  display: grid;
+  grid-area: wireframing-sketches;
+  grid-template-areas:
+  "wireframe-title-1"
+  "wireframe-sketch-1"
+  "wireframe-sketch-2";
 }
 .wireframing-imgs {
   display: grid;
@@ -600,6 +615,7 @@ a.active{
   "hifi-3-img3";
 }
 #poplock.hifi-mockups-2{
+  grid-gap: 2rem;
   grid-template-areas:
   "hifi-revision1"
   "hifi-revision2"
@@ -940,21 +956,33 @@ a.active{
   grid-area: comp-anal-title;
 }
 
-.drive {
-  grid-area: drive;
+.logo1 {
+  grid-area: logo1;
 }
-
-.dropbox {
-  grid-area: dropbox;
+.logo2 {
+  grid-area: logo2;
 }
-
-.evernote {
-  grid-area: evernote;
+.logo3 {
+  grid-area: logo3;
 }
-
-.drive, .dropbox, .evernote{
+.logo1, .logo2, .logo3{
   width: 100%;
   padding: 3rem;
+}
+#poplock.logo1{
+  height: 75%
+}
+.logo1-text{
+  grid-area: logo1-text;
+  padding: 2rem;
+}
+.logo2-text{
+  grid-area: logo2-text;
+  padding: 2rem;
+}
+.logo3-text{
+  grid-area: logo3-text;
+  padding: 2rem;
 }
 
 .user-personas-intro {
@@ -983,12 +1011,16 @@ a.active{
 
 .key-features {
   grid-area: key-features;
+  align-items: center;
 }
 
 .features-text1, .features-text2, .features-text3, .features-text4, .features-text5 {
   align-self: left;
   justify-self: left;
-  padding: 0 3rem;
+  padding: 0 2rem;
+}
+#poplock.features-icon1, #poplock.features-icon2, #poplock.features-icon3, #poplock.features-icon4 {
+  width: 75%
 }
 
 .features-icon1{
@@ -1257,7 +1289,7 @@ a.active{
 
 .usability-testing {
   grid-area: usability-testing;
-  padding: 10rem 0 3rem 0;
+  padding: 3rem 0 3rem 0;
 }
 
 .testing-img1, .testing-img2, .testing-img3 {
@@ -1622,7 +1654,7 @@ a.active{
 
 /* smaller phones */
 @media only screen and (min-width: 360px) {
-  /* .drive, .dropbox, .evernote {
+  /* .logo1, .logo2, .logo3 {
     padding: 6rem;;
   } */
   h1{
@@ -1741,6 +1773,7 @@ a.active{
     ". user-flows-title user-flows-title user-flows-title ."
     ". user-flows user-flows user-flows ."
     "wireframing wireframing wireframing wireframing wireframing"
+    ". wireframing-sketches wireframing-sketches wireframing-sketches ."
     ". wireframing-imgs wireframing-imgs wireframing-imgs . "
     "branding  branding  branding branding  branding "
     " . branding-sketch-title branding-sketch-title branding-sketch-title ."
@@ -1777,7 +1810,7 @@ a.active{
     ". description description description  .";
   }
   #poplock.details {
-    /* padding: 5rem 0 0 0; */
+    padding: 10rem 0 0 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". description description description  .";
@@ -1802,11 +1835,9 @@ a.active{
     grid-template-areas:
       ". lists lists lists .";
   }
-
   .roles, .deliverables, .specs {
     text-align: center;
   }
-
   .lists{
     padding: 10rem 0 0 0;
     grid-template-columns: 1fr;
@@ -1828,7 +1859,7 @@ a.active{
     ". research-intro research-intro research-intro .";
   }
   #poplock.user-research{
-    padding-top: 10rem;
+    padding-top: 15rem;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". research-intro research-intro research-intro .";
@@ -1853,9 +1884,9 @@ a.active{
     grid-template-areas:
     "comp-anal-title"
     "companalysis"
-    "drive"
-    "dropbox"
-    "evernote";
+    "logo1"
+    "logo2"
+    "logo3";
   }
   .user-personas{
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
@@ -1863,6 +1894,7 @@ a.active{
     ". user-personas-intro user-personas-intro user-personas-intro .";
   }
   #poplock.user-personas{
+    padding-top: 10rem;
     grid-template-areas:
     ". user-personas-intro user-personas-intro user-personas-intro .";
   }
@@ -1942,8 +1974,6 @@ a.active{
     "features-icon3 features-text3 features-text3"
     "features-icon4 features-text4 features-text4"
   }
-
-
   .user-flows {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -1958,6 +1988,7 @@ a.active{
     ". wireframing-intro wireframing-intro wireframing-intro .";
   }
   #poplock.wireframing {
+    padding-top: 15rem;
     grid-template-areas:
     ". wireframing-intro wireframing-intro wireframing-intro .";
   }
@@ -1997,7 +2028,7 @@ a.active{
     ". branding-intro branding-intro branding-intro .";
   }
   #poplock.branding{
-    padding-top: 10rem;
+    padding-top: 15rem;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". branding-intro branding-intro branding-intro .";
@@ -2038,7 +2069,7 @@ a.active{
     ". hifi-intro hifi-intro hifi-intro .";
   }
   #poplock.hifi-mockups{
-    padding-top: 10rem;
+    padding-top: 15rem;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". hifi-intro hifi-intro hifi-intro .";
@@ -2225,7 +2256,15 @@ a.active{
     grid-template-areas:
     "comp-anal-title comp-anal-title comp-anal-title"
     "companalysis companalysis companalysis"
-    "drive dropbox evernote";
+    "logo1 logo2 logo3";
+  }
+  #poplock.comp-analysis{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "comp-anal-title comp-anal-title comp-anal-title"
+    "companalysis companalysis companalysis"
+    "logo1 logo2 logo3"
+    "logo1-text logo2-text logo3-text";
   }
   .user-personas{
     padding: 10rem 0;
@@ -2262,6 +2301,20 @@ a.active{
     "wireframe-sketch-1 wireframe-sketch-1"
     "wireframe-sketch-2 wireframe-sketch-2 "
     "wireframe-sketch-3 wireframe-sketch-3 "
+    "wireframe-title-2 wireframe-title-2 "
+    "wireframe-img-1 wireframe-img-2 "
+    "wireframe-img-3 wireframe-img-4 "
+    "wireframe-img-5 wireframe-img-6 ";
+  }
+  .wireframing-sketches{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "wireframe-title-1 wireframe-title-1"
+    "wireframe-sketch-1 wireframe-sketch-2";
+  }
+  #poplock.wireframing-imgs {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
     "wireframe-title-2 wireframe-title-2 "
     "wireframe-img-1 wireframe-img-2 "
     "wireframe-img-3 wireframe-img-4 "
@@ -2365,6 +2418,43 @@ a.active{
     ". . home-bottom-text . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav";
   }
+  .poplock-container{
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". navbar navbar navbar ."
+    ". hero hero . ."
+    "details details details details details"
+    ". . main-mockup . ."
+    "specifications specifications specifications specifications specifications"
+    ". . overview . ."
+    "user-research user-research user-research user-research user-research"
+    ". survey-results survey-results survey-results ."
+    ". comp-analysis comp-analysis comp-analysis ."
+    ". . opportunity . ."
+    "user-personas user-personas user-personas user-personas user-personas"
+    ". user-persona-grid user-persona-grid user-persona-grid . "
+    " user-stories user-stories user-stories user-stories user-stories"
+    ". . features-list . ."
+    ". user-flows-title user-flows-title user-flows-title ."
+    ". user-flows user-flows user-flows ."
+    "wireframing wireframing wireframing wireframing wireframing"
+    ". wireframing-sketches wireframing-sketches wireframing-sketches ."
+    ". wireframing-imgs wireframing-imgs wireframing-imgs . "
+    "branding  branding  branding branding  branding "
+    " . branding-sketch-title branding-sketch-title branding-sketch-title ."
+    ". branding-images branding-images branding-images ."
+    " . branding-moodboard-title branding-moodboard-title branding-moodboard-title ."
+    " . branding-moodboard branding-moodboard branding-moodboard ."
+    "hifi-mockups  hifi-mockups  hifi-mockups hifi-mockups hifi-mockups "
+    " . hifi-images hifi-images hifi-images ."
+    " . . revisions . ."
+    ". . hifi-mockups-2 . ."
+    ". . final-mockups . ."
+    "reflections-intro reflections-intro reflections-intro reflections-intro reflections-intro"
+    ". . reflections . ."
+    "btm-nav btm-nav btm-nav btm-nav btm-nav"
+    ;
+  }
   .hero {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -2372,11 +2462,7 @@ a.active{
     "intro intro intro"
     "btn-prototype . .";
   }
-
   .details {
-    background-image: url("../images/atmos_herocloud.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 5rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
@@ -2384,6 +2470,9 @@ a.active{
   }
   #poplock.details {
     padding: 5rem 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . description . .";
   }
   .description {
     padding: 10rem 0 5rem 0;
@@ -2391,22 +2480,15 @@ a.active{
   #poplock.description {
     padding: 10rem 0 5rem 0;
   }
-
-
   .specifications {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 15rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
       ". lists lists lists .";
   }
-
   .roles, .deliverables, .specs {
     text-align: center;
   }
-
   .lists{
     padding: 10rem 0 0 0;
     grid-template-columns: 1fr 1fr 1fr;
@@ -2418,18 +2500,19 @@ a.active{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "overview-text overview-text overview-text"
-    "divider-btm divider-btm divider-btm";
   }
   .user-research {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . research-intro . .";
   }
-
+  #poplock.user-research{
+    padding: 10rem 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . research-intro . .";
+  }
   .research-intro {
     padding: 20rem 0 5rem 0;
     grid-template-columns: 1fr 1fr;
@@ -2437,7 +2520,6 @@ a.active{
     "research-intro-text research-intro-text"
     "usersurvey usersurvey";
   }
-
   .survey-results {
     padding: 10rem 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -2450,7 +2532,7 @@ a.active{
     grid-template-areas:
     "comp-anal-title comp-anal-title comp-anal-title"
     ". companalysis ."
-    "drive dropbox evernote";
+    "logo1 logo2 logo3";
   }
   .features-list {
     padding-top: 10rem;
@@ -2471,9 +2553,12 @@ a.active{
     "features-icon4 features-text4 features-text4";
   }
   .user-personas{
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 10rem 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . user-personas-intro . .";
+  }
+  #poplock.user-personas{
     padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
@@ -2495,17 +2580,18 @@ a.active{
     "persona-quote3 persona-quote3"
     "frustrations3 goals3";
   }
-
   .user-stories {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . user-stories-intro . .";
   }
-
+  #poplock.user-stories {
+    padding: 10rem 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . user-stories-intro . .";
+  }
   .user-stories-intro{
     padding: 20rem 0 5rem 0;
     grid-template-columns: 1fr;
@@ -2513,7 +2599,6 @@ a.active{
     "user-stories-introtext"
     "userstories";
   }
-
   .user-flows {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -2522,9 +2607,12 @@ a.active{
     "user-flows-2 user-flows-2 user-flows-2";
   }
   .wireframing {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 10rem 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . wireframing-intro . ."
+  }
+  #poplock.wireframing {
     padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
@@ -2542,20 +2630,26 @@ a.active{
     "wireframe-img-1 wireframe-img-2 wireframe-img-3"
     "wireframe-img-4 wireframe-img-5 wireframe-img-6";
   }
+  .wireframing-sketches{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "wireframe-title-1 wireframe-title-1"
+    "wireframe-sketch-1 wireframe-sketch-2";
+  }
   #poplock.wireframing-imgs{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-    "wireframe-title-1 wireframe-title-1 wireframe-title-1"
-    "wireframe-sketch-1 wireframe-sketch-1 wireframe-sketch-1"
-    "wireframe-sketch-2 wireframe-sketch-2 wireframe-sketch-2 "
     "wireframe-title-2 wireframe-title-2 wireframe-title-2 "
     "wireframe-img-1 wireframe-img-2  wireframe-img-3"
     "wireframe-img-4 wireframe-img-5  wireframe-img-6";
   }
   .branding {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 10rem 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . branding-intro . .";
+  }
+  #poplock.branding {
     padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
@@ -2568,37 +2662,35 @@ a.active{
     "branding-introtext"
     "styleguide";
   }
-
   .branding-images {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "mindmap-img logo-sketch-img";
   }
-
   .branding-moodboard {
     display: grid;
     grid-area: branding-moodboard;
     grid-template-areas:
     "moodboard-img-1 logo-img-1";
   }
-
   .branding-images {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "mindmap-img logo-sketch-img"
     "moodboard-img-1 logo-img-1";
   }
-
   .hifi-mockups {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . hifi-intro . .";
   }
-
+  #poplock.hifi-mockups {
+    padding: 10rem 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . hifi-intro . .";
+  }
   .hifi-intro{
     padding: 15rem 0 5rem 0;
     grid-template-columns: 1fr;
@@ -2606,12 +2698,17 @@ a.active{
     "hifi-introtext"
     "prototype2";
   }
-
   .hifi-images {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "hifi-v1 hifi-v2"
     "hifi-v1-caption hifi-v2-caption";
+  }
+  #poplock.hifi-images{
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+      "hifi-v1 hifi-v2 hifi-v3"
+      "hifi-v4 hifi-v5 hifi-v6";
   }
   .revisions {
     grid-template-columns: 1fr 1fr 1fr;
@@ -2643,10 +2740,16 @@ a.active{
     "testing-img2 testing-text2"
     "testing-img3 testing-text3";
   }
+  #poplock.final-mockups{
+    grid-template-columns: 1fr 1fr;
+  }
   .reflections-intro{
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding: 10rem 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . reflections-title . ."
+  }
+  #poplock.reflections-intro{
     padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
@@ -2660,7 +2763,6 @@ a.active{
     grid-template-areas:
     "reflections-text reflections-text reflections-text";
   }
-
   .bio-hero-img {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -2704,7 +2806,7 @@ a.active{
 
 /* desktop */
 @media only screen and (min-width: 992px) {
-  /* .drive, .dropbox, .evernote {
+  /* .logo1, .logo2, .logo3 {
     padding: 4rem;
   } */
   .atmos-container {
@@ -2786,6 +2888,7 @@ a.active{
     ". user-flows-title user-flows-title user-flows-title ."
     ". user-flows user-flows user-flows ."
     "wireframing wireframing wireframing wireframing wireframing"
+    ". wireframing-sketches wireframing-sketches wireframing-sketches ."
     ". wireframing-imgs wireframing-imgs wireframing-imgs . "
     "branding  branding  branding branding  branding "
     " . branding-sketch-title branding-sketch-title branding-sketch-title ."
@@ -2795,8 +2898,8 @@ a.active{
     "hifi-mockups  hifi-mockups  hifi-mockups hifi-mockups hifi-mockups "
     " . hifi-images hifi-images hifi-images ."
     " . . revisions . ."
-    ". hifi-mockups-2 hifi-mockups-2 hifi-mockups-2 ."
-    ". final-mockups final-mockups final-mockups ."
+    ". . hifi-mockups-2 . ."
+    ". . final-mockups . ."
     "reflections-intro reflections-intro reflections-intro reflections-intro reflections-intro"
     ". . reflections . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav"
@@ -2886,7 +2989,7 @@ a.active{
     grid-template-areas:
     "comp-anal-title comp-anal-title comp-anal-title"
     ". companalysis ."
-    "drive dropbox evernote";
+    "logo1 logo2 logo3";
   }
   .features-list {
     grid-template-columns: 1fr 1fr 1fr;
@@ -2902,6 +3005,9 @@ a.active{
   }
   .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
     width:90%;
+  }
+  #poplock.features-icon1, #poplock.features-icon2, #poplock.features-icon3, #poplock.features-icon4{
+    width:80%;
   }
   .features-set{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -3173,7 +3279,7 @@ a.active{
   #poplock.details {
     padding: 20rem 0;
   }
-  .drive, .dropbox, .evernote {
+  .logo1, .logo2, .logo3 {
     padding: 5rem;
   }
   .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
@@ -3237,7 +3343,6 @@ a.active{
   }
   .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
     width:70%;
-    justify-items: center;
   }
 }
 
@@ -3252,7 +3357,7 @@ a.active{
     ". . description . .";
   } */
 
-  /* .drive, .dropbox, .evernote {
+  /* .logo1, .logo2, .logo3 {
     padding: 6rem;
   } */
   .details {
@@ -3368,7 +3473,7 @@ a.active{
     ". . description . .";
   } */
 
-  /* .drive, .dropbox, .evernote {
+  /* .logo1, .logo2, .logo3 {
     padding: 8rem;
   } */
   .details {
