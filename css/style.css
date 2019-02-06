@@ -172,7 +172,8 @@ a.active{
   "final-mockups"
   "reflections-intro"
   "reflections"
-  "btm-nav";
+  "btm-nav"
+  "backtotop";
   /* margin: auto; */
 }
 
@@ -242,7 +243,8 @@ a.active{
   "final-mockups"
   "reflections-intro"
   "reflections"
-  "btm-nav";
+  "btm-nav"
+  "backtotop";
 }
 
 .hero {
@@ -1494,7 +1496,6 @@ a.active{
 .atmosphere-section:hover .atmosphere-overlay {
   opacity: .9;
 }
-
 .atmosphere-overlaytext {
   color: white;
   font-size: 20px;
@@ -1506,7 +1507,6 @@ a.active{
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
 .racsha-overlay {
   position: absolute 0 0 0 0 ;
   height: 100%;
@@ -1555,7 +1555,10 @@ a.active{
   padding-top: 20rem;
   grid-area: home-bottom-text;
 }
-
+.backtotop{
+  padding-top: 10rem;
+  grid-area: backtotop;
+}
 
 /* about me page */
 
@@ -1715,6 +1718,7 @@ a.active{
     ". final-mockups final-mockups final-mockups ."
     "reflections-intro reflections-intro reflections-intro reflections-intro reflections-intro"
     ". reflections reflections reflections ."
+    ". . backtotop . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav";
     /* margin: 1%; */
   }
@@ -1782,6 +1786,7 @@ a.active{
     ". final-mockups final-mockups final-mockups ."
     "reflections-intro reflections-intro reflections-intro reflections-intro reflections-intro"
     ". reflections reflections reflections ."
+    ". . backtotop . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav"
     ;
   }
@@ -2389,6 +2394,7 @@ a.active{
     ". final-mockups final-mockups final-mockups ."
     "reflections-intro reflections-intro reflections-intro reflections-intro reflections-intro"
     ". . reflections . ."
+    ". . backtotop . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav";
     /* margin: 1%; */
   }
@@ -2447,6 +2453,7 @@ a.active{
     ". . final-mockups . ."
     "reflections-intro reflections-intro reflections-intro reflections-intro reflections-intro"
     ". . reflections . ."
+    ". . backtotop . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav"
     ;
   }
@@ -2554,7 +2561,7 @@ a.active{
     "features-text1 features-text2 features-text3 features-text4 features-text5";
   }
   .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
-    width:90%;
+    width:%;
   }
   .user-personas{
     padding: 10rem 0;
@@ -2848,6 +2855,7 @@ a.active{
     ". final-mockups final-mockups final-mockups ."
     "reflections-intro reflections-intro reflections-intro reflections-intro reflections-intro"
     ". . reflections . ."
+    ". . backtotop . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav";
     /* margin: 1%; */
   }
@@ -2906,6 +2914,7 @@ a.active{
     ". . final-mockups . ."
     "reflections-intro reflections-intro reflections-intro reflections-intro reflections-intro"
     ". . reflections . ."
+    ". . backtotop . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav"
     ;
   }
@@ -2946,6 +2955,9 @@ a.active{
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
       ". . lists . .";
+  }
+  #poplock.specifications{
+    padding:15rem 0;
   }
   .lists{
     padding: 15rem 0 5rem 0;
@@ -3281,6 +3293,9 @@ a.active{
     padding: 20rem 0;
   }
   #poplock.details {
+    padding: 15rem 0;
+  }
+  #poplock.specifications{
     padding: 20rem 0;
   }
   .logo1, .logo2, .logo3 {
