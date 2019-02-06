@@ -107,12 +107,12 @@ a{
   text-align: left;
 }
 .navbar{
-    overflow: hidden;
+    background-color: white;
+    overflow: auto;
     list-style:none;
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: white;
 }
 .navbar li{
     display:inline;
@@ -928,30 +928,22 @@ a.active{
   grid-area: key-usersurvey;
 }
 
+.survey-1, .survey-2, .survey-3, .survey-4{
+  width: 100%;
+  padding: 1rem;
+}
 .survey-1{
   grid-area: survey-1;
-  width: 100%;
-  padding: 2rem;
 }
-
 .survey-2{
   grid-area: survey-2;
-  width: 100%;
-  padding: 2rem;
 }
-
 .survey-3{
   grid-area: survey-3;
-  width: 100%;
-  padding: 2rem;
 }
-
 .survey-4{
   grid-area: survey-4;
-  width: 100%;
-  padding: 2rem;
 }
-
 .comp-anal-title {
   grid-area: comp-anal-title;
 }
@@ -1022,6 +1014,9 @@ a.active{
 #poplock.features-icon1, #poplock.features-icon2, #poplock.features-icon3, #poplock.features-icon4 {
   width: 75%
 }
+/* .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon1{
+  width:100%
+} */
 
 .features-icon1{
   grid-area: features-icon1;
@@ -2542,7 +2537,7 @@ a.active{
     "key-features key-features key-features"
     "features-set features-set features-set";
   }
-  .features-set{
+  /* .features-set{
     align-items: center;
     justify-content: center;
     grid-template-columns: 1fr 1fr 1fr;
@@ -2551,6 +2546,15 @@ a.active{
     "features-icon2 features-text2 features-text2"
     "features-icon3 features-text3 features-text3"
     "features-icon4 features-text4 features-text4";
+  } */
+  .features-set{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "features-icon1 features-icon2 features-icon3 features-icon4 features-icon5"
+    "features-text1 features-text2 features-text3 features-text4 features-text5";
+  }
+  .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
+    width:90%;
   }
   .user-personas{
     padding: 10rem 0;
