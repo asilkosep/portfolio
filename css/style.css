@@ -48,7 +48,6 @@ h5 {
   font-weight: 300;
   font-size: 3.2rem;
   padding: 2rem 0;
-  text-align: center;
 }
 
 p{
@@ -137,6 +136,9 @@ a.active{
   text-decoration: none;
   color: #008FC4;
 }
+/* .description p{
+  color: white;
+} */
 
 .atmos-container {
   display: grid;
@@ -268,7 +270,7 @@ a.active{
     "description";
 }
 #poplock.details {
-  background-image: url("../images/poplock_heroimg.png");
+  background-image: url("../images/poplock_heroimg_5.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -360,8 +362,11 @@ a.active{
     "comp-anal-title"
     "companalysis"
     "logo1"
+    "logo1-text"
     "logo2"
-    "logo3";
+    "logo2-text"
+    "logo3"
+    "logo3-text";
 }
 #poplock.comp-analysis{
   align-items: top;
@@ -464,6 +469,7 @@ a.active{
 }
 .wireframing-sketches{
   display: grid;
+  grid-gap: 1rem;
   grid-area: wireframing-sketches;
   grid-template-areas:
   "wireframe-title-1"
@@ -589,6 +595,7 @@ a.active{
 
 .hifi-images {
   display: grid;
+  grid-gap: 1rem;
   grid-area: hifi-images;
   grid-template-areas:
   "hifi-v1"
@@ -960,11 +967,10 @@ a.active{
   grid-area: logo3;
 }
 .logo1, .logo2, .logo3{
-  width: 100%;
-  padding: 3rem;
-}
-#poplock.logo1{
-  height: 75%
+  width: 70%;
+  max-width: 10rem;
+  margin: auto;
+  padding-top: 5rem;
 }
 .logo1-text{
   grid-area: logo1-text;
@@ -1009,33 +1015,34 @@ a.active{
 }
 
 .features-text1, .features-text2, .features-text3, .features-text4, .features-text5 {
-  align-self: left;
-  justify-self: left;
+  margin: auto;
   padding: 0 2rem;
 }
 #poplock.features-icon1, #poplock.features-icon2, #poplock.features-icon3, #poplock.features-icon4 {
-  width: 75%
+  width: 75%;
+  max-width: 10rem;
+  margin: auto;
+  padding: 5rem 0;
 }
-/* .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon1{
-  width:100%
-} */
+.features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5{
+  width: 75%;
+  max-width: 10rem;
+  margin: auto;
+  padding: 5rem 0;
+}
 
 .features-icon1{
   grid-area: features-icon1;
 }
-
 .features-text1{
   grid-area: features-text1;
 }
-
 .features-icon2{
   grid-area: features-icon2;
 }
-
 .features-text2{
   grid-area: features-text2;
 }
-
 .features-icon3{
   grid-area: features-icon3;
 }
@@ -1359,8 +1366,9 @@ a.active{
 }
 .persona-img3 {
   grid-area: persona-img3;
-  width: 75%;
-  padding: 1rem;
+  width: 80%;
+  max-width: 25rem;
+  margin: auto;
 }
 .persona-title1 {
   grid-area: persona-title1;
@@ -1652,9 +1660,6 @@ a.active{
 
 /* smaller phones */
 @media only screen and (min-width: 360px) {
-  /* .logo1, .logo2, .logo3 {
-    padding: 6rem;;
-  } */
   h1{
     font-style: normal;
     font-weight: 400;
@@ -1885,8 +1890,11 @@ a.active{
     "comp-anal-title"
     "companalysis"
     "logo1"
+    "logo1-text"
     "logo2"
-    "logo3";
+    "logo2-text"
+    "logo3"
+    "logo3-text";
   }
   .user-personas{
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
@@ -1951,10 +1959,10 @@ a.active{
     "key-features key-features key-features"
     "features-set features-set features-set";
   }
-  .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
+  /* .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
     padding: 3rem;
     width:100%;
-  }
+  } */
   .features-set{
     align-items: center;
     justify-content: center;
@@ -2256,13 +2264,14 @@ a.active{
     grid-template-areas:
     "comp-anal-title comp-anal-title comp-anal-title"
     "companalysis companalysis companalysis"
-    "logo1 logo2 logo3";
+    "logo1 logo2 logo3"
+    "logo1-text logo2-text logo3-text";
   }
   #poplock.comp-analysis{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "comp-anal-title comp-anal-title comp-anal-title"
-    "companalysis companalysis companalysis"
+    ". companalysis ."
     "logo1 logo2 logo3"
     "logo1-text logo2-text logo3-text";
   }
@@ -2285,9 +2294,9 @@ a.active{
   .features-list {
     padding-top: 10rem;
   }
-  .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
+  /* .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
     width:75%;
-  }
+  } */
   .wireframing {
     padding: 10rem 0;
   }
@@ -2534,7 +2543,8 @@ a.active{
     grid-template-areas:
     "comp-anal-title comp-anal-title comp-anal-title"
     ". companalysis ."
-    "logo1 logo2 logo3";
+    "logo1 logo2 logo3"
+    "logo1-text logo2-text logo3-text";
   }
   .features-list {
     padding-top: 10rem;
@@ -2560,9 +2570,9 @@ a.active{
     "features-icon1 features-icon2 features-icon3 features-icon4 features-icon5"
     "features-text1 features-text2 features-text3 features-text4 features-text5";
   }
-  .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
+  /* .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
     width:%;
-  }
+  } */
   .user-personas{
     padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
@@ -2817,9 +2827,6 @@ a.active{
 
 /* desktop */
 @media only screen and (min-width: 992px) {
-  /* .logo1, .logo2, .logo3 {
-    padding: 4rem;
-  } */
   .atmos-container {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
@@ -2838,7 +2845,7 @@ a.active{
     " user-stories user-stories user-stories user-stories user-stories"
     ". features-list features-list features-list ."
     ". user-flows-title user-flows-title user-flows-title ."
-    ". user-flows user-flows user-flows ."
+    ". . user-flows . ."
     "wireframing wireframing wireframing wireframing wireframing"
     ". wireframing-imgs wireframing-imgs wireframing-imgs . "
     "branding  branding  branding branding  branding "
@@ -2898,17 +2905,17 @@ a.active{
     " user-stories user-stories user-stories user-stories user-stories"
     ". features-list features-list features-list ."
     ". user-flows-title user-flows-title user-flows-title ."
-    ". user-flows user-flows user-flows ."
+    ". . user-flows . ."
     "wireframing wireframing wireframing wireframing wireframing"
-    ". wireframing-sketches wireframing-sketches wireframing-sketches ."
-    ". wireframing-imgs wireframing-imgs wireframing-imgs . "
+    ". . wireframing-sketches . ."
+    ". . wireframing-imgs . . "
     "branding  branding  branding branding  branding "
     " . branding-sketch-title branding-sketch-title branding-sketch-title ."
-    ". branding-images branding-images branding-images ."
+    ". . branding-images . ."
     " . branding-moodboard-title branding-moodboard-title branding-moodboard-title ."
-    " . branding-moodboard branding-moodboard branding-moodboard ."
+    " . . branding-moodboard . ."
     "hifi-mockups  hifi-mockups  hifi-mockups hifi-mockups hifi-mockups "
-    " . hifi-images hifi-images hifi-images ."
+    " . . hifi-images . ."
     " . . revisions . ."
     ". . hifi-mockups-2 . ."
     ". . final-mockups . ."
@@ -2958,6 +2965,9 @@ a.active{
   }
   #poplock.specifications{
     padding:15rem 0;
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+      ". . lists . .";
   }
   .lists{
     padding: 15rem 0 5rem 0;
@@ -3005,7 +3015,8 @@ a.active{
     grid-template-areas:
     "comp-anal-title comp-anal-title comp-anal-title"
     ". companalysis ."
-    "logo1 logo2 logo3";
+    "logo1 logo2 logo3"
+    "logo1-text logo2-text logo3-text";
   }
   .features-list {
     grid-template-columns: 1fr 1fr 1fr;
@@ -3019,12 +3030,12 @@ a.active{
     "key-features"
     "features-set";
   }
-  .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
+  /* .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
     width:90%;
-  }
-  #poplock.features-icon1, #poplock.features-icon2, #poplock.features-icon3, #poplock.features-icon4{
+  } */
+  /* #poplock.features-icon1, #poplock.features-icon2, #poplock.features-icon3, #poplock.features-icon4{
     width:80%;
-  }
+  } */
   .features-set{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
@@ -3289,6 +3300,84 @@ a.active{
 }
 
 @media only screen and (min-width: 1200px) {
+  .atmos-container {
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". navbar navbar . ."
+    ". hero hero . ."
+    "details details details details details"
+    ". . main-mockup . ."
+    "specifications specifications specifications specifications specifications"
+    ". . overview . ."
+    "user-research user-research user-research user-research user-research"
+    ". survey-results survey-results survey-results ."
+    ". comp-analysis comp-analysis comp-analysis ."
+    ". . opportunity . ."
+    "user-personas user-personas user-personas user-personas user-personas"
+    ". . user-persona-grid . . "
+    " user-stories user-stories user-stories user-stories user-stories"
+    ". features-list features-list features-list ."
+    ". user-flows-title user-flows-title user-flows-title ."
+    ". . user-flows . ."
+    "wireframing wireframing wireframing wireframing wireframing"
+    ". wireframing-imgs wireframing-imgs wireframing-imgs . "
+    "branding  branding  branding branding  branding "
+    " . branding-sketch-title branding-sketch-title branding-sketch-title ."
+    ". branding-images branding-images branding-images ."
+    " . branding-moodboard-title branding-moodboard-title branding-moodboard-title ."
+    " . branding-moodboard branding-moodboard branding-moodboard ."
+    ". . style-guide . ."
+    "hifi-mockups  hifi-mockups  hifi-mockups hifi-mockups hifi-mockups "
+    " . hifi-images hifi-images hifi-images ."
+    " . . revisions . ."
+    ". hifi-mockups-2 hifi-mockups-2 hifi-mockups-2 ."
+    ". . preference . ."
+    ". final-mockups final-mockups final-mockups ."
+    "reflections-intro reflections-intro reflections-intro reflections-intro reflections-intro"
+    ". . reflections . ."
+    ". . backtotop . ."
+    "btm-nav btm-nav btm-nav btm-nav btm-nav";
+    /* margin: 1%; */
+  }
+
+  .poplock-container{
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". navbar navbar navbar ."
+    ". hero hero . ."
+    "details details details details details"
+    ". . main-mockup . ."
+    "specifications specifications specifications specifications specifications"
+    ". . overview . ."
+    "user-research user-research user-research user-research user-research"
+    ". survey-results survey-results survey-results ."
+    ". comp-analysis comp-analysis comp-analysis ."
+    ". . opportunity . ."
+    "user-personas user-personas user-personas user-personas user-personas"
+    ". . user-persona-grid . . "
+    " user-stories user-stories user-stories user-stories user-stories"
+    ". features-list features-list features-list ."
+    ". user-flows-title user-flows-title user-flows-title ."
+    ". user-flows user-flows user-flows ."
+    "wireframing wireframing wireframing wireframing wireframing"
+    ". . wireframing-sketches . ."
+    ". . wireframing-imgs . . "
+    "branding  branding  branding branding  branding "
+    " . branding-sketch-title branding-sketch-title branding-sketch-title ."
+    ". . branding-images . ."
+    " . branding-moodboard-title branding-moodboard-title branding-moodboard-title ."
+    " . . branding-moodboard . ."
+    "hifi-mockups  hifi-mockups  hifi-mockups hifi-mockups hifi-mockups "
+    " . . hifi-images . ."
+    " . . revisions . ."
+    ". . hifi-mockups-2 . ."
+    ". . final-mockups . ."
+    "reflections-intro reflections-intro reflections-intro reflections-intro reflections-intro"
+    ". . reflections . ."
+    ". . backtotop . ."
+    "btm-nav btm-nav btm-nav btm-nav btm-nav"
+    ;
+  }
   .details {
     padding: 20rem 0;
   }
@@ -3298,12 +3387,9 @@ a.active{
   #poplock.specifications{
     padding: 20rem 0;
   }
-  .logo1, .logo2, .logo3 {
-    padding: 5rem;
-  }
-  .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
+  /* .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
     width:70%;
-  }
+  } */
 }
 
 /* desktop */
@@ -3360,9 +3446,9 @@ a.active{
   .reflections-title{
     padding: 20rem 0 20rem 0;
   }
-  .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
+  /* .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
     width:70%;
-  }
+  } */
 }
 
 @media only screen and (min-width: 1680px) {
@@ -3376,9 +3462,6 @@ a.active{
     ". . description . .";
   } */
 
-  /* .logo1, .logo2, .logo3 {
-    padding: 6rem;
-  } */
   .details {
     padding: 25rem 0;
   }
@@ -3472,9 +3555,9 @@ a.active{
   #poplock.reflections-title{
     padding: 20rem 0 15rem 0;
   }
-  .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
+  /* .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
     width:75%;
-  }
+  } */
   #poplock.testing-img1, #poplock.testing-img2, #poplock.testing-img3 {
     padding: 10rem;
   }
@@ -3492,9 +3575,6 @@ a.active{
     ". . description . .";
   } */
 
-  /* .logo1, .logo2, .logo3 {
-    padding: 8rem;
-  } */
   .details {
     padding: 30rem 0;
   }
