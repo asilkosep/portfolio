@@ -50,6 +50,18 @@ h5 {
   padding: 2rem 0;
 }
 
+blockquote:after{
+  content: "";
+  background: black;
+  position:absolute;
+  left:-30px;
+  height: 100%;
+  width: 2px;
+}
+blockquote{
+
+}
+
 p{
   font-family: 'Lato', sans-serif;
   font-style: normal;
@@ -281,28 +293,35 @@ a.active{
 }
 
 .specifications {
-  background-image: url("../images/atmos_specifications_bg2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding: 30rem 0;
   display: grid;
   grid-area: specifications;
   grid-template-areas:
     "lists";
+}
+.specifications::before{
+  content: "";
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 100%;
+  height: calc(100% + 24rem);
+  margin-top: -12rem;
+  background: #B1D4E7;
+  opacity: 0.2;
+  transform: skewY(-9deg);
 }
 #poplock.specifications {
-  background-image: url("../images/poplock_bg2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   display: grid;
   grid-area: specifications;
   grid-template-areas:
     "lists";
 }
-
+#poplock.specifications::before{
+  background: #9FCF01;
+}
 .lists{
   display: grid;
   grid-area: lists;
-  padding-top: 10rem;
   grid-template-areas:
   "roles"
   "deliverables"
@@ -317,24 +336,32 @@ a.active{
 }
 
 .user-research {
-  background-image: url("../images/atmos_specifications_bg2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding: 30rem 0;
   display: grid;
   grid-area: user-research;
   grid-template-areas:
     "research-intro";
+}
+.user-research::before{
+  content: "";
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 100%;
+  height: calc(100% + 16rem);
+  margin-top: -8rem;
+  background: #B1D4E7;
+  opacity: 0.2;
+  transform: skewY(-9deg);
 }
 #poplock.user-research{
-  background-image: url("../images/poplock_bg2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   display: grid;
   grid-area: user-research;
   grid-template-areas:
     "research-intro";
 }
-
+#poplock.user-research::before{
+  background: #9FCF01;
+}
 .research-intro {
     display: grid;
     grid-area: research-intro;
@@ -355,6 +382,7 @@ a.active{
 }
 
 .comp-analysis {
+  padding-top: 10rem;
   align-items: top;
   display: grid;
   grid-area: comp-analysis;
@@ -388,27 +416,35 @@ a.active{
   padding-top: 10rem;
 }
 .user-personas{
-  background-image: url("../images/atmos_specifications_bg2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding: 30rem 0;
   display: grid;
   grid-area: user-personas;
   grid-template-areas:
   "user-personas-intro";
 }
+.user-personas::before{
+  content: "";
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 100%;
+  height: calc(100% + 16rem);
+  margin-top: -8rem;
+  background: #B1D4E7;
+  opacity: 0.2;
+  transform: skewY(-9deg);
+}
 #poplock.user-personas{
-  background-image: url("../images/poplock_bg2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   display: grid;
   grid-area: user-personas;
   grid-template-areas:
   "user-personas-intro";
+}
+#poplock.user-personas::before{
+  background: #9FCF01;
 }
 .user-personas-intro {
   display: grid;
   grid-area: user-personas-intro;
-  padding: 15rem 0 5rem 0;
   grid-template-areas:
   "user-personas-introtext"
   "userpersonas";
@@ -450,22 +486,31 @@ a.active{
   "user-flows-2";
 }
 .wireframing {
-  background-image: url("../images/atmos_specifications_bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding: 30rem 0;
   display: grid;
   grid-area: wireframing;
   grid-template-areas:
   "wireframing-intro";
 }
+.wireframing::before{
+ content: "";
+   grid-column: 1 / -1;
+   grid-row: 1 / -1;
+   width: 100%;
+   height: calc(100% + 16rem);
+   margin-top: -8rem;
+   background: #B1D4E7;
+   opacity: 0.2;
+   transform: skewY(-9deg);
+}
 #poplock.wireframing {
-  background-image: url("../images/poplock_bg2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   display: grid;
   grid-area: wireframing;
   grid-template-areas:
   "wireframing-intro";
+}
+#poplock.wireframing::before{
+  background: #9FCF01;
 }
 .wireframing-sketches{
   display: grid;
@@ -511,24 +556,31 @@ a.active{
 }
 
 .branding {
-  display: grid;
-  background-image: url("../images/atmos_specifications_bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding: 30rem 0;
   display: grid;
   grid-area: branding;
   grid-template-areas:
   "branding-intro";
 }
+.branding::before{
+   content: "";
+   grid-column: 1 / -1;
+   grid-row: 1 / -1;
+   width: 100%;
+   height: calc(100% + 16rem);
+   margin-top: -8rem;
+   background: #B1D4E7;
+   opacity: 0.2;
+   transform: skewY(-9deg);
+}
 #poplock.branding{
-  display: grid;
-  background-image: url("../images/poplock_bg2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   display: grid;
   grid-area: branding;
   grid-template-areas:
   "branding-intro";
+}
+#poplock.branding::before{
+  background: #9FCF01;
 }
 .branding-intro{
   display: grid;
@@ -541,7 +593,7 @@ a.active{
 .branding-sketch-title {
   display: grid;
   grid-area: branding-sketch-title;
-  padding: 10rem 0 3rem 0;
+  padding: 0 0 3rem 0;
 }
 
 .branding-images {
@@ -564,26 +616,32 @@ a.active{
   "moodboard-img-1"
   "logo-img-1";
 }
-
 .hifi-mockups {
-  background-image: url("../images/atmos_specifications_bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding: 30rem 0;
   display: grid;
   grid-area: hifi-mockups;
-  grid-gap: 2rem;
   grid-template-areas:
   "hifi-intro";
 }
+.hifi-mockups::before{
+   content: "";
+   grid-column: 1 / -1;
+   grid-row: 1 / -1;
+   width: 100%;
+   height: calc(100% + 16rem);
+   margin-top: -8rem;
+   background: #B1D4E7;
+   opacity: 0.2;
+   transform: skewY(-9deg);
+}
 #poplock.hifi-mockups{
-  background-image: url("../images/poplock_bg2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   display: grid;
   grid-area: hifi-mockups;
-  grid-gap: 2rem;
   grid-template-areas:
   "hifi-intro";
+}
+#poplock.hifi-mockups::before{
+  background: #9FCF01;
 }
 .hifi-intro{
   display: grid;
@@ -667,33 +725,6 @@ a.active{
   "caption3"
   "caption4";
 }
-
-.reflections-intro{
-  background-image: url("../images/atmos_specifications_bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: grid;
-  grid-area: reflections-intro;
-  grid-template-areas:
-  "reflections-title"
-}
-#poplock.reflections-intro{
-  background-image: url("../images/poplock_bg2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: grid;
-  grid-area: reflections-intro;
-  grid-template-areas:
-  "reflections-title"
-}
-
-.reflections {
-  display: grid;
-  grid-area: reflections;
-  grid-template-areas:
-  "reflections-text";
-}
-
 .user-persona-grid {
   border:1px solid #ccc;
   border-width: 1px 0;
@@ -719,22 +750,31 @@ a.active{
 }
 
 .user-stories {
-  background-image: url("../images/atmos_specifications_bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding: 30rem 0;
   display: grid;
   grid-area: user-stories;
   grid-template-areas:
   "user-stories-intro";
 }
+.user-stories::before{
+  content: "";
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 100%;
+  height: calc(100% + 16rem);
+  margin-top: -8rem;
+  background: #B1D4E7;
+  opacity: 0.2;
+  transform: skewY(-9deg);
+}
 #poplock.user-stories {
-  background-image: url("../images/poplock_bg2.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   display: grid;
   grid-area: user-stories;
   grid-template-areas:
   "user-stories-intro";
+}
+#poplock.user-stories::before{
+  background: #9FCF01;
 }
 .user-stories-intro{
   display: grid;
@@ -742,6 +782,39 @@ a.active{
   grid-template-areas:
   "user-stories-introtext"
   "userstories";
+}
+.reflections-intro{
+  padding: 30rem 0;
+  display: grid;
+  grid-area: reflections-intro;
+  grid-template-areas:
+  "reflections-title";
+}
+.reflections-intro::before{
+  content: "";
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 100%;
+  height: calc(100% + 16rem);
+  margin-top: -8rem;
+  background: #B1D4E7;
+  opacity: 0.2;
+  transform: skewY(-9deg);
+}
+#poplock.reflections-intro{
+  display: grid;
+  grid-area: reflections-intro;
+  grid-template-areas:
+  "reflections-title";
+}
+#poplock.reflections-intro::before{
+  background: #9FCF01;
+}
+.reflections {
+  display: grid;
+  grid-area: reflections;
+  grid-template-areas:
+  "reflections-text";
 }
 
 
@@ -935,6 +1008,7 @@ a.active{
 
 .key-usersurvey{
   grid-area: key-usersurvey;
+  padding-bottom: 5rem;
 }
 
 .survey-1, .survey-2, .survey-3, .survey-4{
@@ -1089,7 +1163,7 @@ a.active{
 
 .wireframe-title-1 {
   grid-area: wireframe-title-1;
-  padding: 10rem 0 3rem 0;
+  padding: 0 0 3rem 0;
 }
 
 .wireframe-sketch-1 {
@@ -1844,7 +1918,6 @@ a.active{
     text-align: center;
   }
   .lists{
-    padding: 10rem 0 0 0;
     grid-template-columns: 1fr;
     grid-template-areas:
     "roles"
@@ -1852,32 +1925,27 @@ a.active{
     "specs";
   }
   .overview {
-    padding-top: 10rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "overview-text overview-text overview-text"
   }
   .user-research {
-    padding-top: 10rem;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". research-intro research-intro research-intro .";
   }
   #poplock.user-research{
-    padding-top: 15rem;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". research-intro research-intro research-intro .";
   }
   .research-intro {
-    padding: 15rem 0 5rem 0;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "research-intro-text research-intro-text"
     "usersurvey usersurvey";
   }
   .survey-results {
-    padding: 10rem 0;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "key-usersurvey key-usersurvey"
@@ -1902,19 +1970,16 @@ a.active{
     ". user-personas-intro user-personas-intro user-personas-intro .";
   }
   #poplock.user-personas{
-    padding-top: 10rem;
     grid-template-areas:
     ". user-personas-intro user-personas-intro user-personas-intro .";
   }
   .user-personas-intro {
-    padding: 15em 0 5rem 0;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "user-personas-introtext user-personas-introtext user-personas-introtext"
     "userpersonas userpersonas userpersonas";
   }
   .user-persona-grid {
-    margin-top: 10rem;
     padding-top: 2rem;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -1932,10 +1997,6 @@ a.active{
     "frustrations2 goals2" */
   }
   .user-stories {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 10rem;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". user-stories-intro user-stories-intro user-stories-intro .";
@@ -1945,14 +2006,12 @@ a.active{
     ". user-stories-intro user-stories-intro user-stories-intro .";
   }
   .user-stories-intro{
-    padding: 15rem 0 5rem 0;
     grid-template-columns: 1fr;
     grid-template-areas:
     "user-stories-introtext"
     "userstories";
   }
   .features-list {
-    padding-top: 10rem;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -1990,18 +2049,13 @@ a.active{
     "user-flows-2 user-flows-2 user-flows-2";
   }
   .wireframing {
-    padding-top: 5rem;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". wireframing-intro wireframing-intro wireframing-intro .";
   }
   #poplock.wireframing {
-    padding-top: 15rem;
     grid-template-areas:
     ". wireframing-intro wireframing-intro wireframing-intro .";
-  }
-  .wireframing-intro {
-    padding: 15rem 0 5rem 0;
   }
   .wireframing-imgs {
     grid-template-columns: 1fr 1fr;
@@ -2030,20 +2084,17 @@ a.active{
     "wireframe-img-5 wireframe-img-6";
   }
   .branding {
-    padding-top: 10rem;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". branding-intro branding-intro branding-intro .";
   }
   #poplock.branding{
-    padding-top: 15rem;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". branding-intro branding-intro branding-intro .";
   }
   .branding-intro{
     grid-template-columns: 1fr;
-    padding: 15rem 0 5rem 0;
     grid-template-areas:
     "branding-introtext"
     "styleguide";
@@ -2071,19 +2122,19 @@ a.active{
   }
 
   .hifi-mockups {
-    padding-top: 10rem;
+    /* padding-top: 10rem; */
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". hifi-intro hifi-intro hifi-intro .";
   }
   #poplock.hifi-mockups{
-    padding-top: 15rem;
+    /* padding-top: 15rem; */
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". hifi-intro hifi-intro hifi-intro .";
   }
   .hifi-intro{
-    padding: 15rem 0 5rem 0;
+    /* padding: 15rem 0 5rem 0; */
     grid-template-columns: 1fr;
     grid-template-areas:
     "hifi-introtext"
@@ -2103,8 +2154,7 @@ a.active{
       grid-template-areas:
       "hifi-v1 hifi-v2"
       "hifi-v3 hifi-v4"
-      "hifi-v5 hifi-v6"
-      ;
+      "hifi-v5 hifi-v6";
   }
   .revisions {
     grid-template-columns: 1fr 1fr 1fr;
@@ -2153,19 +2203,14 @@ a.active{
     "testing-text3 testing-text3";
   }
   .reflections-intro{
-    padding-top: 5rem;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". reflections-title reflections-title reflections-title ."
   }
   #poplock.reflections-intro{
-    padding: 5rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". reflections-title reflections-title reflections-title ."
-  }
-  .reflections-title{
-    padding: 10rem 0 5rem 0;
   }
   .reflections {
     grid-template-columns: 1fr 1fr 1fr;
@@ -2233,31 +2278,14 @@ a.active{
   }
 
   .specifications {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
       ". lists lists lists .";
   }
   .lists{
-    padding: 10rem 0 0 0;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "roles deliverables specs";
-  }
-  .overview {
-    padding-top: 10rem;
-  }
-  .user-research {
-    padding: 10rem 0;
-  }
-  .research-intro {
-    padding: 20rem 0 5rem 0;
-  }
-  .survey-results {
-    padding: 10rem 0;
   }
   .comp-analysis{
     grid-template-columns: 1fr 1fr 1fr;
@@ -2275,34 +2303,12 @@ a.active{
     "logo1 logo2 logo3"
     "logo1-text logo2-text logo3-text";
   }
-  .user-personas{
-    padding: 10rem 0;
-  }
-  .user-personas-intro {
-    padding: 20em 0 5rem 0;
-  }
   .user-persona-grid {
-    margin-top: 10rem;
     padding-top: 2rem;
-  }
-  .user-stories {
-    padding: 5rem 0;
-  }
-  .user-stories-intro{
-    padding: 20rem 0 5rem 0;
-  }
-  .features-list {
-    padding-top: 10rem;
   }
   /* .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
     width:75%;
   } */
-  .wireframing {
-    padding: 10rem 0;
-  }
-  .wireframing-intro {
-    padding: 15rem 0 5rem 0;
-  }
   .wireframing-imgs {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -2329,21 +2335,6 @@ a.active{
     "wireframe-img-3 wireframe-img-4 "
     "wireframe-img-5 wireframe-img-6 ";
   }
-  .branding {
-    padding: 10rem 0;
-  }
-  .branding-intro{
-    padding: 15rem 0 5rem 0;
-  }
-  .hifi-mockups {
-    padding: 5rem 0;
-  }
-  .hifi-intro{
-    padding: 20rem 0 5rem 0;
-  }
-  .hifi-images {
-    padding-top: 5rem;
-  }
   .final-mockups {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -2356,12 +2347,6 @@ a.active{
     "testing-img1 testing-text1"
     "testing-img2 testing-text2"
     "testing-img3 testing-text3";
-  }
-  .reflections-intro{
-    padding: 10rem 0;
-  }
-  .reflections-title{
-    padding: 15rem 0 5rem 0;
   }
 }
 
@@ -2492,7 +2477,6 @@ a.active{
     padding: 10rem 0 5rem 0;
   }
   .specifications {
-    padding: 15rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
       ". lists lists lists .";
@@ -2501,38 +2485,32 @@ a.active{
     text-align: center;
   }
   .lists{
-    padding: 10rem 0 0 0;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "roles deliverables specs";
   }
   .overview {
-    padding-top: 10rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "overview-text overview-text overview-text"
   }
   .user-research {
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . research-intro . .";
   }
   #poplock.user-research{
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . research-intro . .";
   }
   .research-intro {
-    padding: 20rem 0 5rem 0;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "research-intro-text research-intro-text"
     "usersurvey usersurvey";
   }
   .survey-results {
-    padding: 10rem 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
     "key-usersurvey key-usersurvey key-usersurvey key-usersurvey"
@@ -2547,7 +2525,6 @@ a.active{
     "logo1-text logo2-text logo3-text";
   }
   .features-list {
-    padding-top: 10rem;
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -2574,26 +2551,22 @@ a.active{
     width:%;
   } */
   .user-personas{
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . user-personas-intro . .";
   }
   #poplock.user-personas{
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . user-personas-intro . .";
   }
   .user-personas-intro {
-    padding: 20em 0 5rem 0;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "user-personas-introtext user-personas-introtext user-personas-introtext"
     "userpersonas userpersonas userpersonas";
   }
   .user-persona-grid {
-    margin-top: 10rem;
     padding-top: 2rem;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -2602,19 +2575,16 @@ a.active{
     "frustrations3 goals3";
   }
   .user-stories {
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . user-stories-intro . .";
   }
   #poplock.user-stories {
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . user-stories-intro . .";
   }
   .user-stories-intro{
-    padding: 20rem 0 5rem 0;
     grid-template-columns: 1fr;
     grid-template-areas:
     "user-stories-introtext"
@@ -2628,19 +2598,14 @@ a.active{
     "user-flows-2 user-flows-2 user-flows-2";
   }
   .wireframing {
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . wireframing-intro . ."
   }
   #poplock.wireframing {
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . wireframing-intro . ."
-  }
-  .wireframing-intro {
-    padding: 15rem 0 5rem 0;
   }
   .wireframing-imgs {
     grid-template-columns: 1fr 1fr 1fr;
@@ -2665,20 +2630,17 @@ a.active{
     "wireframe-img-4 wireframe-img-5  wireframe-img-6";
   }
   .branding {
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . branding-intro . .";
   }
   #poplock.branding {
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . branding-intro . .";
   }
   .branding-intro{
     grid-template-columns: 1fr;
-    padding: 15rem 0 5rem 0;
     grid-template-areas:
     "branding-introtext"
     "styleguide";
@@ -2701,19 +2663,16 @@ a.active{
     "moodboard-img-1 logo-img-1";
   }
   .hifi-mockups {
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . hifi-intro . .";
   }
   #poplock.hifi-mockups {
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . hifi-intro . .";
   }
   .hifi-intro{
-    padding: 15rem 0 5rem 0;
     grid-template-columns: 1fr;
     grid-template-areas:
     "hifi-introtext"
@@ -2765,19 +2724,14 @@ a.active{
     grid-template-columns: 1fr 1fr;
   }
   .reflections-intro{
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . reflections-title . ."
   }
   #poplock.reflections-intro{
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . reflections-title . ."
-  }
-  .reflections-title{
-    padding: 15rem 0 5rem 0;
   }
   .reflections {
     grid-template-columns: 1fr 1fr 1fr;
@@ -2955,48 +2909,38 @@ a.active{
     padding:5rem 0 0 0;
   }
   .specifications {
-    background-image: url("../images/atmos_specifications_bg2.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
       ". . lists . .";
   }
   #poplock.specifications{
-    padding:15rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
       ". . lists . .";
   }
   .lists{
-    padding: 15rem 0 5rem 0;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "roles deliverables specs";
   }
   .overview {
-    padding-top: 10rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "overview-text overview-text overview-text"
     "divider-btm divider-btm divider-btm";
   }
   .user-research {
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . research-intro . .";
   }
   #poplock.user-research {
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . research-intro . .";
   }
 
   .research-intro {
-    padding: 15rem 0 5rem 0;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "research-intro-text research-intro-text"
@@ -3004,7 +2948,6 @@ a.active{
   }
 
   .survey-results {
-    padding: 10rem 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
     "key-usersurvey key-usersurvey key-usersurvey key-usersurvey"
@@ -3049,19 +2992,16 @@ a.active{
     "features-text1 features-text2 features-text3 features-text4";
   }
   .user-personas{
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . user-personas-intro . .";
   }
   #poplock.user-personas {
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . user-personas-intro . .";
   }
   .user-personas-intro {
-    padding: 15rem 0 5rem 0;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "user-personas-introtext user-personas-introtext user-personas-introtext"
@@ -3084,26 +3024,21 @@ a.active{
   }
 
   .user-stories {
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . user-stories-intro . .";
   }
   #poplock.user-stories{
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . user-stories-intro . .";
   }
-
   .user-stories-intro{
-    padding: 15rem 0 5rem 0;
     grid-template-columns: 1fr;
     grid-template-areas:
     "user-stories-introtext"
     "userstories";
   }
-
   .user-flows {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -3112,20 +3047,14 @@ a.active{
     "user-flows-2 user-flows-2 user-flows-2";
   }
   .wireframing {
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . wireframing-intro . ."
   }
   #poplock.wireframing {
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . wireframing-intro . ."
-  }
-
-  .wireframing-intro {
-    padding: 15rem 0 10rem 0;
   }
   .wireframing-imgs {
     grid-template-columns: 1fr 1fr 1fr;
@@ -3137,20 +3066,17 @@ a.active{
     "wireframe-img-4 wireframe-img-5 wireframe-img-6";
   }
   .branding {
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . branding-intro . .";
   }
   #poplock.branding {
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . branding-intro . .";
   }
   .branding-intro{
     grid-template-columns: 1fr;
-    padding: 15rem 0 5rem 0;
     grid-template-areas:
     "branding-introtext"
     "styleguide";
@@ -3176,19 +3102,16 @@ a.active{
     "moodboard-img-1 logo-img-1";
   }
   .hifi-mockups {
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . hifi-intro . .";
   }
   #poplock.hifi-mockups{
-    padding: 10rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . hifi-intro . .";
   }
   .hifi-intro{
-    padding: 15rem 0 5rem 0;
     grid-template-columns: 1fr;
     grid-template-areas:
     "hifi-introtext"
@@ -3240,19 +3163,14 @@ a.active{
     padding: 5rem;
   }
   .reflections-intro{
-    padding: 15rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
-    ". . reflections-title . ."
+    ". . reflections-title . .";
   }
    #poplock.reflections-intro{
-    padding: 15rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
-    ". . reflections-title . ."
-  }
-  .reflections-title{
-    padding: 15rem 0 10rem 0;
+    ". . reflections-title . .";
   }
   .reflections {
     grid-template-columns: 1fr 1fr 1fr;
@@ -3384,9 +3302,6 @@ a.active{
   #poplock.details {
     padding: 15rem 0;
   }
-  #poplock.specifications{
-    padding: 20rem 0;
-  }
   /* .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
     width:70%;
   } */
@@ -3401,159 +3316,14 @@ a.active{
   #poplock.details {
     padding: 20rem 0;
   }
-  .specifications {
-    padding: 20rem 0;
-  }
-  .user-research {
-    padding: 15rem 0;
-  }
-  .research-intro {
-    padding: 15rem 0 10rem 0;
-  }
-  .user-personas{
-    padding: 15rem 0;
-  }
-  .user-personas-intro {
-    padding: 15rem 0 15rem 0;
-  }
-  .user-stories {
-    padding: 15rem 0;
-  }
-  .user-stories-intro{
-    padding: 15rem 0 10rem 0;
-  }
-  .wireframing {
-    padding: 15rem 0;
-  }
-  .wireframing-intro {
-    padding: 20rem 0 20rem 0;
-  }
-  .branding {
-    padding: 10rem 0;
-  }
-  .branding-intro{
-    padding: 20rem 0 10rem 0;
-  }
-  .hifi-mockups {
-    padding: 10rem 0;
-  }
-  .hifi-intro{
-    padding: 15rem 0 10rem 0;
-  }
-  .reflections-intro{
-    padding: 15rem 0;
-  }
-  .reflections-title{
-    padding: 20rem 0 20rem 0;
-  }
-  /* .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
-    width:70%;
-  } */
 }
 
 @media only screen and (min-width: 1680px) {
-  /* .details {
-    background-image: url("../images/atmos_herocloud.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 10rem 0;
-    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
-    grid-template-areas:
-    ". . description . .";
-  } */
-
   .details {
     padding: 25rem 0;
   }
   #poplock.details {
     padding: 25rem 0;
-  }
-  .specifications {
-    padding: 15rem 0;
-  }
-  .lists{
-    padding: 15rem 0 10rem 0;
-  }
-  .user-research {
-    padding: 15rem 0;
-  }
-  #poplock.user-research {
-    padding: 15rem 0;
-  }
-  .research-intro {
-    padding: 20rem 0 20rem 0;
-  }
-  #poplock.research-intro {
-    padding: 20rem 0 20rem 0;
-  }
-  .user-personas{
-    padding: 20rem 0;
-  }
-  #poplock.user-personas{
-    padding: 20rem 0;
-  }
-  .user-personas-intro {
-    padding: 15rem 0 10rem 0;
-  }
-  #poplock.user-personas-intro {
-    padding: 15rem 0 10rem 0;
-  }
-  .user-stories {
-    padding: 20rem 0;
-  }
-  #poplock.user-stories {
-    padding: 20rem 0;
-  }
-  .user-stories-intro{
-    padding: 15rem 0 10rem 0;
-  }
-  #poplock.user-stories-intro{
-    padding: 15rem 0 10rem 0;
-  }
-  .wireframing {
-    padding: 20rem 0;
-  }
-  #poplock.wireframing {
-    padding: 20rem 0;
-  }
-  .wireframing-intro {
-    padding: 20rem 0 15rem 0;
-  }
-  #poplock.wireframing-intro {
-    padding: 20rem 0 15rem 0;
-  }
-  .branding {
-    padding: 15rem 0;
-  }
-  #poplock.branding {
-    padding: 20rem 0;
-  }
-  .branding-intro{
-    padding: 15rem 0 10rem 0;
-  }
-  #poplock.branding-intro{
-    padding: 15rem 0 10rem 0;
-  }
-  .hifi-mockups {
-    padding: 15rem 0;
-  }
-  #poplock.hifi-mockups {
-    padding: 20rem 0;
-  }
-  .hifi-intro{
-    padding: 15rem 0 10rem 0;
-  }
-  .reflections-intro{
-    padding: 20rem 0;
-  }
-  #poplock.reflections-intro{
-    padding: 20rem 0;
-  }
-  .reflections-title{
-    padding: 20rem 0 15rem 0;
-  }
-  #poplock.reflections-title{
-    padding: 20rem 0 15rem 0;
   }
   /* .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
     width:75%;
@@ -3564,17 +3334,6 @@ a.active{
 }
 
 @media only screen and (min-width: 1920px) {
-
-  /* .details {
-    background-image: url("../images/atmos_herocloud.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 10rem 0;
-    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
-    grid-template-areas:
-    ". . description . .";
-  } */
-
   .details {
     padding: 30rem 0;
   }
@@ -3584,103 +3343,9 @@ a.active{
   #poplock.description{
     padding: 15rem 0 15rem 0;
   }
-  .specifications {
-    padding: 15rem 0;
-  }
   #poplock.specifications {
-    padding: 25rem 0;
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
       ". . lists . .";
-  }
-  .lists{
-    padding: 15rem 0 15rem 0;
-  }
-  #poplock.lists{
-    padding: 15rem 0 15rem 0;
-  }
-  .user-research {
-    padding: 25rem 0;
-  }
-  #poplock.user-research {
-    padding: 30rem 0;
-  }
-  .research-intro {
-    padding: 10rem 0 10rem 0;
-  }
-  #poplock.research-intro {
-    padding: 10rem 0 10rem 0;
-  }
-  .user-personas{
-    padding: 25rem 0;
-  }
-  #poplock.user-personas{
-    padding: 30rem 0;
-  }
-  .user-personas-intro {
-    padding: 15rem 0 10rem 0;
-  }
-  #poplock.user-personas-intro {
-    padding: 15rem 0 10rem 0;
-  }
-  .user-stories {
-    padding: 25rem 0;
-  }
-  #poplock.user-stories {
-    padding: 30rem 0;
-  }
-  .user-stories-intro{
-    padding: 15rem 0 10rem 0;
-  }
-  #poplock.user-stories-intro{
-    padding: 15rem 0 10rem 0;
-  }
-  .wireframing {
-    padding: 25rem 0;
-  }
-  #poplock.wireframing {
-    padding: 30rem 0;
-  }
-  .wireframing-intro {
-    padding: 20rem 0 15rem 0;
-  }
-  #poplock.wireframing-intro {
-    padding: 20rem 0 15rem 0;
-  }
-  .branding {
-    padding: 25rem 0;
-  }
-  #poplock.branding {
-    padding: 30rem 0;
-  }
-  .branding-intro{
-    padding: 15rem 0 10rem 0;
-  }
-  #poplock.branding-intro{
-    padding: 15rem 0 10rem 0;
-  }
-  .hifi-mockups {
-    padding: 20rem 0;
-  }
-  #poplock.hifi-mockups {
-    padding: 30rem 0;
-  }
-  .hifi-intro{
-    padding: 15rem 0 10rem 0;
-  }
-  #poplock.hifi-intro{
-    padding: 15rem 0 10rem 0;
-  }
-  .reflections-intro{
-    padding: 25rem 0;
-  }
-  #poplock.reflections-intro{
-    padding: 30rem 0;
-  }
-  .reflections-title{
-    padding: 20rem 0 15rem 0;
-  }
-  #poplock.reflections-title{
-    padding: 20rem 0 15rem 0;
   }
 }
