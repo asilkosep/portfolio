@@ -148,6 +148,9 @@ a.active{
   text-decoration: none;
   color: #008FC4;
 }
+.title-section a{
+  color: #5D7FA4;
+}
 /* .description p{
   color: white;
 } */
@@ -1652,12 +1655,16 @@ a.active{
 .boxes {
   grid-area: boxes;
 }
+
+.boxes-img, .dance-img, .idea-img, .coffee-img{
+  margin: auto;
+  padding: 8rem 0 3rem 0;
+  width: 100%;
+  max-width: 10rem;
+}
+
 .boxes-img{
   grid-area: boxes-img;
-  align-self: center;
-  justify-self: center;
-  padding: 5rem 0 2rem 0;
-  width: 100%;
 }
 .boxes-text{
   grid-area: boxes-text;
@@ -1667,10 +1674,6 @@ a.active{
 }
 .dance-img{
   grid-area: dance-img;
-  align-self: center;
-  justify-self: center;
-  padding: 8rem 0 2rem 0;
-  width: 100%;
 }
 .dance-text{
   grid-area: dance-text;
@@ -1680,26 +1683,30 @@ a.active{
 }
 .idea-img{
   grid-area: idea-img;
-  align-self: center;
-  justify-self: center;
-  padding: 8rem 0 2rem 0;
-  width: 100%;
 }
 .idea-text{
   grid-area: idea-text;
 }
 .bio-quote{
   grid-area: bio-quote;
+  padding: 10rem 0 5rem 0;
+}
+.bio-quote::before{
+  content: "";
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 100%;
+  height: calc(100% + 16rem);
+  margin-top: -8rem;
+  background: #B1D4E7;
+  opacity: 0.2;
+  transform: skewY(-9deg);
 }
 .conclusion {
   grid-area: conclusion;
 }
 .coffee-img{
   grid-area: coffee-img;
-  align-self: center;
-  justify-self: center;
-  padding: 8rem 0 2rem 0;
-  width: 100%;
 }
 .coffee-text{
   grid-area: coffee-text;
