@@ -312,6 +312,7 @@ a.active{
   background: #B1D4E7;
   opacity: 0.2;
   transform: skewY(-9deg);
+  z-index: -1;
 }
 #poplock.specifications {
   display: grid;
@@ -355,6 +356,7 @@ a.active{
   background: #B1D4E7;
   opacity: 0.2;
   transform: skewY(-9deg);
+  z-index: -1;
 }
 #poplock.user-research{
   display: grid;
@@ -435,6 +437,7 @@ a.active{
   background: #B1D4E7;
   opacity: 0.2;
   transform: skewY(-9deg);
+  z-index: -1;
 }
 #poplock.user-personas{
   display: grid;
@@ -505,6 +508,7 @@ a.active{
    background: #B1D4E7;
    opacity: 0.2;
    transform: skewY(-9deg);
+   z-index: -1;
 }
 #poplock.wireframing {
   display: grid;
@@ -575,6 +579,7 @@ a.active{
    background: #B1D4E7;
    opacity: 0.2;
    transform: skewY(-9deg);
+   z-index: -1;
 }
 #poplock.branding{
   display: grid;
@@ -636,6 +641,7 @@ a.active{
    background: #B1D4E7;
    opacity: 0.2;
    transform: skewY(-9deg);
+   z-index: -1;
 }
 #poplock.hifi-mockups{
   display: grid;
@@ -769,6 +775,7 @@ a.active{
   background: #B1D4E7;
   opacity: 0.2;
   transform: skewY(-9deg);
+  z-index: -1;
 }
 #poplock.user-stories {
   display: grid;
@@ -803,6 +810,7 @@ a.active{
   background: #B1D4E7;
   opacity: 0.2;
   transform: skewY(-9deg);
+  z-index: -1;
 }
 #poplock.reflections-intro{
   display: grid;
