@@ -269,6 +269,7 @@ a.active{
   "navbar"
   "hero"
   "details"
+  "main-mockup"
   "btm-nav"
   "backtotop";
 }
@@ -1906,6 +1907,7 @@ a.active{
     ". navbar navbar navbar ."
     ". hero hero . ."
     "details details details details details"
+    ". . main-mockup . ."
     ". . backtotop . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav"
   }
