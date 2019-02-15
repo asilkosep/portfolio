@@ -285,7 +285,7 @@ a.active{
     "description";
 }
 #poplock.details {
-  background-image: url("../images/poplock_heroimg_5.png");
+  background-image: url("../images/poplock_heroimg6.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1100,12 +1100,12 @@ a.active{
 }
 
 .features-text1, .features-text2, .features-text3, .features-text4, .features-text5 {
-  margin: auto;
+  /* margin: auto; */
   padding: 0 2rem;
 }
 #poplock.features-icon1, #poplock.features-icon2, #poplock.features-icon3, #poplock.features-icon4 {
-  width: 75%;
-  max-width: 10rem;
+  width: 100%;
+  max-width: 5rem;
   margin: auto;
   padding: 5rem 0;
 }
@@ -1541,7 +1541,7 @@ a.active{
 .atmosphere-section { -webkit-transform: skewY(-7deg); }
 
 .racsha-section {
-  background-image: url("../images/home_racshav3.png");
+  background-image: url("../images/water2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2609,7 +2609,7 @@ a.active{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     ". userflows ."
-    "user-flows-1 user-flows-1 user-flows-1"
+    ". user-flows-1 ."
     "user-flows-2 user-flows-2 user-flows-2";
   }
   .wireframing {
@@ -2954,19 +2954,21 @@ a.active{
     grid-template-areas:
     ". . research-intro . .";
   }
-
   .research-intro {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "research-intro-text research-intro-text"
     "usersurvey usersurvey";
   }
-
   .survey-results {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas:
     "key-usersurvey key-usersurvey key-usersurvey key-usersurvey"
     "survey-1 survey-2 survey-3 survey-4";
+  }
+  .features-text1, .features-text2, .features-text3, .features-text4, .features-text5 {
+    margin: auto;
+    padding: 0 2rem;
   }
   .comp-analysis{
     grid-template-columns: 1fr 1fr 1fr;
@@ -3291,7 +3293,7 @@ a.active{
     " user-stories user-stories user-stories user-stories user-stories"
     ". features-list features-list features-list ."
     ". user-flows-title user-flows-title user-flows-title ."
-    ". user-flows user-flows user-flows ."
+    ". . user-flows . ."
     "wireframing wireframing wireframing wireframing wireframing"
     ". . wireframing-sketches . ."
     ". . wireframing-imgs . . "
