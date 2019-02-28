@@ -78,16 +78,13 @@ ul{
   font-size: 1.6rem;
   line-height: 2.5rem;
   list-style: circle;
-  /* padding-left: 2rem; */
-  margin-bottom: 1rem;
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
   margin-top: 2rem;
   /* text-align: center; */
 }
 .lists ul {
   list-style: none;
-}
-.navbar li{
-  padding-left: 0rem;
 }
 
 b{
@@ -135,6 +132,7 @@ a{
     position: sticky;
     top: 0;
     width: 100%;
+    padding-left: 0rem;
 }
 .navbar li{
     display:inline;
@@ -145,6 +143,7 @@ a{
     padding:3rem 5rem 0 0;
     color: black;
     font-size: 2rem;
+
 }
 .navbar a:hover{
     color: #5D7FA4;
