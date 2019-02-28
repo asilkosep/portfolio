@@ -77,8 +77,19 @@ ul{
   font-weight: 300;
   font-size: 1.6rem;
   line-height: 2.5rem;
+  list-style: circle;
+  /* padding-left: 2rem; */
+  margin-bottom: 1rem;
+  margin-top: 2rem;
   /* text-align: center; */
 }
+.lists ul {
+  list-style: none;
+}
+.navbar li{
+  padding-left: 0rem;
+}
+
 b{
   font-weight: 600;
 }
@@ -284,7 +295,7 @@ a.active{
     "btn-prototype";
 }
 .details {
-  background-image: url("../images/atmos_herocloud.png");
+  background-image: url("../images/hero_cloud.png");
   background-repeat: no-repeat;
   background-size: cover;
   /* width: 100vw; */
@@ -1122,18 +1133,20 @@ a.active{
   padding: 0 2rem;
 }
 #poplock.features-icon1, #poplock.features-icon2, #poplock.features-icon3, #poplock.features-icon4 {
-  width: 100%;
+  width: 85%;
   max-width: 5rem;
   margin: auto;
   padding: 5rem 0;
 }
 .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5{
   width: 75%;
-  max-width: 10rem;
+  max-width: 7rem;
   margin: auto;
   padding: 5rem 0;
 }
-
+.features-text1, .features-text2, .features-text3, .features-text4{
+  text-align: center;
+}
 .features-icon1{
   grid-area: features-icon1;
 }
@@ -1539,7 +1552,7 @@ a.active{
 }
 
 .poplock-section {
-  background-image: url("../images/home_poplockv3.png");
+  background-image: url("../images/home_poplockv3.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1549,7 +1562,7 @@ a.active{
 .poplock-section { -webkit-transform: skewY(-7deg); }
 
 .atmosphere-section {
-  background-image: url("../images/home_atmospherev3.png");
+  background-image: url("../images/home_atmospherev3.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1559,7 +1572,7 @@ a.active{
 .atmosphere-section { -webkit-transform: skewY(-7deg); }
 
 .racsha-section {
-  background-image: url("../images/water2.jpg");
+  background-image: url("../images/home_racsha.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1716,17 +1729,22 @@ a.active{
 .bio-quote{
   grid-area: bio-quote;
   padding: 10rem 0 5rem 0;
+  margin-top: 5rem;
+  grid-column: 1 / span 2;
+  text-indent: -1;
+  margin-left: -10vw;
+  position: relative;
 }
 .bio-quote::before{
   content: "";
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
   width: 100%;
-  height: calc(100% + 16rem);
-  margin-top: -8rem;
+  height: 70%;
   background: #B1D4E7;
   opacity: 0.2;
   transform: skewY(-9deg);
+  position: absolute;
+  top: 30%;
+  left:-5%;
 }
 .conclusion {
   grid-area: conclusion;
