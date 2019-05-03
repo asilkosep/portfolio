@@ -627,6 +627,15 @@ a.active{
 #poplock.wireframing::before{
   background: #9FCF01;
 }
+#krania.wireframing {
+  display: grid;
+  grid-area: wireframing;
+  grid-template-areas:
+  "wireframing-intro";
+}
+#krania.wireframing::before{
+  background: #A7C5BB;
+}
 .wireframing-sketches{
   display: grid;
   grid-gap: 1rem;
@@ -697,6 +706,15 @@ a.active{
 }
 #poplock.branding::before{
   background: #9FCF01;
+}
+#krania.branding{
+  display: grid;
+  grid-area: branding;
+  grid-template-areas:
+  "branding-intro";
+}
+#krania.branding::before{
+  background: #A7C5BB;
 }
 .branding-intro{
   display: grid;
@@ -2260,6 +2278,11 @@ a.active{
     "user-flows-1 user-flows-1 user-flows-1"
     "user-flows-2 user-flows-2 user-flows-2";
   }
+  #krania.user-flows {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "user-flows-1 user-flows-1 user-flows-1";
+  }
   .wireframing {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
@@ -2267,7 +2290,13 @@ a.active{
   }
   #poplock.wireframing {
     grid-template-areas:
-    ". wireframing-intro wireframing-intro wireframing-intro .";
+    ". wireframing-intro wireframing-intro wireframing-intro ."
+    ;
+  }
+  #krania.wireframing {
+    grid-template-areas:
+    ". wireframing-intro wireframing-intro wireframing-intro ."
+    ;
   }
   .wireframing-imgs {
     grid-template-columns: 1fr 1fr;
@@ -2295,12 +2324,28 @@ a.active{
     "wireframe-img-3 wireframe-img-4 "
     "wireframe-img-5 wireframe-img-6";
   }
+  #krania.wireframing-imgs{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "wireframe-title-1 wireframe-title-1 "
+    "wireframe-sketch-1 wireframe-sketch-1"
+    "wireframe-sketch-2 wireframe-sketch-2 "
+    "wireframe-title-2 wireframe-title-2 "
+    "wireframe-img-1 wireframe-img-2 "
+    "wireframe-img-3 wireframe-img-4 "
+    "wireframe-img-5 wireframe-img-6";
+  }
   .branding {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". branding-intro branding-intro branding-intro .";
   }
   #poplock.branding{
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". branding-intro branding-intro branding-intro .";
+  }
+  #krania.branding{
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". branding-intro branding-intro branding-intro .";
@@ -2535,7 +2580,12 @@ a.active{
   .user-persona-grid {
     padding-top: 2rem;
   }
-
+  .wireframing-sketches{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "wireframe-title-1 wireframe-title-1"
+    "wireframe-sketch-1 wireframe-sketch-2";
+  }
   .wireframing-imgs {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -2548,13 +2598,15 @@ a.active{
     "wireframe-img-3 wireframe-img-4 "
     "wireframe-img-5 wireframe-img-6 ";
   }
-  .wireframing-sketches{
+  #poplock.wireframing-imgs {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-    "wireframe-title-1 wireframe-title-1"
-    "wireframe-sketch-1 wireframe-sketch-2";
+    "wireframe-title-2 wireframe-title-2 "
+    "wireframe-img-1 wireframe-img-2 "
+    "wireframe-img-3 wireframe-img-4 "
+    "wireframe-img-5 wireframe-img-6 ";
   }
-  #poplock.wireframing-imgs {
+  #krania.wireframing-imgs {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "wireframe-title-2 wireframe-title-2 "
@@ -2881,6 +2933,7 @@ a.active{
     ". user-flows-1 ."
     "user-flows-2 user-flows-2 user-flows-2";
   }
+
   .wireframing {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
@@ -2891,6 +2944,17 @@ a.active{
     grid-template-areas:
     ". . wireframing-intro . ."
   }
+  #krania.wireframing {
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . wireframing-intro . ."
+  }
+  .wireframing-sketches{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "wireframe-title-1 wireframe-title-1"
+    "wireframe-sketch-1 wireframe-sketch-2";
+  }
   .wireframing-imgs {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -2900,13 +2964,14 @@ a.active{
     "wireframe-img-1 wireframe-img-2 wireframe-img-3"
     "wireframe-img-4 wireframe-img-5 wireframe-img-6";
   }
-  .wireframing-sketches{
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-    "wireframe-title-1 wireframe-title-1"
-    "wireframe-sketch-1 wireframe-sketch-2";
-  }
   #poplock.wireframing-imgs{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "wireframe-title-2 wireframe-title-2 wireframe-title-2 "
+    "wireframe-img-1 wireframe-img-2  wireframe-img-3"
+    "wireframe-img-4 wireframe-img-5  wireframe-img-6";
+  }
+  #krania.wireframing-imgs{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "wireframe-title-2 wireframe-title-2 wireframe-title-2 "
@@ -2919,6 +2984,11 @@ a.active{
     ". . branding-intro . .";
   }
   #poplock.branding {
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . branding-intro . .";
+  }
+  #krania.branding {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . branding-intro . .";
@@ -3407,6 +3477,11 @@ a.active{
     grid-template-areas:
     ". . wireframing-intro . ."
   }
+  #krania.wireframing {
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . wireframing-intro . ."
+  }
   .wireframing-imgs {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -3422,6 +3497,11 @@ a.active{
     ". . branding-intro . .";
   }
   #poplock.branding {
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . branding-intro . .";
+  }
+  #krania.branding {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . branding-intro . .";
