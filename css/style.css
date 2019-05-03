@@ -883,6 +883,15 @@ a.active{
 #poplock.user-stories::before{
   background: #9FCF01;
 }
+#krania.user-stories {
+  display: grid;
+  grid-area: user-stories;
+  grid-template-areas:
+  "user-stories-intro";
+}
+#krania.user-stories::before{
+  background: #A7C5BB;
+}
 .user-stories-intro{
   display: grid;
   grid-area: user-stories-intro;
@@ -1199,8 +1208,15 @@ a.active{
 .features-text1, .features-text2, .features-text3, .features-text4, .features-text5 {
   /* margin: auto; */
   padding: 0 2rem;
+  text-align: center;
 }
 #poplock.features-icon1, #poplock.features-icon2, #poplock.features-icon3, #poplock.features-icon4 {
+  width: 85%;
+  max-width: 5rem;
+  margin: auto;
+  padding: 5rem 0;
+}
+#krania.features-icon1, #krania.features-icon2, #krania.features-icon3, #krania.features-icon4 {
   width: 85%;
   max-width: 5rem;
   margin: auto;
@@ -1212,9 +1228,7 @@ a.active{
   margin: auto;
   padding: 5rem 0;
 }
-.features-text1, .features-text2, .features-text3, .features-text4{
-  text-align: center;
-}
+
 .features-icon1{
   grid-area: features-icon1;
 }
@@ -2073,7 +2087,6 @@ a.active{
     grid-template-areas:
     ". description description description  .";
   }
-
   .description {
     padding: 10rem 0 10rem 0;
     /* padding: 20rem 0; */
@@ -2185,13 +2198,6 @@ a.active{
     "persona-quote3 persona-quote3"
     "frustrations3 frustrations3"
     "goals3 goals3";
-    /* "persona-img1 persona-title1"
-    "persona-quote1 persona-quote1"
-    "frustrations1 goals1"
-
-    "persona-img2 persona-title2"
-    "persona-quote2 persona-quote2"
-    "frustrations2 goals2" */
   }
   .user-stories {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
@@ -2237,6 +2243,15 @@ a.active{
     "features-icon2 features-text2 features-text2"
     "features-icon3 features-text3 features-text3"
     "features-icon4 features-text4 features-text4"
+  }
+  #krania.features-set{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "features-icon1 features-text1 features-text1"
+    "features-icon2 features-text2 features-text2"
+    "features-icon3 features-text3 features-text3"
+    "features-icon4 features-text4 features-text4"
+    "features-icon5 features-text5 features-text5"
   }
   .user-flows {
     grid-template-columns: 1fr 1fr 1fr;
@@ -2839,11 +2854,25 @@ a.active{
     grid-template-areas:
     ". . user-stories-intro . .";
   }
+  #krania.user-stories {
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . user-stories-intro . .";
+  }
   .user-stories-intro{
     grid-template-columns: 1fr;
     grid-template-areas:
     "user-stories-introtext"
     "userstories";
+  }
+  #krania.features-set{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "features-icon1 features-text1 features-text1"
+    "features-icon2 features-text2 features-text2"
+    "features-icon3 features-text3 features-text3"
+    "features-icon4 features-text4 features-text4"
+    "features-icon5 features-text4 features-text5"
   }
   .user-flows {
     grid-template-columns: 1fr 1fr 1fr;
@@ -3273,7 +3302,7 @@ a.active{
     "survey-1 survey-2 survey-3 survey-4";
   }
   .features-text1, .features-text2, .features-text3, .features-text4, .features-text5 {
-    margin: auto;
+    margin-top: 1rem;
     padding: 0 2rem;
   }
   .comp-analysis{
@@ -3296,6 +3325,12 @@ a.active{
     "key-features"
     "features-set";
   }
+  #krania.features-list{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "key-features"
+    "features-set";
+  }
   .features-set{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
@@ -3307,6 +3342,12 @@ a.active{
     grid-template-areas:
     "features-icon1 features-icon2 features-icon3 features-icon4"
     "features-text1 features-text2 features-text3 features-text4";
+  }
+  #krania.features-set{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "features-icon1 features-icon2 features-icon3 features-icon4 features-icon5"
+    "features-text1 features-text2 features-text3 features-text4 features-text5";
   }
   .user-personas{
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
