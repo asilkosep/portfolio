@@ -667,9 +667,19 @@ a.active{
   grid-gap: 1rem;
   grid-area: wireframing-imgs;
   grid-template-areas:
-  "wireframe-title-1"
-  "wireframe-sketch-1"
-  "wireframe-sketch-2"
+  "wireframe-title-2"
+  "wireframe-img-1"
+  "wireframe-img-2"
+  "wireframe-img-3"
+  "wireframe-img-4"
+  "wireframe-img-5"
+  "wireframe-img-6";
+}
+#krania.wireframing-imgs{
+  display: grid;
+  grid-gap: 1rem;
+  grid-area: wireframing-imgs;
+  grid-template-areas:
   "wireframe-title-2"
   "wireframe-img-1"
   "wireframe-img-2"
@@ -778,6 +788,15 @@ a.active{
 #poplock.hifi-mockups::before{
   background: #9FCF01;
 }
+#krania.hifi-mockups{
+  display: grid;
+  grid-area: hifi-mockups;
+  grid-template-areas:
+  "hifi-intro";
+}
+#krania.hifi-mockups::before{
+  background: #A7C5BB;
+}
 .hifi-intro{
   display: grid;
   grid-area: hifi-intro;
@@ -817,6 +836,19 @@ a.active{
   "hifi-3-img3";
 }
 #poplock.hifi-mockups-2{
+  grid-gap: 2rem;
+  grid-template-areas:
+  "hifi-revision1"
+  "hifi-revision2"
+  "hifi-revision3"
+  "hifi-revision4"
+  "hifi-revision5"
+  "hifi-revision6"
+  "caption1"
+  "caption2"
+  "caption3";
+}
+#krania.hifi-mockups-2{
   grid-gap: 2rem;
   grid-template-areas:
   "hifi-revision1"
@@ -2390,6 +2422,12 @@ a.active{
     grid-template-areas:
     ". hifi-intro hifi-intro hifi-intro .";
   }
+  #krania.hifi-mockups{
+    /* padding-top: 15rem; */
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". hifi-intro hifi-intro hifi-intro .";
+  }
   .hifi-intro{
     /* padding: 15rem 0 5rem 0; */
     grid-template-columns: 1fr;
@@ -2413,6 +2451,13 @@ a.active{
       "hifi-v3 hifi-v4"
       "hifi-v5 hifi-v6";
   }
+  #krania.hifi-images{
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+      "hifi-v1 hifi-v2"
+      "hifi-v3 hifi-v4"
+      "hifi-v5 hifi-v6";
+  }
   .revisions {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -2426,6 +2471,16 @@ a.active{
     "hifi-3-img2 hifi-3-img3";
   }
   #poplock.hifi-mockups-2{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "hifi-revision1 hifi-revision2"
+    "caption1 caption1"
+    "hifi-revision3 hifi-revision4"
+    "caption2 caption2"
+    "hifi-revision5 hifi-revision6"
+    "caption3 caption3" ;
+  }
+  #krania.hifi-mockups-2{
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "hifi-revision1 hifi-revision2"
@@ -3026,6 +3081,11 @@ a.active{
     grid-template-areas:
     ". . hifi-intro . .";
   }
+  #krania.hifi-mockups {
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . hifi-intro . .";
+  }
   .hifi-intro{
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -3542,6 +3602,11 @@ a.active{
     grid-template-areas:
     ". . hifi-intro . .";
   }
+  #krania.hifi-mockups{
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . hifi-intro . .";
+  }
   .hifi-intro{
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -3555,6 +3620,12 @@ a.active{
     "hifi-v1-caption hifi-v2-caption";
   }
   #poplock.hifi-images{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "hifi-v1 hifi-v2 hifi-v3"
+    "hifi-v4 hifi-v5 hifi-v6";
+  }
+  #krania.hifi-images{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "hifi-v1 hifi-v2 hifi-v3"
