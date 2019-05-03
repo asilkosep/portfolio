@@ -58,9 +58,6 @@ blockquote:after{
   height: 100%;
   width: 2px;
 }
-blockquote{
-
-}
 
 p{
   font-family: 'Lato', sans-serif;
@@ -143,7 +140,6 @@ a{
     padding:3rem 5rem 0 0;
     color: black;
     font-size: 2rem;
-
 }
 .navbar a:hover{
     color: #5D7FA4;
@@ -161,9 +157,6 @@ a.active{
 .title-section a{
   color: #5D7FA4;
 }
-/* .description p{
-  color: white;
-} */
 
 .atmos-container {
   display: grid;
@@ -201,7 +194,6 @@ a.active{
   "reflections"
   "btm-nav"
   "backtotop";
-  /* margin: auto; */
 }
 
 .home-container {
@@ -291,6 +283,33 @@ a.active{
   "hero"
   "details"
   "main-mockup"
+  "specifications"
+  "overview"
+  "user-research"
+  "survey-results"
+  "comp-analysis"
+  "opportunity"
+  "user-personas"
+  "user-persona-grid"
+  "user-stories"
+  "features-list"
+  "user-flows"
+  "user-flows-title"
+  "wireframing"
+  "wireframing-sketches"
+  "wireframing-imgs"
+  "branding"
+  "branding-sketch-title"
+  "branding-images"
+  "branding-moodboard-title"
+  "branding-moodboard"
+  "hifi-mockups"
+  "hifi-images"
+  "revisions"
+  "hifi-mockups-2"
+  "final-mockups"
+  "reflections-intro"
+  "reflections"
   "btm-nav"
   "backtotop";
 }
@@ -371,6 +390,15 @@ a.active{
 #poplock.specifications::before{
   background: #9FCF01;
 }
+#krania.specifications {
+  display: grid;
+  grid-area: specifications;
+  grid-template-areas:
+    "lists";
+}
+#krania.specifications::before{
+  background: #A7C5BB;
+}
 .lists{
   display: grid;
   grid-area: lists;
@@ -414,6 +442,15 @@ a.active{
 }
 #poplock.user-research::before{
   background: #9FCF01;
+}
+#krania.user-research{
+  display: grid;
+  grid-area: user-research;
+  grid-template-areas:
+    "research-intro";
+}
+#krania.user-research::before{
+  background: #A7C5BB;
 }
 .research-intro {
     display: grid;
@@ -463,6 +500,20 @@ a.active{
     "logo3"
     "logo3-text";
 }
+#krania.comp-analysis{
+  align-items: top;
+  display: grid;
+  grid-area: comp-analysis;
+  grid-template-areas:
+    "comp-anal-title"
+    "companalysis"
+    "logo1"
+    "logo1-text"
+    "logo2"
+    "logo2-text"
+    "logo3"
+    "logo3-text";
+}
 .opportunity {
   display: grid;
   grid-area: opportunity;
@@ -495,6 +546,15 @@ a.active{
 }
 #poplock.user-personas::before{
   background: #9FCF01;
+}
+#krania.user-personas{
+  display: grid;
+  grid-area: user-personas;
+  grid-template-areas:
+  "user-personas-intro";
+}
+#krania.user-personas::before{
+  background: #A7C5BB;
 }
 .user-personas-intro {
   display: grid;
@@ -793,17 +853,6 @@ a.active{
   "persona-quote3"
   "frustrations3"
   "goals3";
-  /* "persona-img1"
-  "persona-title1"
-  "persona-quote1"
-  "frustrations1"
-  "goals1"
-
-  "persona-img2"
-  "persona-title2"
-  "persona-quote2"
-  "frustrations2"
-  "goals2" */
 }
 
 .user-stories {
@@ -945,6 +994,9 @@ a.active{
 #poplock.prototype, #poplock.usersurvey, #poplock.companalysis, #poplock.userpersonas, #poplock.userstories, #poplock.userflows, #poplock.styleguide, #poplock.prototype2, #poplock.resume {
   border-color: #E93886;
 }
+#krania.prototype, #krania.usersurvey, #krania.companalysis, #krania.userpersonas, #krania.userstories, #krania.userflows, #krania.styleguide, #krania.prototype2, #krania.resume {
+  border-color: #009472;
+}
 .prototype:hover, .usersurvey:hover, .companalysis:hover, .userpersonas:hover, .userstories:hover, .userflows:hover, .styleguide:hover, .prototype2:hover, .resume:hover {
  background-color: #008FC4;
  color: white;
@@ -953,7 +1005,10 @@ a.active{
  background-color: #E93886;
  color: white;
 }
-
+#krania.prototype:hover, #krania.usersurvey:hover, #krania.companalysis:hover, #krania.userpersonas:hover, #krania.userstories:hover, #krania.userflows:hover, #krania.styleguide:hover, #krania.prototype2:hover, #krania.resume:hover {
+ background-color: #009472;
+ color: white;
+}
 .resume{
   grid-area: resume;
   max-width: 40rem;
@@ -1019,13 +1074,7 @@ a.active{
 .blue-bg {
   grid-area: blue-bg;
   width: 100%;
-  /* display: inline-block; */
-  /* margin-bottom: 50px; */
-  /* position: absolute; */
-  /* padding: 10rem 0 10rem 0; */
 }
-
-/* .blue-bg { -webkit-transform: skewY(-9deg); } */
 
 .roles {
   grid-area: roles;
@@ -1828,6 +1877,9 @@ a.active{
   .poplock-container h3 {
     color: #678602;
   }
+  .krania-container h3 {
+    color: #009472;
+  }
   .navbar a{
       font-size: 1.6rem;
       padding: 3rem 2rem 0 0;
@@ -1954,9 +2006,37 @@ a.active{
     ". navbar navbar navbar ."
     ". hero hero . ."
     "details details details details details"
-    ". . main-mockup . ."
+    ". main-mockup main-mockup main-mockup ."
+    "specifications specifications specifications specifications specifications"
+    ". overview overview overview ."
+    "user-research user-research user-research user-research user-research"
+    ". survey-results survey-results survey-results ."
+    ". comp-analysis comp-analysis comp-analysis ."
+    ". opportunity opportunity opportunity ."
+    "user-personas user-personas user-personas user-personas user-personas"
+    ". user-persona-grid user-persona-grid user-persona-grid . "
+    " user-stories user-stories user-stories user-stories user-stories"
+    ". features-list features-list features-list ."
+    ". user-flows-title user-flows-title user-flows-title ."
+    ". user-flows user-flows user-flows ."
+    "wireframing wireframing wireframing wireframing wireframing"
+    ". wireframing-sketches wireframing-sketches wireframing-sketches ."
+    ". wireframing-imgs wireframing-imgs wireframing-imgs . "
+    "branding  branding  branding branding  branding "
+    " . branding-sketch-title branding-sketch-title branding-sketch-title ."
+    ". branding-images branding-images branding-images ."
+    " . branding-moodboard-title branding-moodboard-title branding-moodboard-title ."
+    " . branding-moodboard branding-moodboard branding-moodboard ."
+    "hifi-mockups  hifi-mockups  hifi-mockups hifi-mockups hifi-mockups "
+    " . hifi-images hifi-images hifi-images ."
+    " . revisions revisions revisions ."
+    ". hifi-mockups-2 hifi-mockups-2 hifi-mockups-2 ."
+    ". final-mockups final-mockups final-mockups ."
+    "reflections-intro reflections-intro reflections-intro reflections-intro reflections-intro"
+    ". reflections reflections reflections ."
     ". . backtotop . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav"
+    ;
   }
   .btmnav-gmail, .btmnav-behance, .btmnav-linkedin, .btmnav-instagram, .btmnav-pinterest{
     width: 6rem;
@@ -2017,6 +2097,11 @@ a.active{
     grid-template-areas:
       ". lists lists lists .";
   }
+  #krania.specifications {
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+      ". lists lists lists .";
+  }
   .roles, .deliverables, .specs {
     text-align: center;
   }
@@ -2038,6 +2123,11 @@ a.active{
     ". research-intro research-intro research-intro .";
   }
   #poplock.user-research{
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". research-intro research-intro research-intro .";
+  }
+  #krania.user-research{
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". research-intro research-intro research-intro .";
@@ -2076,6 +2166,10 @@ a.active{
     grid-template-areas:
     ". user-personas-intro user-personas-intro user-personas-intro .";
   }
+  #krania.user-personas{
+    grid-template-areas:
+    ". user-personas-intro user-personas-intro user-personas-intro .";
+  }
   .user-personas-intro {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -2108,6 +2202,10 @@ a.active{
     grid-template-areas:
     ". user-stories-intro user-stories-intro user-stories-intro .";
   }
+  #krania.user-stories {
+    grid-template-areas:
+    ". user-stories-intro user-stories-intro user-stories-intro .";
+  }
   .user-stories-intro{
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -2121,10 +2219,6 @@ a.active{
     "key-features key-features key-features"
     "features-set features-set features-set";
   }
-  /* .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
-    padding: 3rem;
-    width:100%;
-  } */
   .features-set{
     align-items: center;
     justify-content: center;
@@ -2415,12 +2509,18 @@ a.active{
     "logo1 logo2 logo3"
     "logo1-text logo2-text logo3-text";
   }
+  #krania.comp-analysis{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "comp-anal-title comp-anal-title comp-anal-title"
+    ". companalysis ."
+    "logo1 logo2 logo3"
+    "logo1-text logo2-text logo3-text";
+  }
   .user-persona-grid {
     padding-top: 2rem;
   }
-  /* .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
-    width:75%;
-  } */
+
   .wireframing-imgs {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -2502,7 +2602,6 @@ a.active{
     ". . reflections . ."
     ". . backtotop . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav";
-    /* margin: 1%; */
   }
   .home-container {
     grid-template-columns: 1fr 5fr 5fr 1fr;
@@ -2526,6 +2625,44 @@ a.active{
     "btm-nav btm-nav btm-nav btm-nav btm-nav";
   }
   .poplock-container{
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". navbar navbar navbar ."
+    ". hero hero . ."
+    "details details details details details"
+    ". . main-mockup . ."
+    "specifications specifications specifications specifications specifications"
+    ". . overview . ."
+    "user-research user-research user-research user-research user-research"
+    ". survey-results survey-results survey-results ."
+    ". comp-analysis comp-analysis comp-analysis ."
+    ". . opportunity . ."
+    "user-personas user-personas user-personas user-personas user-personas"
+    ". user-persona-grid user-persona-grid user-persona-grid . "
+    " user-stories user-stories user-stories user-stories user-stories"
+    ". . features-list . ."
+    ". user-flows-title user-flows-title user-flows-title ."
+    ". user-flows user-flows user-flows ."
+    "wireframing wireframing wireframing wireframing wireframing"
+    ". wireframing-sketches wireframing-sketches wireframing-sketches ."
+    ". wireframing-imgs wireframing-imgs wireframing-imgs . "
+    "branding  branding  branding branding  branding "
+    " . branding-sketch-title branding-sketch-title branding-sketch-title ."
+    ". branding-images branding-images branding-images ."
+    " . branding-moodboard-title branding-moodboard-title branding-moodboard-title ."
+    " . branding-moodboard branding-moodboard branding-moodboard ."
+    "hifi-mockups  hifi-mockups  hifi-mockups hifi-mockups hifi-mockups "
+    " . hifi-images hifi-images hifi-images ."
+    " . . revisions . ."
+    ". . hifi-mockups-2 . ."
+    ". . final-mockups . ."
+    "reflections-intro reflections-intro reflections-intro reflections-intro reflections-intro"
+    ". . reflections . ."
+    ". . backtotop . ."
+    "btm-nav btm-nav btm-nav btm-nav btm-nav"
+    ;
+  }
+  .krania-container{
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". navbar navbar navbar ."
@@ -2625,6 +2762,11 @@ a.active{
     grid-template-areas:
     ". . research-intro . .";
   }
+  #krania.user-research{
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . research-intro . .";
+  }
   .research-intro {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -2652,31 +2794,23 @@ a.active{
     "key-features key-features key-features"
     "features-set features-set features-set";
   }
-  /* .features-set{
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-    "features-icon1 features-text1 features-text1"
-    "features-icon2 features-text2 features-text2"
-    "features-icon3 features-text3 features-text3"
-    "features-icon4 features-text4 features-text4";
-  } */
   .features-set{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
     "features-icon1 features-icon2 features-icon3 features-icon4 features-icon5"
     "features-text1 features-text2 features-text3 features-text4 features-text5";
   }
-  /* .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
-    width:%;
-  } */
   .user-personas{
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . user-personas-intro . .";
   }
   #poplock.user-personas{
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . user-personas-intro . .";
+  }
+  #krania.user-personas{
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . user-personas-intro . .";
@@ -2939,7 +3073,6 @@ a.active{
     ". . reflections . ."
     ". . backtotop . ."
     "btm-nav btm-nav btm-nav btm-nav btm-nav";
-    /* margin: 1%; */
   }
   .home-container {
     grid-template-columns: 1fr 5fr 5fr 1fr;
@@ -3000,6 +3133,45 @@ a.active{
     "btm-nav btm-nav btm-nav btm-nav btm-nav"
     ;
   }
+  .krania-container{
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". navbar navbar navbar ."
+    ". hero hero . ."
+    "details details details details details"
+    ". . main-mockup . ."
+    "specifications specifications specifications specifications specifications"
+    ". . overview . ."
+    "user-research user-research user-research user-research user-research"
+    ". survey-results survey-results survey-results ."
+    ". comp-analysis comp-analysis comp-analysis ."
+    ". . opportunity . ."
+    "user-personas user-personas user-personas user-personas user-personas"
+    ". . user-persona-grid . . "
+    " user-stories user-stories user-stories user-stories user-stories"
+    ". features-list features-list features-list ."
+    ". user-flows-title user-flows-title user-flows-title ."
+    ". . user-flows . ."
+    "wireframing wireframing wireframing wireframing wireframing"
+    ". . wireframing-sketches . ."
+    ". . wireframing-imgs . . "
+    "branding  branding  branding branding  branding "
+    " . branding-sketch-title branding-sketch-title branding-sketch-title ."
+    ". . branding-images . ."
+    " . branding-moodboard-title branding-moodboard-title branding-moodboard-title ."
+    " . . branding-moodboard . ."
+    "hifi-mockups  hifi-mockups  hifi-mockups hifi-mockups hifi-mockups "
+    " . . hifi-images . ."
+    " . . revisions . ."
+    ". . hifi-mockups-2 . ."
+    ". . final-mockups . ."
+    "reflections-intro reflections-intro reflections-intro reflections-intro reflections-intro"
+    ". . reflections . ."
+    ". . backtotop . ."
+    "btm-nav btm-nav btm-nav btm-nav btm-nav"
+    ;
+  }
+
   .hero {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -3044,12 +3216,20 @@ a.active{
   #poplock.main-mockup {
     padding:5rem 0 0 0;
   }
+  #krania.main-mockup {
+    padding:5rem 0 0 0;
+  }
   .specifications {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
       ". . lists . .";
   }
   #poplock.specifications{
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+      ". . lists . .";
+  }
+  #krania.specifications{
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
       ". . lists . .";
@@ -3071,6 +3251,11 @@ a.active{
     ". . research-intro . .";
   }
   #poplock.user-research {
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . research-intro . .";
+  }
+  #krania.user-research {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . research-intro . .";
@@ -3111,12 +3296,6 @@ a.active{
     "key-features"
     "features-set";
   }
-  /* .features-icon1, .features-icon2, .features-icon3, .features-icon4, .features-icon5 {
-    width:90%;
-  } */
-  /* #poplock.features-icon1, #poplock.features-icon2, #poplock.features-icon3, #poplock.features-icon4{
-    width:80%;
-  } */
   .features-set{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
@@ -3152,13 +3331,6 @@ a.active{
     "persona-img3 persona-title3"
     "persona-quote3 persona-quote3"
     "frustrations3 goals3";
-    /* "persona-img1 persona-title1"
-    "persona-quote1 persona-quote1"
-    "frustrations1 goals1"
-
-    "persona-img2 persona-title2"
-    "persona-quote2 persona-quote2"
-    "frustrations2 goals2" */
   }
 
   .user-stories {
@@ -3434,6 +3606,44 @@ a.active{
     "btm-nav btm-nav btm-nav btm-nav btm-nav"
     ;
   }
+  .krania-container{
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". navbar navbar navbar ."
+    ". hero hero . ."
+    "details details details details details"
+    ". . main-mockup . ."
+    "specifications specifications specifications specifications specifications"
+    ". . overview . ."
+    "user-research user-research user-research user-research user-research"
+    ". survey-results survey-results survey-results ."
+    ". comp-analysis comp-analysis comp-analysis ."
+    ". . opportunity . ."
+    "user-personas user-personas user-personas user-personas user-personas"
+    ". . user-persona-grid . . "
+    " user-stories user-stories user-stories user-stories user-stories"
+    ". features-list features-list features-list ."
+    ". user-flows-title user-flows-title user-flows-title ."
+    ". . user-flows . ."
+    "wireframing wireframing wireframing wireframing wireframing"
+    ". . wireframing-sketches . ."
+    ". . wireframing-imgs . . "
+    "branding  branding  branding branding  branding "
+    " . branding-sketch-title branding-sketch-title branding-sketch-title ."
+    ". . branding-images . ."
+    " . branding-moodboard-title branding-moodboard-title branding-moodboard-title ."
+    " . . branding-moodboard . ."
+    "hifi-mockups  hifi-mockups  hifi-mockups hifi-mockups hifi-mockups "
+    " . . hifi-images . ."
+    " . . revisions . ."
+    ". . hifi-mockups-2 . ."
+    ". . final-mockups . ."
+    "reflections-intro reflections-intro reflections-intro reflections-intro reflections-intro"
+    ". . reflections . ."
+    ". . backtotop . ."
+    "btm-nav btm-nav btm-nav btm-nav btm-nav"
+    ;
+  }
   .details {
     padding: 20rem 0;
   }
@@ -3499,6 +3709,11 @@ a.active{
     padding: 15rem 0 15rem 0;
   }
   #poplock.specifications {
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+      ". . lists . .";
+  }
+  #krania.specifications {
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
       ". . lists . .";
