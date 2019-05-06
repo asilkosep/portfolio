@@ -94,6 +94,10 @@ a{
   color: #5D7FA4;
 }
 
+#krania.key-usersurvey p{
+  text-align: center;
+}
+
 .title-section p{
   font-family: 'Abel', sans-serif;
   font-size: 2rem;
@@ -1176,6 +1180,11 @@ a.active{
 .key-usersurvey{
   grid-area: key-usersurvey;
   padding-bottom: 5rem;
+}
+
+#krania.survey-1, #krania.survey-2, #krania.survey-3, #krania.survey-4{
+  width: 80%;
+  padding: 2rem;
 }
 
 .survey-1, .survey-2, .survey-3, .survey-4{
