@@ -981,6 +981,15 @@ a.active{
 #poplock.reflections-intro::before{
   background: #9FCF01;
 }
+#krania.reflections-intro{
+  display: grid;
+  grid-area: reflections-intro;
+  grid-template-areas:
+  "reflections-title";
+}
+#krania.reflections-intro::before{
+  background: #A7C5BB;
+}
 .reflections {
   display: grid;
   grid-area: reflections;
@@ -2570,6 +2579,11 @@ a.active{
     grid-template-areas:
     ". reflections-title reflections-title reflections-title ."
   }
+  #krania.reflections-intro{
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". reflections-title reflections-title reflections-title ."
+  }
   .reflections {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -3184,12 +3198,20 @@ a.active{
   #poplock.final-mockups{
     grid-template-columns: 1fr 1fr;
   }
+  #krania.final-mockups{
+    grid-template-columns: 1fr 1fr;
+  }
   .reflections-intro{
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . reflections-title . ."
   }
   #poplock.reflections-intro{
+    grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+    grid-template-areas:
+    ". . reflections-title . ."
+  }
+  #krania.reflections-intro{
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
     ". . reflections-title . ."
@@ -3712,6 +3734,9 @@ a.active{
   #poplock.testing-img1, #poplock.testing-img2, #poplock.testing-img3 {
     padding: 5rem;
   }
+  #krania.testing-img1, #krania.testing-img2, #krania.testing-img3 {
+    padding: 5rem;
+  }
   .reflections-intro{
     grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
     grid-template-areas:
@@ -3722,6 +3747,11 @@ a.active{
     grid-template-areas:
     ". . reflections-title . .";
   }
+  #krania.reflections-intro{
+   grid-template-columns: 1fr 2fr 6fr 2fr 1fr;
+   grid-template-areas:
+   ". . reflections-title . .";
+ }
   .reflections {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
