@@ -1688,6 +1688,7 @@ a.active{
   padding-top: 15rem;
   grid-template-areas:
   "poplock-section"
+  "krania-section"
   "atmosphere-section"
   "racsha-section";
 }
@@ -1701,6 +1702,17 @@ a.active{
   width: 100%
 }
 .poplock-section { -webkit-transform: skewY(-7deg); }
+
+.krania-section {
+  background-image: url("../images/krania_home4.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  grid-area: krania-section;
+  width: 100%
+}
+.krania-section { -webkit-transform: skewY(-7deg); }
+
 
 .atmosphere-section {
   background-image: url("../images/home_atmospherev3.jpg");
@@ -1738,6 +1750,31 @@ a.active{
 }
 
 .poplock-overlaytext {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.krania-overlay {
+  position: absolute 0 0 0 0 ;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #494B56;
+}
+
+.krania-section:hover .krania-overlay {
+  opacity: .9;
+}
+
+.krania-overlaytext {
   color: white;
   font-size: 20px;
   position: absolute;
@@ -2571,6 +2608,7 @@ a.active{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "poplock-section poplock-section poplock-section "
+    "krania-section krania-section krania-section "
     "atmosphere-section atmosphere-section atmosphere-section "
     "racsha-section racsha-section racsha-section";
   }
@@ -3196,6 +3234,7 @@ a.active{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "poplock-section poplock-section poplock-section "
+    "krania-section krania-section krania-section "
     "atmosphere-section atmosphere-section atmosphere-section "
     "racsha-section racsha-section racsha-section";
   }
@@ -3723,6 +3762,7 @@ a.active{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     "poplock-section poplock-section poplock-section "
+    "krania-section krania-section krania-section "
     "atmosphere-section atmosphere-section atmosphere-section "
     "racsha-section racsha-section racsha-section";
   }
